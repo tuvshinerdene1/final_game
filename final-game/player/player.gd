@@ -1,8 +1,11 @@
 extends CharacterBody3D
 
+@export_category("movement setting")
 @export var mouse_sensitivity : float = 0.002
 @export var SPEED = 5.0
 @export var JUMP_VELOCITY = 4.5
+
+@export_category("headbob setting")
 @export var HEADBOB = true
 @export var HEADBOB_FREQUENCY = 0.5
 @export var HEADBOB_DISTANCE = 0.2

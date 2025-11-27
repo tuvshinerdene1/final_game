@@ -3,11 +3,16 @@
 [ext_resource type="Script" uid="uid://7fytjb4dooon" path="res://player/player.gd" id="1_ulp21"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ehsmr"]
+radius = 0.23388672
+height = 1.8653564
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_ulp21")
+HEADBOB_FREQUENCY = 1.0
+HEADBOB_DISTANCE = 10.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06732178, 0)
 shape = SubResource("CapsuleShape3D_ehsmr")
 
 [node name="Camera3D" type="Camera3D" parent="."]
