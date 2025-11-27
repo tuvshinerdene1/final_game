@@ -10,7 +10,7 @@ height = 1.8653564
 script = ExtResource("1_ulp21")
 SPEED = 2.5
 HEADBOB_FREQUENCY = 1.0
-HEADBOB_DISTANCE = 10.0
+HEADBOB_DISTANCE = 10000.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06732178, 0)
