@@ -8,7 +8,6 @@ height = 1.8653564
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_ulp21")
-SPEED = 2.5
 HEADBOB_FREQUENCY = 1.0
 HEADBOB_DISTANCE = 10000.0
 

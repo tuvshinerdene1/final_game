@@ -24,7 +24,7 @@ mesh = SubResource("BoxMesh_esipj")
 transform = Transform3D(1, 0, 0, 0, 0.75509876, 0.65561104, 0, -0.65561104, 0.75509876, 0, 4.3140616, 2.6953197)
 
 [node name="Player" parent="." instance=ExtResource("1_esipj")]
-transform = Transform3D(1, 0, 0, 0, 0.99983495, -0.018167878, 0, 0.018167878, 0.99983495, -26.187273, 1.5582944, -133.9877)
-HEADBOB = false
+transform = Transform3D(1, 0, 0, 0, 0.99983495, -0.018167878, 0, 0.018167878, 0.99983495, -24.18451, 1.5582944, -134.72964)
+SPEED = 1.7
 
 [node name="Abandoned_House-col" parent="." instance=ExtResource("2_o12yy")]

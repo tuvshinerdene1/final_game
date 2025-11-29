@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dyujkeqploq2u"
-path="res://.godot/imported/Abandoned_House-col.glb-f2d7483d2806f7583785c5199b4ff878.scn"
+path="res://.godot/imported/Abandoned_House-col.glb-1d934e5799134f4eeb11a7517742f2dd.scn"
 
 [deps]
 
-source_file="res:///Abandoned_House/Models/Abandoned_House-col.glb"
-dest_files=["res://.godot/imported/Abandoned_House-col.glb-f2d7483d2806f7583785c5199b4ff878.scn"]
+source_file="res://Abandoned_House/Models/Abandoned_House-col.glb"
+dest_files=["res://.godot/imported/Abandoned_House-col.glb-1d934e5799134f4eeb11a7517742f2dd.scn"]
 
 [params]
 
