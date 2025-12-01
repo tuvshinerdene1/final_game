@@ -1,5 +1,29 @@
-[gd_scene format=3 uid="uid://kmyakts4l64t"]
+[gd_scene load_steps=5 format=3 uid="uid://kmyakts4l64t"]
 
-[node name="Head" type="Node3D"]
+[ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://player/Player.tscn" id="1_rhc6q"]
+[ext_resource type="PackedScene" uid="uid://dyujkeqploq2u" path="res://Abandoned_House/Models/Abandoned_House-col.glb" id="2_chc3y"]
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[sub_resource type="BoxShape3D" id="BoxShape3D_a4c5l"]
+size = Vector3(5.051758, 1.6342773, 6.9143677)
+
+[sub_resource type="BoxMesh" id="BoxMesh_esipj"]
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1503906, -0.31713867, 1.8095398)
+shape = SubResource("BoxShape3D_a4c5l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(2.7524338, 0, 0, 0, 1, 0, 0, 0, 3.2450247, 0, 0, 0)
+mesh = SubResource("BoxMesh_esipj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.75509876, 0.65561104, 0, -0.65561104, 0.75509876, 0, 4.3140616, 2.6953197)
+
+[node name="Player" parent="." instance=ExtResource("1_rhc6q")]
+transform = Transform3D(1, 0, 0, 0, 0.99983495, -0.018167878, 0, 0.018167878, 0.99983495, -24.18451, 1.5582944, -134.72964)
+
+[node name="Abandoned_House-col" parent="." instance=ExtResource("2_chc3y")]
