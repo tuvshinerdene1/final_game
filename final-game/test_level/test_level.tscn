@@ -2,29 +2,34 @@
 
 [ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://player/Player.tscn" id="1_esipj"]
 [ext_resource type="PackedScene" uid="uid://dyujkeqploq2u" path="res://Abandoned_House/Models/Abandoned_House-col.glb" id="2_o12yy"]
+[ext_resource type="Script" uid="uid://b66yslgrqqdba" path="res://test_level/loop_trigger.gd" id="3_5dngq"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_a4c5l"]
-size = Vector3(5.051758, 1.6342773, 6.9143677)
-
-[sub_resource type="BoxMesh" id="BoxMesh_esipj"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_12ge2"]
+size = Vector3(1, 1, 1.0336914)
 
 [node name="TestLevel" type="Node3D"]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1503906, -0.31713867, 1.8095398)
-shape = SubResource("BoxShape3D_a4c5l")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(2.7524338, 0, 0, 0, 1, 0, 0, 0, 3.2450247, 0, 0, 0)
-mesh = SubResource("BoxMesh_esipj")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.75509876, 0.65561104, 0, -0.65561104, 0.75509876, 0, 4.3140616, 2.6953197)
 
 [node name="Player" parent="." instance=ExtResource("1_esipj")]
-transform = Transform3D(1, 0, 0, 0, 0.99983495, -0.018167878, 0, 0.018167878, 0.99983495, -26.187273, 1.5582944, -133.9877)
+transform = Transform3D(0.3289655, 0.017156688, 0.9441861, 0, 0.99983495, -0.018167878, -0.94434196, 0.005976605, 0.32891122, -28.159388, 6.0153165, -126.05831)
 HEADBOB = false
 
 [node name="Abandoned_House-col" parent="." instance=ExtResource("2_o12yy")]
+transform = Transform3D(1, 0.00020292109, 9.7971206e-05, -0.00020292109, 1, 2.6552256e-05, -9.7971206e-05, -2.6552256e-05, 1, -1.9919167, 1.5381107, -0.04839325)
+
+[node name="LoopTrigger" type="Area3D" parent="." node_paths=PackedStringArray("exit_marker")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.28312, 0.60068953, -126.76716)
+script = ExtResource("3_5dngq")
+exit_marker = NodePath("ExitMarker")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LoopTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0886688, 1.1042584, 0.17959595)
+shape = SubResource("BoxShape3D_12ge2")
+
+[node name="EntryMarker" type="Marker3D" parent="LoopTrigger"]
+visible = false
+
+[node name="ExitMarker" type="Marker3D" parent="LoopTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9551544, 3.2671995, 0.42149353)
