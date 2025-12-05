@@ -39,9 +39,9 @@ func _refresh_items() -> void:
 
 func _on_item_pressed(item: Dictionary) -> void:
 	item_name_label.text = item.get("name", "Unknown")
-	var base_desc := item.get("description", "")
-	var alt_desc := item.get("alt_description", "")
-	if alt_desc != "" and randf() < 0.25:
-		item_description_label.text = alt_desc
-	else:
-		item_description_label.text = base_desc
+	#var base_desc := item.get("description", "")
+	#var alt_desc := item.get("alt_description", "")
+	#if alt_desc != "" and randf() < 0.25:
+		#item_description_label.text = alt_desc
+	#else:
+		#item_description_label.text = base_desc

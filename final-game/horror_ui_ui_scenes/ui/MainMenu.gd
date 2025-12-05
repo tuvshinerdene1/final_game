@@ -14,13 +14,10 @@ func _ready() -> void:
 func _on_new_game_pressed() -> void:
 	get_tree().change_scene_to_file("res://test_level_1/TestLevel1.tscn")
 	
-
 func _on_load_pressed() -> void:
-	# TODO: open load menu
 	get_tree().change_scene_to_file("res://test_level_1/TestLevel1.tscn")
 
 func _on_settings_pressed() -> void:
-	# TODO: settings
 	pass
 
 func _on_quit_pressed() -> void:

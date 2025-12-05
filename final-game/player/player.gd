@@ -18,9 +18,18 @@ extends CharacterBody3D
 # Camera tilt when moving sideways
 @export var MOVEMENT_TILT_AMOUNT := 0.05
 
+# ---------- FOOTSTEP SETTINGS ----------
+@export var MIN_WALK_SPEED: float = 0.2          # how fast you must move before walking sound starts
+@export var walking_loops: Array[AudioStream] = []  # assign your 4 walking sounds in the editor
+# ---------------------------------------
+
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var camera: Camera3D = $Camera3D
+
+# ---------- FOOTSTEP NODE ----------
+@onready var footstep_player: AudioStreamPlayer3D = $FootstepPlayer
+# -----------------------------------
 
 # Head bob vars
 var headbob_time: float = 0.0
@@ -31,12 +40,11 @@ var original_camera_rotation: Vector3
 var direction: Vector3 = Vector3.ZERO
 
 func _ready() -> void:
-	print("player loaded")
-	print(SPEED)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	original_camera_position = camera.position
 	original_camera_rotation = camera.rotation
 	camera.current = true
+
 
 func _input(event) -> void:
 	if event is InputEventMouseMotion:
@@ -48,6 +56,9 @@ func _physics_process(delta: float) -> void:
 	apply_gravity(delta)
 	move()
 	apply_headbob_and_sway(delta)
+
+	_update_walking_sound()  
+
 	move_and_slide()
 
 func apply_gravity(delta: float) -> void:
@@ -109,3 +120,25 @@ func apply_headbob_and_sway(delta: float) -> void:
 	var current_local_rotation := Vector3(0.0, 0.0, camera.rotation.z)
 	var new_local_rotation := current_local_rotation.lerp(target_rotation, delta * lerp_speed)
 	camera.rotation.z = new_local_rotation.z
+
+
+# ==========================
+# WALKING LOOP SOUND LOGIC
+# ==========================
+
+func _is_walking() -> bool:
+	var horizontal_speed := Vector2(velocity.x, velocity.z).length()
+	return horizontal_speed > MIN_WALK_SPEED and is_on_floor()
+
+func _update_walking_sound() -> void:
+	var walking := _is_walking()
+
+	if walking:
+
+		# If not already playing, start a random loop
+		if not footstep_player.playing:
+			footstep_player.play()
+	else:
+		# Stop the sound when you stop walking or leave the floor
+		if footstep_player.playing:
+			footstep_player.stop()
