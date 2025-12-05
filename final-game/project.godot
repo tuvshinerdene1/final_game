@@ -15,6 +15,12 @@ run/main_scene="uid://dtsqdu46ew0jv"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/mode=2
+window/size/resizable=false
+window/stretch/aspect="expand"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/Basic FPS Player/plugin.cfg", "res://addons/physics_collision_import_generator/plugin.cfg")

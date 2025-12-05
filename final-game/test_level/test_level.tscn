@@ -14,7 +14,6 @@ transform = Transform3D(1, 0, 0, 0, 0.75509876, 0.65561104, 0, -0.65561104, 0.75
 
 [node name="Player" parent="." instance=ExtResource("1_esipj")]
 transform = Transform3D(0.3289655, 0.017156688, 0.9441861, 0, 0.99983495, -0.018167878, -0.94434196, 0.005976605, 0.32891122, -28.159388, 6.0153165, -126.05831)
-HEADBOB = false
 
 [node name="Abandoned_House-col" parent="." instance=ExtResource("2_o12yy")]
 transform = Transform3D(1, 0.00020292109, 9.7971206e-05, -0.00020292109, 1, 2.6552256e-05, -9.7971206e-05, -2.6552256e-05, 1, -1.9919167, 1.5381107, -0.04839325)
