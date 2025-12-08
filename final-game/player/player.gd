@@ -122,10 +122,6 @@ func apply_headbob_and_sway(delta: float) -> void:
 	camera.rotation.z = new_local_rotation.z
 
 
-# ==========================
-# WALKING LOOP SOUND LOGIC
-# ==========================
-
 func _is_walking() -> bool:
 	var horizontal_speed := Vector2(velocity.x, velocity.z).length()
 	return horizontal_speed > MIN_WALK_SPEED and is_on_floor()
