@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://cvd4gqwsj3yjj" path="res://WalkingSound.mp3" id="2_3c3w1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ehsmr"]
-radius = 0.23388672
+radius = 0.32373047
 height = 1.8653564
 
 [node name="Player" type="CharacterBody3D"]
@@ -16,7 +16,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06732178, 0)
 shape = SubResource("CapsuleShape3D_ehsmr")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -0.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0.006381139)
 
 [node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_3c3w1")
