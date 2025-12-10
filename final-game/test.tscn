@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxewungehwwd3"]
+
+[ext_resource type="PackedScene" uid="uid://dhmebw73adv2r" path="res://level_map.glb" id="1_8uh7m"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="level_map" parent="." instance=ExtResource("1_8uh7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7940024, -1.1920929e-07, -0.8535614)
