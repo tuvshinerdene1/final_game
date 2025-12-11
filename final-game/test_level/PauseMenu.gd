@@ -60,4 +60,4 @@ func _on_main_menu_pressed() -> void:
 	get_tree().paused = false
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	back_to_main_menu_requested.emit()
-	get_tree().change_scene_to_file("res://horror_ui_ui_scenes/ui/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://test_level/MainMenu.tscn")
