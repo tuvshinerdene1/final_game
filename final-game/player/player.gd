@@ -40,6 +40,7 @@ var original_camera_rotation: Vector3
 var direction: Vector3 = Vector3.ZERO
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_PAUSABLE  
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	original_camera_position = camera.position
 	original_camera_rotation = camera.rotation

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b88crces8q8xk"]
 
-[ext_resource type="Script" uid="uid://dqc02f48sovq0" path="res://horror_ui_ui_scenes/ui/PauseMenu.gd" id="1"]
+[ext_resource type="Script" uid="uid://dqc02f48sovq0" path="res://test_level/PauseMenu.gd" id="1"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 script = ExtResource("1")
@@ -14,6 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DarkOverlay" type="ColorRect" parent="Root"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,6 +47,7 @@ layout_mode = 2
 text = "Resume"
 
 [node name="SettingsButton" type="Button" parent="Root/Panel/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Settings"
 

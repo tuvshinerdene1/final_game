@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://dtsqdu46ew0jv"]
+[gd_scene load_steps=13 format=3 uid="uid://dtsqdu46ew0jv"]
 
+[ext_resource type="Script" uid="uid://coiofb77452bc" path="res://test_level/test_level.gd" id="1_8ss2y"]
 [ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://player/Player.tscn" id="1_esipj"]
 [ext_resource type="Script" uid="uid://b66yslgrqqdba" path="res://test_level/loop_trigger.gd" id="3_5dngq"]
 [ext_resource type="PackedScene" uid="uid://b1r5v7llpax8d" path="res://level_map/level_map_02.glb" id="4_12ge2"]
@@ -8,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bt7oib7kvp7tb" path="res://furniture/chair.tscn" id="5_ttjb5"]
 [ext_resource type="AudioStream" uid="uid://baj2nhdddwcll" path="res://ambience/P.T. Silent Hills creepy ambient music (PS4) [Vg2IuNk28sI].mp3" id="6_42dln"]
 [ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://radio/radio.tscn" id="6_qw1tw"]
+[ext_resource type="PackedScene" uid="uid://b88crces8q8xk" path="res://test_level/PauseMenu.tscn" id="10_qqygc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_12ge2"]
 size = Vector3(1, 1, 1.0336914)
@@ -19,6 +21,7 @@ reflected_light_source = 1
 volumetric_fog_density = 0.1
 
 [node name="TestLevel" type="Node3D"]
+script = ExtResource("1_8ss2y")
 
 [node name="Player" parent="." instance=ExtResource("1_esipj")]
 transform = Transform3D(0.3289655, 0.017156688, 0.9441861, 0, 0.99983495, -0.018167878, -0.94434196, 0.005976605, 0.32891122, -51.529392, 6.812005, -283.47543)
@@ -33,7 +36,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0886688, 1.1042584, 0.1795
 shape = SubResource("BoxShape3D_12ge2")
 
 [node name="EntryMarker" type="Marker3D" parent="LoopTrigger"]
-visible = false
 
 [node name="ExitMarker" type="Marker3D" parent="LoopTrigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9551544, 3.2671995, 0.42149353)
@@ -94,3 +96,5 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -56.
 stream = ExtResource("6_42dln")
 autoplay = true
 parameters/looping = true
+
+[node name="PauseMenu" parent="." instance=ExtResource("10_qqygc")]
