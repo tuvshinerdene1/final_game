@@ -3,12 +3,7 @@
 [ext_resource type="Script" uid="uid://s8tn2ljfw1yj" path="res://Door/static_body_3d.gd" id="1_d0h81"]
 [ext_resource type="AudioStream" uid="uid://clhulll16n8pi" path="res://Door/Door Opening- Sound Effect [mlUmhaT998E].mp3" id="2_lov5c"]
 [ext_resource type="AudioStream" uid="uid://lrc4opotw0w0" path="res://Door/Front Door Close - Sound Effect‎ @paracetamol563 [M6Bnr2KBuCg].mp3" id="3_4s0j3"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_iokuj"]
-size = Vector3(1, 2, 0.1)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iokuj"]
-points = PackedVector3Array(-0.5, -1, -0.05, -0.5, -1, 0.05, -0.5, 1, -0.05, 0.5, -1, -0.05, 0.5, -1, 0.05, -0.5, 1, 0.05, 0.5, 1, -0.05, 0.5, 1, 0.05)
+[ext_resource type="PackedScene" uid="uid://b4qxa36wkss41" path="res://Door/inside_door.glb" id="4_4s0j3"]
 
 [sub_resource type="Animation" id="Animation_d0h81"]
 length = 0.001
@@ -67,21 +62,16 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_iokuj"]
 size = Vector3(1.5, 2, 1.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_4s0j3"]
+size = Vector3(0.788208, 2.0825195, 0.08728027)
+
 [node name="Door" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
 script = ExtResource("1_d0h81")
 open_sound = ExtResource("2_lov5c")
 close_sound = ExtResource("3_4s0j3")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
-mesh = SubResource("BoxMesh_iokuj")
-skeleton = NodePath("../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_iokuj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D"]
 libraries = {
@@ -95,3 +85,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
 shape = SubResource("BoxShape3D_iokuj")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3912964, -0.064208984, 0.0022582987)
+shape = SubResource("BoxShape3D_4s0j3")
+
+[node name="inside_door" parent="StaticBody3D" instance=ExtResource("4_4s0j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1, 0)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfh70ad0dkf3t"
+path="res://.godot/imported/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3-04e46d55bc53213d84bc902617021bc1.mp3str"
+
+[deps]
+
+source_file="res://radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3"
+dest_files=["res://.godot/imported/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3-04e46d55bc53213d84bc902617021bc1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

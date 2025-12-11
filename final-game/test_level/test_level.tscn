@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dtsqdu46ew0jv"]
+[gd_scene load_steps=11 format=3 uid="uid://dtsqdu46ew0jv"]
 
 [ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://player/Player.tscn" id="1_esipj"]
-[ext_resource type="PackedScene" uid="uid://dyujkeqploq2u" path="res://Abandoned_House/Models/Abandoned_House-col.glb" id="2_o12yy"]
 [ext_resource type="Script" uid="uid://b66yslgrqqdba" path="res://test_level/loop_trigger.gd" id="3_5dngq"]
 [ext_resource type="PackedScene" uid="uid://b1r5v7llpax8d" path="res://level_map/level_map_02.glb" id="4_12ge2"]
+[ext_resource type="PackedScene" uid="uid://d321xu2mcfwgo" path="res://Door/Door.tscn" id="5_42dln"]
 [ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://light_bulb/light_bulb.tscn" id="5_adkkv"]
+[ext_resource type="PackedScene" uid="uid://bt7oib7kvp7tb" path="res://furniture/chair.tscn" id="5_ttjb5"]
+[ext_resource type="AudioStream" uid="uid://baj2nhdddwcll" path="res://ambience/P.T. Silent Hills creepy ambient music (PS4) [Vg2IuNk28sI].mp3" id="6_42dln"]
+[ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://radio/radio.tscn" id="6_qw1tw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_12ge2"]
 size = Vector3(1, 1, 1.0336914)
@@ -19,9 +22,6 @@ volumetric_fog_density = 0.1
 
 [node name="Player" parent="." instance=ExtResource("1_esipj")]
 transform = Transform3D(0.3289655, 0.017156688, 0.9441861, 0, 0.99983495, -0.018167878, -0.94434196, 0.005976605, 0.32891122, -51.529392, 6.812005, -283.47543)
-
-[node name="Abandoned_House-col" parent="." instance=ExtResource("2_o12yy")]
-transform = Transform3D(1, 0.00020292109, 9.7971206e-05, -0.00020292109, 1, 2.6552256e-05, -9.7971206e-05, -2.6552256e-05, 1, -1.9919167, 1.5381107, -0.04839325)
 
 [node name="LoopTrigger" type="Area3D" parent="." node_paths=PackedStringArray("exit_marker")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.28312, 0.60068953, -126.76716)
@@ -39,18 +39,58 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9551544, 3.2671995, 0.42149353)
 
 [node name="level_map_02" parent="." instance=ExtResource("4_12ge2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.94401, 0.46494675, -281.2186)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.941223, 0.48044872, -281.20773)
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="bulb" type="Node3D" parent="."]
 
-[node name="LightBulb" parent="Node3D" instance=ExtResource("5_adkkv")]
+[node name="LightBulb" parent="bulb" instance=ExtResource("5_adkkv")]
 transform = Transform3D(1, 0, 0, 0, -0.02422279, -0.99970657, 0, 0.99970657, -0.02422279, -51.922497, 5.4560747, -287.4224)
 
-[node name="LightBulb2" parent="Node3D" instance=ExtResource("5_adkkv")]
+[node name="LightBulb5" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.07168893, -0.9971344, 0.024160465, 0, -0.02422279, -0.99970657, 0.99742705, 0.071667895, -0.0017365058, -49.27377, 4.1821566, -283.9128)
+
+[node name="LightBulb6" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.0046251416, 0.9996959, -0.024222529, -1.1611579e-10, -0.02422279, -0.99970657, -0.99998933, 0.0046237856, -0.0001120338, -52.38389, 3.485189, -282.0358)
+
+[node name="LightBulb7" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.9963988, -0.08476606, 0.002053871, -1.3066755e-10, -0.02422279, -0.99970657, 0.08479094, 0.9961064, -0.024135556, -50.2694, 2.499371, -289.6766)
+
+[node name="LightBulb9" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.9963988, -0.08476606, 0.002053871, -1.3066755e-10, -0.02422279, -0.99970657, 0.08479094, 0.9961064, -0.024135556, -55.423946, 2.499371, -289.70554)
+
+[node name="LightBulb10" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.9963988, -0.08476606, 0.002053871, -1.3066755e-10, -0.02422279, -0.99970657, 0.08479094, 0.9961064, -0.024135556, -60.342327, 2.499371, -289.67856)
+
+[node name="LightBulb8" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.0046251416, 0.9996959, -0.024222529, -1.1611579e-10, -0.02422279, -0.99970657, -0.99998933, 0.0046237856, -0.0001120338, -52.579433, 2.499371, -286.7036)
+
+[node name="LightBulb2" parent="bulb" instance=ExtResource("5_adkkv")]
 transform = Transform3D(1, 0, 0, 0, -0.02422279, -0.99970657, 0, 0.99970657, -0.02422279, -54.326946, 5.4560747, -289.68906)
 
-[node name="LightBulb3" parent="Node3D" instance=ExtResource("5_adkkv")]
+[node name="LightBulb4" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.02422279, -0.99970657, 0, 0.99970657, -0.02422279, -57.880615, 5.4560747, -288.40967)
+
+[node name="LightBulb3" parent="bulb" instance=ExtResource("5_adkkv")]
 transform = Transform3D(1, 0, 0, 0, -0.014747549, 0.9998912, 0, -0.9998912, -0.014747549, -54.772255, 5.4560747, -285.36014)
+
+[node name="chair" parent="bulb" instance=ExtResource("5_ttjb5")]
+transform = Transform3D(0.34380725, 0, -0.93904024, 0, 1, 0, 0.93904024, 0, 0.34380725, -60.468094, 0.86708766, -289.1636)
+
+[node name="Retro Radio Receiver" parent="bulb" instance=ExtResource("6_qw1tw")]
+transform = Transform3D(0.7695779, 0, -0.63855296, 0, 1, 0, 0.63855296, 0, 0.7695779, -60.32004, 1.3957597, -289.1825)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_adkkv")
+
+[node name="doors" type="Node3D" parent="."]
+
+[node name="Door" parent="doors" instance=ExtResource("5_42dln")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -56.283203, 4.773256, -289.13538)
+
+[node name="Door2" parent="doors" instance=ExtResource("5_42dln")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -56.283203, 1.8722222, -289.13538)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_42dln")
+autoplay = true
+parameters/looping = true
