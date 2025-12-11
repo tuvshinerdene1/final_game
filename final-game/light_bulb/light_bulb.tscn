@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2qc58jyyjare"]
+
+[ext_resource type="PackedScene" uid="uid://dw3fi846oj2g6" path="res://assets/lamp-glb-file/source/Untitled.glb" id="1_uasyd"]
+
+[node name="LightBulb" type="Node3D"]
+
+[node name="Untitled" parent="." instance=ExtResource("1_uasyd")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03834732, 0.28463334, 0)
+light_color = Color(0.33049116, 0.2680796, 0.02624825, 1)
+light_energy = 0.505
+light_size = 0.278
+shadow_enabled = true
+shadow_bias = 1.028
+shadow_opacity = 0.9
+omni_range = 3.7007709
