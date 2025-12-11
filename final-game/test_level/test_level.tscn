@@ -80,18 +80,16 @@ transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.09878576, -0
 light_color = Color(0, 0.32941177, 0.19215687, 1)
 
 [node name="LightBulb13" parent="bulb" instance=ExtResource("5_adkkv")]
-transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.09878576, -0.9939079, 0.048870675, -0.99510586, 0.09878712, -0.0023935998, -67.20448, 3.3077238, -295.58258)
-light_color = Color(0.46666667, 0, 0.050980393, 1)
+transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.09878576, -0.9939079, 0.048870675, -0.99510586, 0.09878712, -0.0023935998, -65.75365, 3.3077238, -293.48074)
+light_color = Color(0.601223, 0.601223, 0.60122293, 0.5882353)
 
 [node name="LightBulb17" parent="bulb" instance=ExtResource("5_adkkv")]
-transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.09878576, -0.9939079, 0.048870675, -0.99510586, 0.09878712, -0.0023935998, -76.23319, 3.3077238, -295.58258)
+transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.99976563, 0.021616906, 0.001393493, 0.021522887, 0.99857134, -0.04890942, -77.23683, 2.6962967, -296.27216)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
 
 [node name="LightBulb18" parent="bulb" instance=ExtResource("5_adkkv")]
 transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.09878576, -0.9939079, 0.048870675, -0.99510586, 0.09878712, -0.0023935998, -78.75846, 3.3077238, -295.58258)
-
-[node name="LightBulb14" parent="bulb" instance=ExtResource("5_adkkv")]
-transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.09878576, -0.9939079, 0.048870675, -0.99510586, 0.09878712, -0.0023935998, -67.20448, 3.3077238, -292.33792)
-light_color = Color(0.4664548, 0, 0.051357433, 1)
+light_color = Color(0.4509804, 0, 0, 1)
 
 [node name="LightBulb8" parent="bulb" instance=ExtResource("5_adkkv")]
 transform = Transform3D(0.0046251416, 0.9996959, -0.024222529, -1.1611579e-10, -0.02422279, -0.99970657, -0.99998933, 0.0046237856, -0.0001120338, -52.579433, 2.499371, -286.7036)
@@ -114,6 +112,9 @@ transform = Transform3D(0.34380725, 0, -0.93904024, 0, 1, 0, 0.93904024, 0, 0.34
 
 [node name="Retro Radio Receiver" parent="bulb" instance=ExtResource("6_qw1tw")]
 transform = Transform3D(0.7695779, 0, -0.63855296, 0, 1, 0, 0.63855296, 0, 0.7695779, -60.32004, 1.3957597, -289.1825)
+
+[node name="Retro Radio Receiver2" parent="bulb" instance=ExtResource("6_qw1tw")]
+transform = Transform3D(0.8379569, 0, 0.5457364, 0, 1, 0, -0.5457364, 0, 0.8379569, -79.4241, 0.78043, -294.50757)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_adkkv")

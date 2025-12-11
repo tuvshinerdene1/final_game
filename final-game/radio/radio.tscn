@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://b7yrfghfgmhcn"]
+[gd_scene load_steps=7 format=4 uid="uid://b7yrfghfgmhcn"]
 
 [ext_resource type="Texture2D" uid="uid://xplyh01ten71" path="res://radio/Retro Radio Receiver_Radio Color 256.jpg" id="1_ww4nh"]
+[ext_resource type="Script" uid="uid://di34fy5ds3h82" path="res://radio/radio.gd" id="1_yrq6i"]
 [ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="2_yrq6i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yew7d"]
@@ -43,6 +44,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7nwgq")
 
 [node name="Retro Radio Receiver" type="Node3D"]
+script = ExtResource("1_yrq6i")
 
 [node name="PSX style" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.76128286, 0, 0.1381897, 0)
