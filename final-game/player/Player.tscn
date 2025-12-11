@@ -22,3 +22,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0.006381139)
 stream = ExtResource("2_3c3w1")
 volume_db = -35.0
 parameters/looping = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+light_energy = 0.2
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 15.0
+distance_fade_shadow = 15.0
