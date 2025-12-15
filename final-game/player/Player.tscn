@@ -7,7 +7,7 @@
 radius = 0.32373047
 height = 1.8653564
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_ulp21")
 HEADBOB_FREQUENCY = 1.0
 

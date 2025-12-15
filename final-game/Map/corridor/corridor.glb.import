@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bi2eaewagws47"
-path="res://.godot/imported/corridor.glb-17f998a84c7a3e59764d3490c5925379.scn"
+path="res://.godot/imported/corridor.glb-6e92d21c25f98f4395fdd3cef452d198.scn"
 
 [deps]
 
-source_file="res:///Map/corridor/corridor.glb"
-dest_files=["res://.godot/imported/corridor.glb-17f998a84c7a3e59764d3490c5925379.scn"]
+source_file="res://Map/corridor/corridor.glb"
+dest_files=["res://.godot/imported/corridor.glb-6e92d21c25f98f4395fdd3cef452d198.scn"]
 
 [params]
 
