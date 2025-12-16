@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcwcpo57wonb"]
+
+[ext_resource type="PackedScene" uid="uid://b4qxa36wkss41" path="res://scenes/furnitures/door_inside/door_model/inside_door.glb" id="1_v2ca7"]
+
+[node name="inside_door" instance=ExtResource("1_v2ca7")]
