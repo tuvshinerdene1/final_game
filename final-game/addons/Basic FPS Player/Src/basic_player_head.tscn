@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://kmyakts4l64t"]
 
-[ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://player/Player.tscn" id="1_rhc6q"]
-[ext_resource type="PackedScene" uid="uid://dyujkeqploq2u" path="res://Abandoned_House/Models/Abandoned_House-col.glb" id="2_chc3y"]
+[ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="1_rhc6q"]
+[ext_resource type="PackedScene" path="res://Abandoned_House/Models/Abandoned_House-col.glb" id="2_chc3y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a4c5l"]
 size = Vector3(5.051758, 1.6342773, 6.9143677)

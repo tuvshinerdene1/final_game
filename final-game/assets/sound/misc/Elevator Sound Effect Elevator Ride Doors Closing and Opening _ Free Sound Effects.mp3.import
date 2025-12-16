@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hfx10vi43yvl"
+path="res://.godot/imported/Elevator Sound Effect Elevator Ride Doors Closing and Opening _ Free Sound Effects.mp3-4bf63695125659017390615ca52214e8.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/misc/Elevator Sound Effect Elevator Ride Doors Closing and Opening _ Free Sound Effects.mp3"
+dest_files=["res://.godot/imported/Elevator Sound Effect Elevator Ride Doors Closing and Opening _ Free Sound Effects.mp3-4bf63695125659017390615ca52214e8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

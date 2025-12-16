@@ -1,0 +1,293 @@
+[gd_scene load_steps=15 format=3 uid="uid://dtsqdu46ew0jv"]
+
+[ext_resource type="Script" uid="uid://coiofb77452bc" path="res://scenes/test_levels/test_level/test_level.gd" id="1_8ss2y"]
+[ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="1_esipj"]
+[ext_resource type="Script" uid="uid://b66yslgrqqdba" path="res://scenes/test_levels/test_level/loop_trigger.gd" id="3_5dngq"]
+[ext_resource type="PackedScene" uid="uid://b1r5v7llpax8d" path="res://assets/map_models/level_map/level_map_02.glb" id="4_12ge2"]
+[ext_resource type="PackedScene" uid="uid://d321xu2mcfwgo" path="res://scenes/furnitures/Door/Door.tscn" id="5_42dln"]
+[ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="5_adkkv"]
+[ext_resource type="PackedScene" uid="uid://bt7oib7kvp7tb" path="res://scenes/furnitures/chair/chair.tscn" id="5_ttjb5"]
+[ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="6_qw1tw"]
+[ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="8_0t0ks"]
+[ext_resource type="AudioStream" uid="uid://b42n8ovvmim1k" path="res://scenes/furnitures/radio/Болгарын гудамж.mp3" id="8_rncrq"]
+[ext_resource type="PackedScene" uid="uid://b88crces8q8xk" path="res://scenes/test_levels/test_level/PauseMenu.tscn" id="10_qqygc"]
+[ext_resource type="PackedScene" uid="uid://dk5f51cupss8c" path="res://scenes/test_levels/test_level/MazeSound.tscn" id="14_hcwq1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_12ge2"]
+size = Vector3(1, 1, 1.0336914)
+
+[sub_resource type="Environment" id="Environment_adkkv"]
+background_mode = 1
+ambient_light_source = 1
+reflected_light_source = 1
+volumetric_fog_density = 0.1
+
+[node name="TestLevel" type="Node3D"]
+script = ExtResource("1_8ss2y")
+
+[node name="Player" parent="." instance=ExtResource("1_esipj")]
+transform = Transform3D(0.3289655, 0.017156688, 0.9441861, 0, 0.99983495, -0.018167878, -0.94434196, 0.005976605, 0.32891122, -44.27764, 2.1915224, -301.49454)
+
+[node name="LoopTrigger" type="Area3D" parent="." node_paths=PackedStringArray("exit_marker")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.28312, 0.60068953, -126.76716)
+script = ExtResource("3_5dngq")
+exit_marker = NodePath("ExitMarker")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LoopTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0886688, 1.1042584, 0.17959595)
+shape = SubResource("BoxShape3D_12ge2")
+
+[node name="EntryMarker" type="Marker3D" parent="LoopTrigger"]
+
+[node name="ExitMarker" type="Marker3D" parent="LoopTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9551544, 3.2671995, 0.42149353)
+
+[node name="level_map_02" parent="." instance=ExtResource("4_12ge2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.928024, 0.55169964, -281.29587)
+
+[node name="level_map_03" parent="." instance=ExtResource("4_12ge2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.071156, 0.49322414, -281.3001)
+
+[node name="bulb" type="Node3D" parent="."]
+
+[node name="LightBulb" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.02422279, -0.99970657, 0, 0.99970657, -0.02422279, -51.922497, 5.4560747, -287.4224)
+light_color = Color(0.13908362, 0.26001197, 0.07015187, 1)
+
+[node name="LightBulb5" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.07168893, -0.9971344, 0.024160465, 0, -0.02422279, -0.99970657, 0.99742705, 0.071667895, -0.0017365058, -49.27377, 4.1821566, -283.9128)
+light_color = Color(0, 0.43137255, 0.23137255, 1)
+
+[node name="LightBulb6" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.0046251416, 0.9996959, -0.024222529, -1.1611579e-10, -0.02422279, -0.99970657, -0.99998933, 0.0046237856, -0.0001120338, -52.38389, 3.485189, -282.0358)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb7" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.9963988, -0.08476606, 0.002053871, -1.3066755e-10, -0.02422279, -0.99970657, 0.08479094, 0.9961064, -0.024135556, -50.2694, 2.499371, -289.6766)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb9" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.9963988, -0.08476606, 0.002053871, -1.3066755e-10, -0.02422279, -0.99970657, 0.08479094, 0.9961064, -0.024135556, -55.424393, 2.499371, -289.7023)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb10" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.9963988, -0.08476606, 0.002053871, -1.3066755e-10, -0.02422279, -0.99970657, 0.08479094, 0.9961064, -0.024135556, -60.342327, 2.499371, -289.67856)
+light_color = Color(0.32044965, 1.6544945e-07, 9.62615e-08, 1)
+
+[node name="LightBulb11" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.9963988, -0.08476606, 0.002053871, -1.3066755e-10, -0.02422279, -0.99970657, 0.08479094, 0.9961064, -0.024135556, -64.05052, 2.499371, -289.69196)
+light_color = Color(0.32156864, 0, 0, 1)
+
+[node name="LightBulb15" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.09878576, -0.9939079, 0.048870675, -0.99510586, 0.09878712, -0.0023935998, -66.40873, 3.3077238, -285.14197)
+light_color = Color(0, 0.32941177, 0.19215687, 1)
+
+[node name="LightBulb13" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.09878576, -0.9939079, 0.048870675, -0.99510586, 0.09878712, -0.0023935998, -65.75365, 3.3077238, -293.48074)
+light_color = Color(0.601223, 0.601223, 0.60122293, 0.5882353)
+
+[node name="LightBulb17" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.99976563, 0.021616906, 0.001393493, 0.021522887, 0.99857134, -0.04890942, -77.23683, 2.6962967, -296.27216)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb19" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.99976563, 0.021616906, 0.001393493, 0.021522887, 0.99857134, -0.04890942, -70.832825, 2.6962967, -296.27216)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb22" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.021526242, 0.99863774, -0.0475322, -0.99976563, 0.021616906, 0.0013934931, 0.002419086, 0.047491048, 0.99886864, -81.74494, 3.2046094, -296.27216)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb23" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.99962264, 0.027455352, 0.0011155588, -0.027371287, -0.9984944, 0.04753954, 0.002419086, 0.047491048, 0.99886864, -81.74494, 3.2046094, -301.1432)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb20" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.021348855, -0.97238946, -0.23238556, -0.99976563, 0.021616906, 0.0013934931, 0.0036684407, 0.23236082, -0.9726227, -70.52448, 2.6962967, -292.88852)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb21" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.012077505, 0.9956629, -0.09224609, -0.99988776, -0.011204812, 0.009972093, 0.008895254, 0.09235615, 0.99568605, -73.62362, 2.6962967, -289.97144)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb18" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.0024487632, -0.048867945, -0.9988022, -0.09878576, -0.9939079, 0.048870675, -0.99510586, 0.09878712, -0.0023935998, -78.75846, 3.3077238, -295.58258)
+light_color = Color(0.4509804, 0, 0, 1)
+
+[node name="LightBulb8" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(0.0046251416, 0.9996959, -0.024222529, -1.1611579e-10, -0.02422279, -0.99970657, -0.99998933, 0.0046237856, -0.0001120338, -52.579433, 2.499371, -286.7036)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb2" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.02422279, -0.99970657, 0, 0.99970657, -0.02422279, -54.326946, 5.4560747, -289.68906)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb4" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.02422279, -0.99970657, 0, 0.99970657, -0.02422279, -57.880615, 5.4560747, -288.40967)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb3" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.014747549, 0.9998912, 0, -0.9998912, -0.014747549, -54.772255, 5.4560747, -285.36014)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb14" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.014747549, 0.9998912, 0, -0.9998912, -0.014747549, -20.948135, 2.8436985, -280.88263)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb36" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -276.86487)
+
+[node name="LightBulb37" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -268.63025)
+
+[node name="LightBulb38" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -259.52396)
+
+[node name="LightBulb39" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -253.81992)
+
+[node name="LightBulb40" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -247.93819)
+
+[node name="LightBulb41" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -238.37846)
+
+[node name="LightBulb42" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -229.1616)
+
+[node name="LightBulb43" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -225.75468)
+
+[node name="LightBulb44" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -221.54187)
+
+[node name="LightBulb45" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -218.67711)
+
+[node name="LightBulb46" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -214.47119)
+
+[node name="LightBulb47" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -213.03157)
+
+[node name="LightBulb48" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -209.26054)
+
+[node name="LightBulb49" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -207.56355)
+
+[node name="LightBulb50" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -205.2646)
+
+[node name="LightBulb51" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -203.72487)
+
+[node name="LightBulb52" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -197.17015)
+
+[node name="LightBulb53" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -192.37874)
+
+[node name="LightBulb54" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -189.65785)
+
+[node name="LightBulb55" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -187.89261)
+
+[node name="LightBulb56" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -183.567)
+
+[node name="LightBulb57" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -183.567)
+
+[node name="LightBulb58" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -175.27866)
+
+[node name="LightBulb59" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -22.23471, 3.4587412, -172.83598)
+
+[node name="LightBulb24" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.014747549, 0.9998912, 0, -0.9998912, -0.014747549, -28.923418, 3.201969, -280.20267)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb25" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.9413469, 0.33740368, 0.004976419, 0, -0.014747549, 0.9998912, 0.3374404, 0.9412445, 0.013882559, -28.923418, 3.201969, -284.27554)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb26" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.9413469, 0.33740368, 0.004976419, 0, -0.014747549, 0.9998912, 0.3374404, 0.9412445, 0.013882559, -28.923418, 3.201969, -284.27554)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb27" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.9413469, 0.33740368, 0.004976419, 0, -0.014747549, 0.9998912, 0.3374404, 0.9412445, 0.013882559, -37.05523, 3.3469727, -284.27554)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb28" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.17101774, 0.98516077, 0.014530287, -4.383488e-10, -0.014747549, 0.9998912, 0.98526794, 0.17099908, 0.0025220918, -37.05523, 3.3469727, -282.78156)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb29" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.17101774, 0.98516077, 0.014530287, -4.383488e-10, -0.014747549, 0.9998912, 0.98526794, 0.17099908, 0.0025220918, -32.16481, 3.3469727, -282.78156)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb30" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.17101774, 0.98516077, 0.014530287, -4.383488e-10, -0.014747549, 0.9998912, 0.98526794, 0.17099908, 0.0025220918, -30.79955, 3.3469727, -280.31454)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="LightBulb31" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.17101774, 0.98516077, 0.014530287, -4.383488e-10, -0.014747549, 0.9998912, 0.98526794, 0.17099908, 0.0025220918, -40.762497, 3.3321984, -284.12024)
+light_energy = 14.0
+
+[node name="LightBulb33" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.17101774, 0.98516077, 0.014530287, -4.383488e-10, -0.014747549, 0.9998912, 0.98526794, 0.17099908, 0.0025220918, -26.48563, 3.3977573, -287.07535)
+light_energy = 14.0
+
+[node name="LightBulb34" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.17101774, 0.98516077, 0.014530287, -4.383488e-10, -0.014747549, 0.9998912, 0.98526794, 0.17099908, 0.0025220918, -26.48563, 3.3977573, -283.83755)
+light_energy = 14.0
+
+[node name="LightBulb35" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.17101774, 0.98516077, 0.014530287, -4.383488e-10, -0.014747549, 0.9998912, 0.98526794, 0.17099908, 0.0025220918, -25.38385, 3.3977573, -283.83755)
+light_energy = 14.0
+
+[node name="LightBulb32" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(-0.17101774, 0.98516077, 0.014530287, -4.383488e-10, -0.014747549, 0.9998912, 0.98526794, 0.17099908, 0.0025220918, -40.761898, 3.3475993, -296.62057)
+light_energy = 14.5
+
+[node name="LightBulb16" parent="bulb" instance=ExtResource("5_adkkv")]
+transform = Transform3D(1, 0, 0, 0, -0.014747549, 0.9998912, 0, -0.9998912, -0.014747549, -21.887768, 2.8436985, -284.8876)
+light_color = Color(0.13725491, 0.25882354, 0.07058824, 1)
+
+[node name="chair" parent="bulb" instance=ExtResource("5_ttjb5")]
+transform = Transform3D(0.34380725, 0, -0.93904024, 0, 1, 0, 0.93904024, 0, 0.34380725, -60.468094, 0.86708766, -289.1636)
+
+[node name="Retro Radio Receiver" parent="bulb" node_paths=PackedStringArray("player") instance=ExtResource("6_qw1tw")]
+transform = Transform3D(0.7695779, 0, -0.63855296, 0, 1, 0, 0.63855296, 0, 0.7695779, -60.32004, 1.3957597, -289.1825)
+audio_name = ExtResource("8_0t0ks")
+default_name = ExtResource("8_0t0ks")
+player = NodePath("../../Player")
+
+[node name="Retro Radio Receiver2" parent="bulb" node_paths=PackedStringArray("player") instance=ExtResource("6_qw1tw")]
+transform = Transform3D(0.8379569, 0, 0.5457364, 0, 1, 0, -0.5457364, 0, 0.8379569, -79.4241, 0.78043, -294.50757)
+audio_name = ExtResource("8_rncrq")
+default_name = ExtResource("8_0t0ks")
+player = NodePath("../../Player")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_adkkv")
+
+[node name="doors" type="Node3D" parent="."]
+
+[node name="Door" parent="doors" instance=ExtResource("5_42dln")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -56.283203, 4.773256, -289.13538)
+
+[node name="Door2" parent="doors" instance=ExtResource("5_42dln")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -56.283203, 1.8722222, -289.13538)
+
+[node name="Door3" parent="doors" instance=ExtResource("5_42dln")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -77.567116, 1.8746498, -295.75134)
+
+[node name="PauseMenu" parent="." instance=ExtResource("10_qqygc")]
+
+[node name="AudioSource" parent="." instance=ExtResource("14_hcwq1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.274237, 1.9290143, -280.73688)

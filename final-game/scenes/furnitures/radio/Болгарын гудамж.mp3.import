@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b42n8ovvmim1k"
+path="res://.godot/imported/Болгарын гудамж.mp3-88814af67491ddca637589de22c266a5.mp3str"
+
+[deps]
+
+source_file="res://scenes/furnitures/radio/Болгарын гудамж.mp3"
+dest_files=["res://.godot/imported/Болгарын гудамж.mp3-88814af67491ddca637589de22c266a5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
