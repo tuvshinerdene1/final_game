@@ -35,6 +35,6 @@ distance_fade_shadow = 15.0
 [node name="BreathingPlayer" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6649535, 0)
 stream = ExtResource("3_wnvi2")
-volume_db = 20.0
+volume_db = 50.0
 autoplay = true
-parameters/looping = false
+parameters/looping = true

@@ -37,6 +37,57 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Node/Layer_2 kicken_wall": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node10/Layer_1 toilet_floor": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node11/Layer_2 out_wall": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node12/Layer_3 ceiling": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node2/Layer_2 bed1_wall": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node3/Layer_2 corridor_wall": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node4/Layer_3 corner": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node5/Layer_2 living_wall": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node6/Layer_2 bed2_wall": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node7/Layer_1 wood_floor": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node8/Layer_1 kitchen_floor": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node9/Layer_2 toilet_wall": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
