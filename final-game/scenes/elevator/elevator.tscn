@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://b7a046v0qaba0"]
+
+[node name="Elevator" type="Node3D"]

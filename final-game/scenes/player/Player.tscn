@@ -26,11 +26,16 @@ volume_db = -40.0
 parameters/looping = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-light_energy = 0.2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09256005, 0)
+light_energy = 0.3
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 10.0
 shadow_enabled = true
 distance_fade_enabled = true
 distance_fade_begin = 15.0
 distance_fade_shadow = 15.0
+spot_range = 5.5880494
+spot_angle = 45.341965
 
 [node name="BreathingPlayer" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6649535, 0)

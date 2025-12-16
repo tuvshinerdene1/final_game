@@ -26,6 +26,8 @@ extends CharacterBody3D
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var camera: Camera3D = $Camera3D
+@onready var spotlight : SpotLight3D = $SpotLight3D
+var is_light_on := true
 
 # ---------- FOOTSTEP NODE ----------
 @onready var footstep_player: AudioStreamPlayer3D = $FootstepPlayer

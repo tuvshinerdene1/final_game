@@ -1,11 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://8gaq3yih1l08"]
+[gd_scene load_steps=5 format=3 uid="uid://8gaq3yih1l08"]
 
 [ext_resource type="PackedScene" uid="uid://7gq5w1poek33" path="res://scenes/production_levels/level1/level_1_model.tscn" id="2_aqg50"]
 [ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="2_hwl57"]
+[ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="3_hwl57"]
 
 [sub_resource type="Environment" id="Environment_aqg50"]
 background_mode = 1
 ambient_light_source = 2
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.2
+volumetric_fog_albedo = Color(0.10747976, 0.10747973, 0.10747977, 1)
+volumetric_fog_length = 10.0
 
 [node name="Level1" type="Node3D"]
 
@@ -17,3 +22,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.824522, 0, -2.3204327)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_aqg50")
+
+[node name="light_bulbs" type="Node" parent="."]
+
+[node name="LightBulb" parent="light_bulbs" instance=ExtResource("3_hwl57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4889, 1.6813928, -3.2156286)
+light_energy = 0.01
+light_size = 1.0
