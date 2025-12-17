@@ -1,0 +1,137 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bi2eaewagws47"
+path="res://.godot/imported/corridor.glb-338da5e3aa877f849c7167a2cd661bdf.scn"
+
+[deps]
+
+source_file="res://scenes/production_levels/corridor/model/corridor.glb"
+dest_files=["res://.godot/imported/corridor.glb-338da5e3aa877f849c7167a2cd661bdf.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"nodes": {
+"PATH:Node/Layer_1 floor": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node10/Layer_LETTERE": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node11/Obj_Layer_0_1": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node12/Obj_Layer_02": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node13/Obj_Layer_1 stair_metal_1": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node14/Obj_Layer_1 stair_plastic_1": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node15/Obj_Layer_03": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node16/Obj_Layer_1 stair_metal_2": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node17/Obj_Layer_1 stair_plastic_2": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node18/Obj_Layer_04": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node19/Obj_Layer_1 stair_metal_3": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node2/Layer_1 wall": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node20/Obj_Layer_1 stair_plastic_3": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node21/Obj_Layer_05": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node22/Obj_Layer_1 stair_metal_4": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node23/Obj_Layer_1 stair_plastic_4": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node3/Layer_1 ceiling": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node4/Layer_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node5/Layer_1 stair_metal": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node6/Layer_1 stair_plastic": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node7/Obj_Layer_0": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node8/Obj_Layer_1 stair_metal": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:Node9/Obj_Layer_1 stair_plastic": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bi2eaewagws47"
-path="res://.godot/imported/corridor.glb-a8128fb78ab34d06eae5011b7cf566e8.scn"
+uid="uid://n0pkhv2bkomq"
+path="res://.godot/imported/simple_wood_planks_debris_pack.glb-9a66512a161ec1523f8a8bed423ace31.scn"
 
 [deps]
 
-source_file="res://assets/map_models/corridor/corridor.glb"
-dest_files=["res://.godot/imported/corridor.glb-a8128fb78ab34d06eae5011b7cf566e8.scn"]
+source_file="res://assets/map_models/trash/simple_wood_planks_debris_pack.glb"
+dest_files=["res://.godot/imported/simple_wood_planks_debris_pack.glb-9a66512a161ec1523f8a8bed423ace31.scn"]
 
 [params]
 

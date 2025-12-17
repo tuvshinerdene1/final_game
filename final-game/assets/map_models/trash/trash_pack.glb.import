@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dtd00681cohl6"
-path="res://.godot/imported/elevator.glb-5c2fd4475a738ec0dc6936dd99bafdd4.scn"
+uid="uid://b4t0w3n8e4jc8"
+path="res://.godot/imported/trash_pack.glb-a923cfa8b32f2865f71ce9d76ce49266.scn"
 
 [deps]
 
-source_file="res://scenes/elevator/model/elevator.glb"
-dest_files=["res://.godot/imported/elevator.glb-5c2fd4475a738ec0dc6936dd99bafdd4.scn"]
+source_file="res://assets/map_models/trash/trash_pack.glb"
+dest_files=["res://.godot/imported/trash_pack.glb-a923cfa8b32f2865f71ce9d76ce49266.scn"]
 
 [params]
 
@@ -37,19 +37,6 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:Node/Layer_0": {
-"physics/shape_type": 2
-},
-"PATH:Node2/Layer_3 ele_floor": {
-"physics/shape_type": 2
-},
-"PATH:Node3/Layer_3 ele_main": {
-"generate/physics": true,
-"physics/shape_type": 2
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

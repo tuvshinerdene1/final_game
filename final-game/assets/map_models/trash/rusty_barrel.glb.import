@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dtd00681cohl6"
-path="res://.godot/imported/elevator.glb-5c2fd4475a738ec0dc6936dd99bafdd4.scn"
+uid="uid://ddvd8c6yqbp4s"
+path="res://.godot/imported/rusty_barrel.glb-065bde2fd9811e323436dd5e30ec1b31.scn"
 
 [deps]
 
-source_file="res://scenes/elevator/model/elevator.glb"
-dest_files=["res://.godot/imported/elevator.glb-5c2fd4475a738ec0dc6936dd99bafdd4.scn"]
+source_file="res://assets/map_models/trash/rusty_barrel.glb"
+dest_files=["res://.godot/imported/rusty_barrel.glb-065bde2fd9811e323436dd5e30ec1b31.scn"]
 
 [params]
 
@@ -37,19 +37,6 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:Node/Layer_0": {
-"physics/shape_type": 2
-},
-"PATH:Node2/Layer_3 ele_floor": {
-"physics/shape_type": 2
-},
-"PATH:Node3/Layer_3 ele_main": {
-"generate/physics": true,
-"physics/shape_type": 2
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

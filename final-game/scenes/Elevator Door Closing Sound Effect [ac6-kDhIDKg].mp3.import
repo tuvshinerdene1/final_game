@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp0f3sd8jbg88"
+path="res://.godot/imported/Elevator Door Closing Sound Effect [ac6-kDhIDKg].mp3-3af3113a516f1e18a81c36d2ce9f2229.mp3str"
+
+[deps]
+
+source_file="res://scenes/Elevator Door Closing Sound Effect [ac6-kDhIDKg].mp3"
+dest_files=["res://.godot/imported/Elevator Door Closing Sound Effect [ac6-kDhIDKg].mp3-3af3113a516f1e18a81c36d2ce9f2229.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

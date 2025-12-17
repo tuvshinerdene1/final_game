@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://da72ajhydjy16"]
+
+[ext_resource type="PackedScene" uid="uid://n0pkhv2bkomq" path="res://assets/map_models/trash/simple_wood_planks_debris_pack.glb" id="1_301pl"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_301pl")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
