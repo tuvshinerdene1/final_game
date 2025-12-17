@@ -43,5 +43,5 @@ transform = Transform3D(-0.018327218, 0, 1.0098294, 0, 0.5665083, 0, -0.7060052,
 
 [node name="LightBulb" parent="light_bulbs" instance=ExtResource("3_hwl57")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4889, 1.6813928, -3.2156286)
-light_energy = 0.01
+light_energy = 0.1
 light_size = 1.0
