@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dtd00681cohl6" path="res://scenes/elevator/model/elevator.glb" id="1_7w7uo"]
 [ext_resource type="Script" uid="uid://c1e5s1g347yai" path="res://scenes/elevator/elevator.gd" id="1_8ved2"]
-[ext_resource type="AudioStream" uid="uid://dp0f3sd8jbg88" path="res://scenes/Elevator Door Closing Sound Effect [ac6-kDhIDKg].mp3" id="2_flwkg"]
+[ext_resource type="AudioStream" uid="uid://dp0f3sd8jbg88" path="res://scenes/elevator/Elevator Door Closing Sound Effect [ac6-kDhIDKg].mp3" id="2_flwkg"]
 [ext_resource type="PackedScene" uid="uid://c7cngxqg62yx" path="res://scenes/elevator/model/elevator_door.glb" id="3_21fob"]
 [ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="4_hadwe"]
 
@@ -104,6 +104,7 @@ libraries = {
 
 [node name="LightBulb" parent="." instance=ExtResource("4_hadwe")]
 transform = Transform3D(1, 0, 0, 0, -0.99993896, -0.011047767, 0, 0.011047767, -0.99993896, 0.7572359, 2.9510672, 0.72418135)
+light_energy = 0.1
 light_size = 1.5
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

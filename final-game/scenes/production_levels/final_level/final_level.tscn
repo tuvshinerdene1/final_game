@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxfw5xl47fh2q"]
+
+[ext_resource type="PackedScene" uid="uid://d3vxe7oncfpd" path="res://scenes/production_levels/corridor/corridor.tscn" id="1_3u61e"]
+[ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="2_ix1qr"]
+[ext_resource type="PackedScene" uid="uid://8gaq3yih1l08" path="res://scenes/production_levels/level1/level1.tscn" id="3_ix1qr"]
+
+[sub_resource type="Environment" id="Environment_rof60"]
+background_mode = 1
+ambient_light_source = 1
+reflected_light_source = 1
+
+[node name="FinalLevel" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rof60")
+
+[node name="Corridor" parent="." instance=ExtResource("1_3u61e")]
+
+[node name="Player" parent="." instance=ExtResource("2_ix1qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.925001, 1.2768669, -3.316478)
+
+[node name="Level1" parent="." instance=ExtResource("3_ix1qr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -20.227, 0.05, -17.09)
