@@ -1,3 +1,93 @@
-[gd_scene format=3 uid="uid://b7a046v0qaba0"]
+[gd_scene load_steps=8 format=3 uid="uid://b7a046v0qaba0"]
+
+[ext_resource type="PackedScene" uid="uid://dtd00681cohl6" path="res://scenes/elevator/model/elevator.glb" id="1_7w7uo"]
+[ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="2_21fob"]
+[ext_resource type="PackedScene" uid="uid://c7cngxqg62yx" path="res://scenes/elevator/model/elevator_door.glb" id="3_21fob"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hadwe"]
+size = Vector3(8.404907, 1, 4.9785156)
+
+[sub_resource type="Animation" id="Animation_21fob"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("elevator_door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.3532794, 0.01973766, -0.0030457973), Vector3(-0.8381943, 0.01973766, -0.0030457973)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("elevator_door2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.23179257, 0.01973766, -0.0030457973), Vector3(-0.21850353, 0.01973766, -0.0030457973)]
+}
+
+[sub_resource type="Animation" id="Animation_hadwe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("elevator_door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.3532794, 0.01973766, -0.0030457973)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("elevator_door2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.23179257, 0.01973766, -0.0030457973)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ved2"]
+_data = {
+&"RESET": SubResource("Animation_hadwe"),
+&"open": SubResource("Animation_21fob")
+}
 
 [node name="Elevator" type="Node3D"]
+
+[node name="elevator" parent="." instance=ExtResource("1_7w7uo")]
+transform = Transform3D(1.3537912, 0, 0, 0, 1.1849637, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_21fob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45616794, 1.4295704, 0.4778089)
+
+[node name="elevator_door" parent="." instance=ExtResource("3_21fob")]
+transform = Transform3D(1.7836456, 0, 0, 0, 1.2061098, 0, 0, 0, 6.6727533, -1.3532794, 0.01973766, -0.0030457973)
+
+[node name="elevator_door2" parent="." instance=ExtResource("3_21fob")]
+transform = Transform3D(1.7836456, 0, 0, 0, 1.2061098, 0, 0, 0, 6.6727533, 0.23179257, 0.01973766, -0.0030457973)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37554932, 0, -1.9892578)
+shape = SubResource("BoxShape3D_hadwe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8ved2")
+}
