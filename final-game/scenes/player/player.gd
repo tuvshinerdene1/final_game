@@ -26,7 +26,8 @@ extends CharacterBody3D
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var camera: Camera3D = $Camera3D
-@onready var spotlight : SpotLight3D = $SpotLight3D
+@onready var spotlight : SpotLight3D = $Camera3D/SpotLight3D
+@onready var click_sound :AudioStreamPlayer3D= $toggle_light_sound
 var is_light_on := true
 
 # ---------- FOOTSTEP NODE ----------
@@ -59,10 +60,9 @@ func _physics_process(delta: float) -> void:
 	apply_gravity(delta)
 	move()
 	apply_headbob_and_sway(delta)
-
 	_update_walking_sound()  
-
 	move_and_slide()
+	toggle_light()
 
 func apply_gravity(delta: float) -> void:
 	if not is_on_floor():
@@ -123,12 +123,9 @@ func apply_headbob_and_sway(delta: float) -> void:
 	var current_local_rotation := Vector3(0.0, 0.0, camera.rotation.z)
 	var new_local_rotation := current_local_rotation.lerp(target_rotation, delta * lerp_speed)
 	camera.rotation.z = new_local_rotation.z
-
-
 func _is_walking() -> bool:
 	var horizontal_speed := Vector2(velocity.x, velocity.z).length()
 	return horizontal_speed > MIN_WALK_SPEED and is_on_floor()
-
 func _update_walking_sound() -> void:
 	var walking := _is_walking()
 
@@ -141,3 +138,12 @@ func _update_walking_sound() -> void:
 		# Stop the sound when you stop walking or leave the floor
 		if footstep_player.playing:
 			footstep_player.stop()
+			
+func toggle_light():
+	if Input.is_action_just_pressed("flash_light"):
+		is_light_on = not is_light_on
+		click_sound.play()
+		if is_light_on:
+			spotlight.visible = true
+		else:
+			spotlight.visible = false
