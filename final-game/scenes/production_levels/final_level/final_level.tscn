@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxfw5xl47fh2q"]
+[gd_scene load_steps=6 format=3 uid="uid://cxfw5xl47fh2q"]
 
 [ext_resource type="PackedScene" uid="uid://d3vxe7oncfpd" path="res://scenes/production_levels/corridor/corridor.tscn" id="1_3u61e"]
 [ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="2_ix1qr"]
 [ext_resource type="PackedScene" uid="uid://8gaq3yih1l08" path="res://scenes/production_levels/level1/level1.tscn" id="3_ix1qr"]
+[ext_resource type="AudioStream" uid="uid://baj2nhdddwcll" path="res://assets/sound/ambient_sound/P.T. Silent Hills creepy ambient music (PS4) [Vg2IuNk28sI].mp3" id="4_rof60"]
 
 [sub_resource type="Environment" id="Environment_rof60"]
 background_mode = 1
@@ -20,4 +21,9 @@ environment = SubResource("Environment_rof60")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.925001, 1.2768669, -3.316478)
 
 [node name="Level1" parent="." instance=ExtResource("3_ix1qr")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -20.227, 0.05, -17.09)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -20.227, 0.05, -16.85)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_rof60")
+autoplay = true
+parameters/looping = true
