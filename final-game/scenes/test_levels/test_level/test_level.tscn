@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="8_0t0ks"]
 [ext_resource type="AudioStream" uid="uid://b42n8ovvmim1k" path="res://scenes/furnitures/radio/Болгарын гудамж.mp3" id="8_rncrq"]
 [ext_resource type="PackedScene" uid="uid://b88crces8q8xk" path="res://scenes/test_levels/test_level/PauseMenu.tscn" id="10_qqygc"]
-[ext_resource type="PackedScene" uid="uid://dk5f51cupss8c" path="res://scenes/test_levels/test_level/MazeSound.tscn" id="14_hcwq1"]
+[ext_resource type="PackedScene" uid="uid://cctb0wiqe6oo7" path="res://scenes/baby cry/MazeSound.tscn" id="14_hcwq1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_12ge2"]
 size = Vector3(1, 1, 1.0336914)

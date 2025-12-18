@@ -16,7 +16,6 @@ func _ready() -> void:
 	settings_button.pressed.connect(_on_settings_pressed)
 	main_menu_button.pressed.connect(_on_main_menu_pressed)
 
-# Use _unhandled_key_input for higher priority blocking
 func _unhandled_key_input(event: InputEvent) -> void:
 	if visible and event.keycode != KEY_ESCAPE:
 		get_viewport().set_input_as_handled()

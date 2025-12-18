@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dk5f51cupss8c"]
+[gd_scene load_steps=4 format=3 uid="uid://cctb0wiqe6oo7"]
 
-[ext_resource type="AudioStream" uid="uid://bxv0pao5wpxb4" path="res://assets/sound/misc/Baby Crying Sound Effect.mp3" id="1_3lavm"]
-[ext_resource type="Script" uid="uid://7f3xhr7v18fm" path="res://scenes/test_levels/test_level/audiosource.gd" id="2_3lavm"]
+[ext_resource type="AudioStream" uid="uid://bxv0pao5wpxb4" path="res://assets/sound/misc/Baby Crying Sound Effect.mp3" id="1_nqm7t"]
+[ext_resource type="Script" uid="uid://7f3xhr7v18fm" path="res://scenes/test_levels/test_level/audiosource.gd" id="2_hit04"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g8pbb"]
 radius = 30.0
@@ -9,13 +9,13 @@ radius = 30.0
 [node name="AudioSource" type="Node3D"]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("1_3lavm")
+stream = ExtResource("1_nqm7t")
 pitch_scale = 0.4
 max_distance = 30.0
 parameters/looping = true
 
 [node name="Area3D" type="Area3D" parent="."]
-script = ExtResource("2_3lavm")
+script = ExtResource("2_hit04")
 hear_radius = 30.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]

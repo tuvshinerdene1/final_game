@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://cxfw5xl47fh2q"]
+[gd_scene load_steps=16 format=3 uid="uid://cxfw5xl47fh2q"]
 
 [ext_resource type="PackedScene" uid="uid://d3vxe7oncfpd" path="res://scenes/production_levels/corridor/corridor.tscn" id="1_3u61e"]
+[ext_resource type="Script" uid="uid://coiofb77452bc" path="res://scenes/test_levels/test_level/test_level.gd" id="1_7fxbf"]
 [ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="2_ix1qr"]
 [ext_resource type="PackedScene" uid="uid://8gaq3yih1l08" path="res://scenes/production_levels/level1/level1.tscn" id="3_ix1qr"]
 [ext_resource type="AudioStream" uid="uid://baj2nhdddwcll" path="res://assets/sound/ambient_sound/P.T. Silent Hills creepy ambient music (PS4) [Vg2IuNk28sI].mp3" id="4_rof60"]
@@ -12,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c3e4kcdwqb4ed" path="res://scenes/production_levels/level7/level_7.tscn" id="10_ewsar"]
 [ext_resource type="PackedScene" uid="uid://bs54rccgkcysm" path="res://scenes/production_levels/level8/level_8.tscn" id="11_th561"]
 [ext_resource type="PackedScene" uid="uid://b7a046v0qaba0" path="res://scenes/elevator/elevator.tscn" id="12_oamqr"]
+[ext_resource type="PackedScene" uid="uid://b88crces8q8xk" path="res://scenes/test_levels/test_level/PauseMenu.tscn" id="13_k4hin"]
 
 [sub_resource type="Environment" id="Environment_rof60"]
 background_mode = 1
@@ -19,6 +21,7 @@ ambient_light_source = 1
 reflected_light_source = 1
 
 [node name="FinalLevel" type="Node3D"]
+script = ExtResource("1_7fxbf")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rof60")
@@ -42,7 +45,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -20.
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.892, 0.099, -36.622)
 
 [node name="Player" parent="." instance=ExtResource("2_ix1qr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.21542, 1.5449524, 21.907482)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.904573, 1.5449524, -3.4351792)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_rof60")
@@ -67,3 +70,5 @@ parameters/looping = true
 
 [node name="Elevator" parent="." instance=ExtResource("12_oamqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.292, 0.099, 102.04)
+
+[node name="PauseMenu" parent="." instance=ExtResource("13_k4hin")]

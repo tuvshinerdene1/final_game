@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cgoawtblahyl0" path="res://assets/map_models/level7/Level_7.glb" id="1_q4i3r"]
 [ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="2_7kwj0"]
-[ext_resource type="PackedScene" uid="uid://dk5f51cupss8c" path="res://scenes/test_levels/test_level/MazeSound.tscn" id="3_nkrha"]
+[ext_resource type="PackedScene" uid="uid://cctb0wiqe6oo7" path="res://scenes/baby cry/MazeSound.tscn" id="3_nkrha"]
 
 [node name="Level_7" type="Node3D"]
 
