@@ -94,7 +94,7 @@ transform = Transform3D(0.0012360148, 0, -0.009923319, 0, 0.01, 0, 0.009923319, 
 transform = Transform3D(1.192488e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, 1.192488e-10, -19.379154, 0.37396502, -7.499386)
 
 [node name="Document" parent="." instance=ExtResource("11_tytmh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.974254, 1.2956929, -3.3520646)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.974254, 0.6981797, -4.621352)
 
 [node name="OutsideDoor2" parent="." instance=ExtResource("12_pobet")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -19.984, 0.3, -14.389)

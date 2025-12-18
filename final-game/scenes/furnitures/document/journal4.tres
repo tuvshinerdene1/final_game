@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DocumentData" load_steps=2 format=3 uid="uid://dnjnfp8bt8vfn"]
+
+[ext_resource type="Script" uid="uid://cbfqdprht2bx1" path="res://scenes/furnitures/document/document_data.gd" id="1_d88py"]
+
+[resource]
+script = ExtResource("1_d88py")
+pages = Array[String](["Алга болсон нялх хүүхдийг олсон талаар цагдаагийн байгууллагаас мэдээллээ. Харамсалтай нь, хүүхдийн хоолойн хөвчийг хүчээр авсан байдалтай байсан нь ", "урьдчилсан шалгалтаар тогтоогдсон бөгөөд уг хэргийг холбогдох байгууллагууд шалгаж байна."])
+metadata/_custom_type_script = "uid://cbfqdprht2bx1"
