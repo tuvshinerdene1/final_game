@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=17 format=3 uid="uid://11bv17opodnt"]
 
 [ext_resource type="Script" uid="uid://coiofb77452bc" path="res://scenes/test_levels/test_level/test_level.gd" id="1_sdm26"]
@@ -15,6 +16,25 @@
 [ext_resource type="PackedScene" uid="uid://b7a046v0qaba0" path="res://scenes/elevator/elevator.tscn" id="13_6eptk"]
 [ext_resource type="PackedScene" uid="uid://b88crces8q8xk" path="res://scenes/test_levels/test_level/PauseMenu.tscn" id="14_psvao"]
 [ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="15_th5yt"]
+=======
+[gd_scene load_steps=17 format=3 uid="uid://ctj0utbk4tnq4"]
+
+[ext_resource type="Script" uid="uid://coiofb77452bc" path="res://scenes/test_levels/test_level/test_level.gd" id="1_wn55n"]
+[ext_resource type="PackedScene" uid="uid://d3vxe7oncfpd" path="res://scenes/production_levels/corridor/corridor.tscn" id="2_m7hy6"]
+[ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="3_bnxr4"]
+[ext_resource type="AudioStream" uid="uid://baj2nhdddwcll" path="res://assets/sound/ambient_sound/P.T. Silent Hills creepy ambient music (PS4) [Vg2IuNk28sI].mp3" id="4_ryf60"]
+[ext_resource type="PackedScene" uid="uid://8gaq3yih1l08" path="res://scenes/production_levels/level1/level1.tscn" id="5_th8ph"]
+[ext_resource type="PackedScene" uid="uid://x664cx1lidro" path="res://scenes/production_levels/level2/level_2.tscn" id="6_v5uww"]
+[ext_resource type="PackedScene" uid="uid://djn5ys604ln23" path="res://scenes/production_levels/level3/level_3.tscn" id="7_2r5yr"]
+[ext_resource type="PackedScene" uid="uid://dee0dtctw54j8" path="res://scenes/production_levels/level4/level_4.tscn" id="8_l54nq"]
+[ext_resource type="PackedScene" uid="uid://lj6hskffmajc" path="res://scenes/production_levels/level5/level_5.tscn" id="9_pa7d0"]
+[ext_resource type="PackedScene" uid="uid://phgv7ho8rgr0" path="res://scenes/production_levels/level6/level_6.tscn" id="10_bjauc"]
+[ext_resource type="PackedScene" uid="uid://c3e4kcdwqb4ed" path="res://scenes/production_levels/level7/level_7.tscn" id="11_grfdp"]
+[ext_resource type="PackedScene" uid="uid://bs54rccgkcysm" path="res://scenes/production_levels/level8/level_8.tscn" id="12_5rgok"]
+[ext_resource type="PackedScene" uid="uid://b7a046v0qaba0" path="res://scenes/elevator/elevator.tscn" id="13_qun8y"]
+[ext_resource type="PackedScene" uid="uid://b88crces8q8xk" path="res://scenes/test_levels/test_level/PauseMenu.tscn" id="14_61jev"]
+[ext_resource type="PackedScene" uid="uid://8isxjp62xfmw" path="res://scenes/furnitures/document/DocumentUI.tscn" id="15_sdm26"]
+>>>>>>> 4a56da57212e687660738b7d4ace270e5b774bd4
 
 [sub_resource type="Environment" id="Environment_rof60"]
 background_mode = 1
@@ -72,6 +92,7 @@ parameters/looping = true
 [node name="Elevator" parent="." instance=ExtResource("13_6eptk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.292, 0.099, 102.04)
 
+<<<<<<< HEAD
 [node name="PauseMenu" parent="." instance=ExtResource("14_psvao")]
 
 [node name="permalocked_door" type="Node3D" parent="."]
@@ -79,3 +100,8 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.8
 
 [node name="OutsideDoor" parent="permalocked_door" instance=ExtResource("15_th5yt")]
 perma_locked = true
+=======
+[node name="PauseMenu" parent="." instance=ExtResource("14_61jev")]
+
+[node name="DocumentUi" parent="." groups=["DocumentUI"] instance=ExtResource("15_sdm26")]
+>>>>>>> 4a56da57212e687660738b7d4ace270e5b774bd4
