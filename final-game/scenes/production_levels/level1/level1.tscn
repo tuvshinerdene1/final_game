@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://lj4ry77s71vo" path="res://scenes/furnitures/eye_portrait/eye_portrait.tscn" id="2_hwl57"]
 [ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="4_p5lcn"]
 [ext_resource type="PackedScene" uid="uid://cwip4y4xu4wf" path="res://assets/map_models/furniture/radiator.tscn" id="5_4ym0s"]
-[ext_resource type="PackedScene" uid="uid://ctpki6fn8ebme" path="res://assets/map_models/furniture/kitchen_furniture.tscn" id="6_1nlu2"]
 [ext_resource type="PackedScene" uid="uid://t1dvv4s4nsc1" path="res://assets/map_models/furniture/sofa.tscn" id="6_islxn"]
 [ext_resource type="PackedScene" uid="uid://dkk7l1ol38847" path="res://assets/map_models/furniture/kitchen_table.tscn" id="7_36w8h"]
 [ext_resource type="PackedScene" uid="uid://ce53xx6didmoa" path="res://assets/map_models/furniture/bed.tscn" id="8_tytmh"]
@@ -73,9 +72,6 @@ transform = Transform3D(-1.8, 0, -1.509958e-07, 0, 0.8, 0, 2.7179243e-07, 0, -1,
 
 [node name="Radiator_A_3" parent="radiator" instance=ExtResource("5_4ym0s")]
 transform = Transform3D(-1.8, 0, -1.509958e-07, 0, 0.8, 0, 2.7179243e-07, 0, -1, -19.58626, 0.3935706, -0.40952516)
-
-[node name="Kitchen_fur" parent="." instance=ExtResource("6_1nlu2")]
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -6.8121877, 0.0012619495, -6.00569)
 
 [node name="Sofa" parent="." instance=ExtResource("6_islxn")]
 transform = Transform3D(1.192488e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, 1.192488e-10, -13.485975, 0.5443845, -3.0468428)
