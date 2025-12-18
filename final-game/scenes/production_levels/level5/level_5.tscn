@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://lj6hskffmajc"]
+[gd_scene load_steps=6 format=3 uid="uid://lj6hskffmajc"]
 
 [ext_resource type="PackedScene" uid="uid://xgq7fu4qcfo3" path="res://assets/map_models/level5/Level_5.glb" id="1_1tdt7"]
 [ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="2_jmvh0"]
 [ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="3_bklmw"]
 [ext_resource type="PackedScene" uid="uid://4vmydmcb6a4u" path="res://scenes/furnitures/document/document.tscn" id="4_0222n"]
+[ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="5_0222n"]
 
 [node name="Level5" type="Node3D"]
 
@@ -23,3 +24,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.505871, 0.39948434, -38.4
 
 [node name="Document" parent="." instance=ExtResource("4_0222n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.518082, 0.44361305, -39.0966)
+
+[node name="OutsideDoor" parent="." instance=ExtResource("5_0222n")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -9.79, 0.399, -44.92)
+
+[node name="OutsideDoor2" parent="." instance=ExtResource("5_0222n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.89, 0.399, -37.938)
