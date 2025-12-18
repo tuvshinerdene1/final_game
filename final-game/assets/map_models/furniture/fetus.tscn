@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://hmvtouab0w4p"]
+
+[ext_resource type="PackedScene" uid="uid://bilfp72gcgtr5" path="res://assets/map_models/furniture_map/alien_fetus.glb" id="1_tslp0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2827v"]
+size = Vector3(0.6213379, 1.2562284, 0.9718933)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_tslp0")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04650879, 1.1124835, 0.31059265)
+shape = SubResource("BoxShape3D_2827v")
