@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c3yp7d63lwb7e"
-path="res://.godot/imported/Level_8.glb-480b0ec86fde73e59c8f81e180aea824.scn"
+uid="uid://3iqu5wq28hj5"
+path="res://.godot/imported/Level_8.glb-4b497d3740c315e27054fe55eb8d0a0b.scn"
 
 [deps]
 
-source_file="res://assets/map_models/level8/Level_8.glb"
-dest_files=["res://.godot/imported/Level_8.glb-480b0ec86fde73e59c8f81e180aea824.scn"]
+source_file="res:///assets/map_models/level8/Level_8.glb"
+dest_files=["res://.godot/imported/Level_8.glb-4b497d3740c315e27054fe55eb8d0a0b.scn"]
 
 [params]
 

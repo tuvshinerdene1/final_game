@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c80d7k4yr2emn"
-path="res://.godot/imported/Level_4.glb-ce87f5e1e40ec8b6dfaeaa3afa8e7e09.scn"
+path="res://.godot/imported/Level_4.glb-e6dfd629703ff451f464ba6894449abc.scn"
 
 [deps]
 
-source_file="res://assets/map_models/level4/Level_4.glb"
-dest_files=["res://.godot/imported/Level_4.glb-ce87f5e1e40ec8b6dfaeaa3afa8e7e09.scn"]
+source_file="res:///assets/map_models/level4/Level_4.glb"
+dest_files=["res://.godot/imported/Level_4.glb-e6dfd629703ff451f464ba6894449abc.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="res://addons/physics_collision_import_generator/import_scripts/import_physics_trimesh.gd"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""

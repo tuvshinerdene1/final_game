@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3e4kcdwqb4ed"]
+
+[ext_resource type="PackedScene" uid="uid://cgoawtblahyl0" path="res://assets/map_models/level7/Level_7.glb" id="1_q4i3r"]
+
+[node name="Level_7" type="Node3D"]
+
+[node name="Level_7" parent="." instance=ExtResource("1_q4i3r")]
