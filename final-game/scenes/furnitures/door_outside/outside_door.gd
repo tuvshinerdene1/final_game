@@ -9,6 +9,7 @@ extends Node3D
 @export var locked_sound: AudioStream
 @export var unlock_sound : AudioStream
 @export var locked_with_key : bool = false
+@export var perma_locked : bool = false
 
 var is_open: bool = false
 var player_in_range: bool = false
@@ -26,6 +27,7 @@ func _ready():
 func _process(_delta):
 	# Stop processing interaction if the door is permanently locked
 	if is_permanently_locked: return
+	if perma_locked: return
 	
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		if not anim.is_playing():

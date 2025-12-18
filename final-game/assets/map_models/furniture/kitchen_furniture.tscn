@@ -1,0 +1,128 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctpki6fn8ebme"]
+
+[ext_resource type="PackedScene" uid="uid://dv8tgusb1ghv2" path="res://assets/map_models/furniture_map/cucina_lineare_con_colonne_in_nicchia.glb" id="1_6ctud"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ctud"]
+size = Vector3(358.79248, 260.56854, 59.703922)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_6ctud")]
+
+[node name="G_0_extern_wall" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="0"]
+visible = false
+
+[node name="G_1_extern_wall" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="1"]
+visible = false
+
+[node name="G_2_extern_wall" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="2"]
+visible = false
+
+[node name="G_3_extern_wall" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="3"]
+visible = false
+
+[node name="G_4_extern_wall" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="4"]
+visible = false
+
+[node name="G_5_extern_wall" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="5"]
+visible = false
+
+[node name="interiors" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="6"]
+visible = false
+
+[node name="Mesh7" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/interiors" index="0"]
+visible = false
+
+[node name="Mesh7_img2_6_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/interiors/Mesh7" index="0"]
+visible = false
+
+[node name="G_38" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="7"]
+visible = false
+
+[node name="Mesh8" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_38" index="0"]
+visible = false
+
+[node name="Mesh8_img45_7_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_38/Mesh8" index="0"]
+visible = false
+
+[node name="Mesh8_Color_8_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_38/Mesh8" index="1"]
+visible = false
+
+[node name="G_39" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="8"]
+visible = false
+
+[node name="G_52" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="19"]
+visible = false
+
+[node name="Mesh26" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_53" index="0"]
+visible = false
+
+[node name="G_54" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="21"]
+visible = false
+
+[node name="G_55" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="22"]
+visible = false
+
+[node name="Mesh28" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_55" index="0"]
+visible = false
+
+[node name="Mesh28_Color_10_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_55/Mesh28" index="0"]
+visible = false
+
+[node name="Mesh28_img45_7_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_55/Mesh28" index="1"]
+visible = false
+
+[node name="Mesh28_Color_18_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_55/Mesh28" index="2"]
+visible = false
+
+[node name="Mesh28_Color_13_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_55/Mesh28" index="3"]
+visible = false
+
+[node name="Mesh28_img17_34_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_55/Mesh28" index="4"]
+visible = false
+
+[node name="Mesh28_Color_11_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_55/Mesh28" index="5"]
+visible = false
+
+[node name="G_56" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="23"]
+visible = false
+
+[node name="Mesh29" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_56" index="0"]
+visible = false
+
+[node name="Mesh29_Color_8_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_56/Mesh29" index="0"]
+visible = false
+
+[node name="Mesh29_img45_7_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_56/Mesh29" index="1"]
+visible = false
+
+[node name="Mesh29_Color_36_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_56/Mesh29" index="2"]
+visible = false
+
+[node name="Mesh29_Color_10_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_56/Mesh29" index="3"]
+visible = false
+
+[node name="Mesh30_img45_7_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_57/Mesh30" index="0"]
+visible = false
+
+[node name="Mesh30_Color_8_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_57/Mesh30" index="1"]
+visible = false
+
+[node name="Mesh39_Color_11_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_64/Mesh39" index="0"]
+visible = false
+
+[node name="Mesh40_Color_11_0" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model/G_65/Mesh40" index="0"]
+visible = false
+
+[node name="G_89" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="36"]
+visible = false
+
+[node name="a3" parent="Sketchfab_model/cucina vers1bFBX_fbx/RootNode/Model" index="38"]
+visible = false
+
+[node name="Node3D" type="Node3D" parent="." index="1"]
+transform = Transform3D(0.0009981234, 0, 0, 0, 0.0009981234, -2.2162792e-19, 0, 2.2162792e-19, 0.0009981234, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D" index="0"]
+transform = Transform3D(10.000004, 0, 0, 0, 10.000004, 0, 0, 0, 10.000004, 1528.4886, 1216.056, 2277.134)
+shape = SubResource("BoxShape3D_6ctud")

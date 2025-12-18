@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccecxm007jfh5"]
+
+[ext_resource type="PackedScene" uid="uid://cr3iudhx10n18" path="res://assets/map_models/furniture_map/dirty_toilet.glb" id="1_l8p3r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l8p3r"]
+size = Vector3(7.2434387, 5.3963623, 3.9002838)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_l8p3r")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11579895, 2.1981812, 0.00038909912)
+shape = SubResource("BoxShape3D_l8p3r")

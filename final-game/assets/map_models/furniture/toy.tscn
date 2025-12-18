@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvwtfempmh7fp"]
+
+[ext_resource type="PackedScene" uid="uid://1umowve0yc1w" path="res://assets/map_models/furniture_map/toy_box.glb" id="1_lytam"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lytam"]
+size = Vector3(165.99695, 123.03409, 45.981384)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_lytam")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="Environment" parent="Sketchfab_model/b8dce7101fbf4c499da514b9795f651e_fbx/RootNode/Toy_Box_Sceme" index="0"]
+visible = false
+
+[node name="Wall2" parent="Sketchfab_model/b8dce7101fbf4c499da514b9795f651e_fbx/RootNode/Toy_Box_Sceme/Environment" index="0"]
+visible = false
+
+[node name="Wall2_Mat_Room_0" parent="Sketchfab_model/b8dce7101fbf4c499da514b9795f651e_fbx/RootNode/Toy_Box_Sceme/Environment/Wall2" index="0"]
+visible = false
+
+[node name="Wall1" parent="Sketchfab_model/b8dce7101fbf4c499da514b9795f651e_fbx/RootNode/Toy_Box_Sceme/Environment" index="1"]
+visible = false
+
+[node name="PottedPlant" parent="Sketchfab_model/b8dce7101fbf4c499da514b9795f651e_fbx/RootNode/Toy_Box_Sceme/Scene" index="15"]
+visible = false
+
+[node name="Bear" parent="Sketchfab_model/b8dce7101fbf4c499da514b9795f651e_fbx/RootNode/Toy_Box_Sceme/Scene" index="17"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.480896, -3.2664337, 22.490692)
+shape = SubResource("BoxShape3D_lytam")

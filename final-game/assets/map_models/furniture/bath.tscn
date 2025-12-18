@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfa7e7grxc4wc"]
+
+[ext_resource type="PackedScene" uid="uid://dxxm1ifso85ng" path="res://assets/map_models/furniture_map/old_ussr_bath.glb" id="1_tuq7n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tuq7n"]
+size = Vector3(169.14323, 56.36664, 72.94702)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_tuq7n")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20371415, 27.683317, 0.2711162)
+shape = SubResource("BoxShape3D_tuq7n")

@@ -33,7 +33,7 @@ var is_light_on := true
 # ---------- FOOTSTEP NODE ----------
 @onready var footstep_player: AudioStreamPlayer3D = $FootstepPlayer
 # -----------------------------------
-
+@onready var flashlight_ray : RayCast3D = $Camera3D/SpotLight3D/RayCast3D
 # Head bob vars
 var headbob_time: float = 0.0
 var idle_sway_time: float = 0.0
@@ -42,6 +42,9 @@ var original_camera_rotation: Vector3
 
 var direction: Vector3 = Vector3.ZERO
 var has_key: bool = false
+var last_portrait = null
+
+
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_PAUSABLE  
@@ -68,6 +71,22 @@ func _physics_process(delta: float) -> void:
 	_update_walking_sound()  
 	move_and_slide()
 	toggle_light()
+	check_flashlight_hit() # Add this line
+
+func check_flashlight_hit():
+	if is_light_on and flashlight_ray.is_colliding():
+		var collider = flashlight_ray.get_collider()
+		var portrait = collider.get_parent()
+		
+		if portrait.has_method("shine_light"):
+			portrait.shine_light()
+			last_portrait = portrait # Keep track of what we are looking at
+	else:
+		# If we stop hitting a portrait, tell the last one to reset
+		if last_portrait != null:
+			last_portrait.is_being_shined_on = false
+			last_portrait.play_default()
+			last_portrait = null
 
 func apply_gravity(delta: float) -> void:
 	if not is_on_floor():
