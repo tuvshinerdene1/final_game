@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://phgv7ho8rgr0"]
+[gd_scene load_steps=5 format=3 uid="uid://phgv7ho8rgr0"]
 
 [ext_resource type="PackedScene" uid="uid://b2uyvqpvbl50v" path="res://assets/map_models/level6/Level_6.glb" id="1_gc640"]
 [ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="2_0pl2u"]
+[ext_resource type="PackedScene" uid="uid://4vmydmcb6a4u" path="res://scenes/furnitures/document/document.tscn" id="3_nckrd"]
+[ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="4_y4t3l"]
 
 [node name="Level_6" type="Node3D"]
 
@@ -15,3 +17,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.
 
 [node name="window3" parent="." instance=ExtResource("2_0pl2u")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.222, 1.399, -17.506)
+
+[node name="Document" parent="." instance=ExtResource("3_nckrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7821536, 0.39948457, -19.610174)
+
+[node name="Retro Radio Receiver" parent="." instance=ExtResource("4_y4t3l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.68877, 0.39948446, -22.40648)
