@@ -79,3 +79,59 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.8
 
 [node name="OutsideDoor" parent="permalocked_door" instance=ExtResource("15_th5yt")]
 perma_locked = true
+
+[node name="OutsideDoor2" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.4, 0, 0.1)
+perma_locked = true
+
+[node name="OutsideDoor3" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -10.9, 0, -0.7)
+perma_locked = true
+
+[node name="OutsideDoor4" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3, 0, 6.607)
+perma_locked = true
+
+[node name="OutsideDoor5" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9, 0, 6.707)
+perma_locked = true
+
+[node name="OutsideDoor6" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 29.532, 0, 26.339)
+perma_locked = true
+
+[node name="OutsideDoor7" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 29.432, 0, 16.939)
+perma_locked = true
+
+[node name="OutsideDoor8" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20.676, 0.099, 40.356)
+perma_locked = true
+
+[node name="OutsideDoor10" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 22.176, 0.099, 30.256)
+perma_locked = true
+
+[node name="OutsideDoor11" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.706, 0.099, 37.238)
+perma_locked = true
+
+[node name="OutsideDoor12" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.606, 0.099, 35.738)
+perma_locked = true
+
+[node name="OutsideDoor13" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -7.194, 0.099, 28.456)
+perma_locked = true
+
+[node name="OutsideDoor14" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -7.294, 0.099, 19.056)
+perma_locked = true
+
+[node name="OutsideDoor15" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -9.394, 0.499, 43.645)
+perma_locked = true
+
+[node name="OutsideDoor9" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(-0.9953962, -0.09584575, -8.742278e-08, -0.09584575, 0.9953962, 0, 8.70203e-08, 8.379102e-09, -1, 23.516193, 0.16916257, 40.268986)
+perma_locked = true
