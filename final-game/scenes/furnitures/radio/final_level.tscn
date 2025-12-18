@@ -82,7 +82,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.292, 0.099, 102.04)
 [node name="PauseMenu" parent="." instance=ExtResource("13_k4hin")]
 
 [node name="Retro Radio Receiver" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_ke14o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.616116, 0.29999965, -12.230562)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.94404, 0.4765364, -16.168945)
 audio_name = ExtResource("16_ayh0t")
 default_name = ExtResource("17_i0cgy")
 player = NodePath("../Player")
