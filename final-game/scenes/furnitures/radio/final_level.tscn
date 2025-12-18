@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cxfw5xl47fh2q"]
+[gd_scene load_steps=17 format=3 uid="uid://cxfw5xl47fh2q"]
 
 [ext_resource type="PackedScene" uid="uid://d3vxe7oncfpd" path="res://scenes/production_levels/corridor/corridor.tscn" id="1_3u61e"]
 [ext_resource type="Script" uid="uid://coiofb77452bc" path="res://scenes/test_levels/test_level/test_level.gd" id="1_7fxbf"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bs54rccgkcysm" path="res://scenes/production_levels/level8/level_8.tscn" id="11_th561"]
 [ext_resource type="PackedScene" uid="uid://b7a046v0qaba0" path="res://scenes/elevator/elevator.tscn" id="12_oamqr"]
 [ext_resource type="PackedScene" uid="uid://b88crces8q8xk" path="res://scenes/test_levels/test_level/PauseMenu.tscn" id="13_k4hin"]
+[ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="15_ke14o"]
 
 [sub_resource type="Environment" id="Environment_rof60"]
 background_mode = 1
@@ -72,3 +73,21 @@ parameters/looping = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.292, 0.099, 102.04)
 
 [node name="PauseMenu" parent="." instance=ExtResource("13_k4hin")]
+
+[node name="Retro Radio Receiver" parent="." instance=ExtResource("15_ke14o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.616116, 0.29999965, -12.230562)
+
+[node name="Retro Radio Receiver2" parent="." instance=ExtResource("15_ke14o")]
+transform = Transform3D(0.9551906, -0.29599148, 0, 0.29599148, 0.9551906, 0, 0, 0, 1, -39.741917, 0.4896317, -47.629345)
+
+[node name="Retro Radio Receiver3" parent="." instance=ExtResource("15_ke14o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.406918, 0.39948446, -42.149796)
+
+[node name="Retro Radio Receiver4" parent="." instance=ExtResource("15_ke14o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.505871, 0.39948434, -38.45785)
+
+[node name="Retro Radio Receiver5" parent="." instance=ExtResource("15_ke14o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.68877, 0.39948446, -22.40648)
+
+[node name="Retro Radio Receiver6" parent="." instance=ExtResource("15_ke14o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.97174, 0.3976674, 101.6093)

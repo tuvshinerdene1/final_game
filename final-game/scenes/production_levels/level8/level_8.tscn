@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bs54rccgkcysm"]
+[gd_scene load_steps=3 format=3 uid="uid://bs54rccgkcysm"]
 
 [ext_resource type="PackedScene" uid="uid://3iqu5wq28hj5" path="res://assets/map_models/level8/Level_8.glb" id="1_eetvj"]
 [ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="2_t2g60"]
-[ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="3_3ai7y"]
 
 [node name="Level_8" type="Node3D"]
 
@@ -241,6 +240,3 @@ transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.
 light_color = Color(0, 0, 0, 1)
 light_energy = 100.0
 light_size = 0.5
-
-[node name="Retro Radio Receiver" parent="bulb" instance=ExtResource("3_3ai7y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.29641, 1.3976674, -184.1489)
