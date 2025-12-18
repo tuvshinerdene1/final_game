@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3e4kcdwqb4ed"]
+[gd_scene load_steps=3 format=3 uid="uid://c3e4kcdwqb4ed"]
 
 [ext_resource type="PackedScene" uid="uid://cgoawtblahyl0" path="res://assets/map_models/level7/Level_7.glb" id="1_q4i3r"]
+[ext_resource type="PackedScene" uid="uid://hmvtouab0w4p" path="res://assets/map_models/furniture/fetus.tscn" id="2_7kwj0"]
 
 [node name="Level_7" type="Node3D"]
 
 [node name="Level_7" parent="." instance=ExtResource("1_q4i3r")]
+
+[node name="fetus" parent="." instance=ExtResource("2_7kwj0")]
+transform = Transform3D(5.9624403e-09, 0.5, 0, 0.5, -5.9624403e-09, 4.371139e-08, 4.371139e-08, -5.2125306e-16, -0.5, 26.342129, 0.55383855, 1.12171)

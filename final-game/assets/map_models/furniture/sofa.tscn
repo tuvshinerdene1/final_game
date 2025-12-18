@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://t1dvv4s4nsc1"]
+
+[ext_resource type="PackedScene" uid="uid://b5d80mwwowixj" path="res://assets/map_models/furniture_map/sofa_-_classic_furniture_set..glb" id="1_u5nbv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_skvuu"]
+size = Vector3(95.45047, 95.58984, 192.90164)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jniub"]
+size = Vector3(94.60983, 94.31541, 81.02985)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i6pfv"]
+size = Vector3(95.36218, 96.81213, 81.31836)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ggahb"]
+size = Vector3(129.32141, 71.137405, 49.055176)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_u5nbv")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/classic_ set_FBX/RootNode/sofa_classic_ch_models_" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/classic_ set_FBX/RootNode/sofa_classic_ch_models_/StaticBody3D" index="0"]
+transform = Transform3D(1, 4.9824186e-14, 0, 1.02619736e-16, 1, -1.2619421e-07, 0, 1.2619421e-07, 1, 0.81027603, 48.62482, 0.05133847)
+shape = SubResource("BoxShape3D_skvuu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/classic_ set_FBX/RootNode/armchair_classic_ch_models_armchair_classic_ch_models_01" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/classic_ set_FBX/RootNode/armchair_classic_ch_models_armchair_classic_ch_models_01/StaticBody3D" index="0"]
+transform = Transform3D(1, 3.259629e-09, -2.8731358e-18, -3.259629e-09, 1, 0, -6.9650645e-14, 0, 1, -1.0056458, 47.04536, 0.07122803)
+shape = SubResource("BoxShape3D_jniub")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/classic_ set_FBX/RootNode/armchair_classic_ch_models_armchair_classic_ch_models" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/classic_ set_FBX/RootNode/armchair_classic_ch_models_armchair_classic_ch_models/StaticBody3D" index="0"]
+transform = Transform3D(1, -3.2596328e-09, -3.1974423e-13, 3.2596252e-09, 1, 8.881784e-14, -7.1054274e-15, 3.5527137e-15, 1, -0.03440857, 47.90606, -0.21315765)
+shape = SubResource("BoxShape3D_i6pfv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/classic_ set_FBX/RootNode/table_low" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/classic_ set_FBX/RootNode/table_low/StaticBody3D" index="0"]
+transform = Transform3D(1, 6.617445e-23, 3.259629e-09, 0, 1, -1.323489e-22, -3.259629e-09, 0, 1, -0.36541784, -0.25671387, -21.753178)
+shape = SubResource("BoxShape3D_ggahb")
