@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cxfw5xl47fh2q"]
+[gd_scene load_steps=24 format=3 uid="uid://cxfw5xl47fh2q"]
 
 [ext_resource type="PackedScene" uid="uid://d3vxe7oncfpd" path="res://scenes/production_levels/corridor/corridor.tscn" id="1_3u61e"]
 [ext_resource type="Script" uid="uid://coiofb77452bc" path="res://scenes/test_levels/test_level/test_level.gd" id="1_7fxbf"]
@@ -15,6 +15,13 @@
 [ext_resource type="PackedScene" uid="uid://b7a046v0qaba0" path="res://scenes/elevator/elevator.tscn" id="12_oamqr"]
 [ext_resource type="PackedScene" uid="uid://b88crces8q8xk" path="res://scenes/test_levels/test_level/PauseMenu.tscn" id="13_k4hin"]
 [ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="15_ke14o"]
+[ext_resource type="AudioStream" uid="uid://b42n8ovvmim1k" path="res://scenes/furnitures/radio/Болгарын гудамж.mp3" id="16_ayh0t"]
+[ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="17_i0cgy"]
+[ext_resource type="AudioStream" uid="uid://dtein8fesegf7" path="res://scenes/furnitures/radio/audio1.mp3" id="18_i0cgy"]
+[ext_resource type="AudioStream" uid="uid://14darx6i4uxv" path="res://scenes/furnitures/radio/audio3.mp3" id="19_yh1kr"]
+[ext_resource type="AudioStream" uid="uid://clppsul5qmpp2" path="res://scenes/furnitures/radio/audio4.mp3" id="20_nymk4"]
+[ext_resource type="AudioStream" uid="uid://dumw24jelsh3a" path="res://scenes/furnitures/radio/audio5.mp3" id="21_qh3yc"]
+[ext_resource type="AudioStream" uid="uid://bixu6mlyei6a8" path="res://scenes/furnitures/radio/audio6.mp3" id="22_lrwx0"]
 
 [sub_resource type="Environment" id="Environment_rof60"]
 background_mode = 1
@@ -74,20 +81,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.292, 0.099, 102.04)
 
 [node name="PauseMenu" parent="." instance=ExtResource("13_k4hin")]
 
-[node name="Retro Radio Receiver" parent="." instance=ExtResource("15_ke14o")]
+[node name="Retro Radio Receiver" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_ke14o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.616116, 0.29999965, -12.230562)
+audio_name = ExtResource("16_ayh0t")
+default_name = ExtResource("17_i0cgy")
+player = NodePath("../Player")
 
-[node name="Retro Radio Receiver2" parent="." instance=ExtResource("15_ke14o")]
+[node name="Retro Radio Receiver2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_ke14o")]
 transform = Transform3D(0.9551906, -0.29599148, 0, 0.29599148, 0.9551906, 0, 0, 0, 1, -39.741917, 0.4896317, -47.629345)
+audio_name = ExtResource("18_i0cgy")
+default_name = ExtResource("17_i0cgy")
+player = NodePath("../Player")
 
-[node name="Retro Radio Receiver3" parent="." instance=ExtResource("15_ke14o")]
+[node name="Retro Radio Receiver3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_ke14o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.406918, 0.39948446, -42.149796)
+audio_name = ExtResource("19_yh1kr")
+default_name = ExtResource("17_i0cgy")
+player = NodePath("../Player")
 
-[node name="Retro Radio Receiver4" parent="." instance=ExtResource("15_ke14o")]
+[node name="Retro Radio Receiver4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_ke14o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.505871, 0.39948434, -38.45785)
+audio_name = ExtResource("20_nymk4")
+default_name = ExtResource("17_i0cgy")
+player = NodePath("../Player")
 
-[node name="Retro Radio Receiver5" parent="." instance=ExtResource("15_ke14o")]
+[node name="Retro Radio Receiver5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_ke14o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.68877, 0.39948446, -22.40648)
+audio_name = ExtResource("21_qh3yc")
+default_name = ExtResource("17_i0cgy")
+player = NodePath("../Player")
 
-[node name="Retro Radio Receiver6" parent="." instance=ExtResource("15_ke14o")]
+[node name="Retro Radio Receiver6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_ke14o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.97174, 0.3976674, 101.6093)
+audio_name = ExtResource("22_lrwx0")
+default_name = ExtResource("17_i0cgy")
+player = NodePath("../Player")
