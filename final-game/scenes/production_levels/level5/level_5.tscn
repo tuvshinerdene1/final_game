@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://lj6hskffmajc"]
+[gd_scene load_steps=6 format=3 uid="uid://lj6hskffmajc"]
 
 [ext_resource type="PackedScene" uid="uid://xgq7fu4qcfo3" path="res://assets/map_models/level5/Level_5.glb" id="1_1tdt7"]
 [ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="2_jmvh0"]
 [ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="3_bklmw"]
 [ext_resource type="PackedScene" uid="uid://4vmydmcb6a4u" path="res://scenes/furnitures/document/document.tscn" id="4_0222n"]
+[ext_resource type="Resource" uid="uid://dnjnfp8bt8vfn" path="res://scenes/furnitures/document/journal4.tres" id="5_0222n"]
 
 [node name="Level5" type="Node3D"]
 
@@ -22,4 +23,5 @@ transform = Transform3D(-1, -7.642742e-15, 8.742278e-08, 0, -1, -8.742278e-08, 8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.505871, 0.39948434, -38.45785)
 
 [node name="Document" parent="." instance=ExtResource("4_0222n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.518082, 0.44361305, -39.0966)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7171788, 2.4721165, -42.982098)
+document_info = ExtResource("5_0222n")
