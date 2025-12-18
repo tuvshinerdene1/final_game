@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3vxe7oncfpd"]
+[gd_scene load_steps=9 format=3 uid="uid://d3vxe7oncfpd"]
 
 [ext_resource type="PackedScene" uid="uid://bi2eaewagws47" path="res://scenes/production_levels/corridor/model/corridor.glb" id="1_wagdf"]
 [ext_resource type="PackedScene" uid="uid://ddvd8c6yqbp4s" path="res://assets/map_models/trash/rusty_barrel.glb" id="3_2um5n"]
@@ -9,9 +9,6 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7qaoq"]
 size = Vector3(1.8911133, 2.6750793, 1.2978516)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_134yl"]
-size = Vector3(1, 2.2749634, 0.47607422)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yg4u2"]
 size = Vector3(11.841354, 0.99316406, 9.027954)
@@ -37,16 +34,6 @@ transform = Transform3D(-0.06620876, 0.002769749, -1.6918298, 0.23458621, 0.0007
 [node name="CollisionShape3D" type="CollisionShape3D" parent="barricade"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1561542, 1.6202464, -5.841072)
 shape = SubResource("BoxShape3D_7qaoq")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4426464, -8.604918)
-shape = SubResource("BoxShape3D_134yl")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.4324875, 1.4426464, -8.604918)
-shape = SubResource("BoxShape3D_134yl")
 
 [node name="LightBulb" parent="." instance=ExtResource("10_t3n8c")]
 transform = Transform3D(0.38502026, -0.9229081, 0, 0.9229081, 0.38502026, 0, 0, 0, 1, 0.92676914, 2.5604382, -7.352717)
