@@ -1,31 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://d3vxe7oncfpd"]
+[gd_scene load_steps=10 format=3 uid="uid://d3vxe7oncfpd"]
 
 [ext_resource type="PackedScene" uid="uid://bi2eaewagws47" path="res://scenes/production_levels/corridor/model/corridor.glb" id="1_wagdf"]
 [ext_resource type="PackedScene" uid="uid://ddvd8c6yqbp4s" path="res://assets/map_models/trash/rusty_barrel.glb" id="3_2um5n"]
 [ext_resource type="PackedScene" uid="uid://b03p8qeuteck8" path="res://assets/map_models/trash/plank_01.tscn" id="4_7qaoq"]
 [ext_resource type="PackedScene" uid="uid://c6hsjo0gl7e0d" path="res://assets/map_models/trash/plank_04.tscn" id="5_gjkvu"]
-[ext_resource type="Texture2D" uid="uid://caok8yt1s28iw" path="res://assets/materials/textures/damaged_plaster_diff_1k.jpg" id="6_eilil"]
-[ext_resource type="Texture2D" uid="uid://biayif6nuf88l" path="res://assets/materials/textures/damaged_plaster_arm_1k.jpg" id="7_t3n8c"]
-[ext_resource type="Texture2D" uid="uid://bvwnqnbcuy8rd" path="res://assets/materials/textures/damaged_plaster_nor_dx_1k.jpg" id="8_yg4u2"]
-[ext_resource type="Texture2D" uid="uid://bifvimdqqoq0o" path="res://assets/materials/textures/damaged_plaster_rough_1k.jpg" id="9_5sbgv"]
 [ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="10_t3n8c"]
 [ext_resource type="PackedScene" uid="uid://b7a046v0qaba0" path="res://scenes/elevator/elevator.tscn" id="11_yg4u2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7qaoq"]
 size = Vector3(1.8911133, 2.6750793, 1.2978516)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l05n2"]
-albedo_texture = ExtResource("6_eilil")
-albedo_texture_force_srgb = true
-metallic = 1.0
-metallic_texture = ExtResource("7_t3n8c")
-roughness_texture = ExtResource("9_5sbgv")
-emission_enabled = true
-normal_enabled = true
-normal_texture = ExtResource("8_yg4u2")
-
-[sub_resource type="BoxMesh" id="BoxMesh_1rp8t"]
-material = SubResource("StandardMaterial3D_l05n2")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_134yl"]
 size = Vector3(1, 2.2749634, 0.47607422)
@@ -57,14 +40,6 @@ shape = SubResource("BoxShape3D_7qaoq")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 2.7499657, 0, 0, 0, 0.039747, 0, 1.6258539, -8.113222)
-mesh = SubResource("BoxMesh_1rp8t")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 2.7499657, 0, 0, 0, 1, -9.5265465, 1.6258539, -8.903258)
-mesh = SubResource("BoxMesh_1rp8t")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4426464, -8.604918)
 shape = SubResource("BoxShape3D_134yl")
@@ -85,6 +60,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.69366, 0, -3.8666496)
 [node name="ground" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7779007, -0.08371353, -4.0678916)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7779007, -0.2274512, -4.0678916)
 shape = SubResource("BoxShape3D_yg4u2")
 debug_color = Color(0.8888389, 0.30520257, 0.32070455, 0.41960785)

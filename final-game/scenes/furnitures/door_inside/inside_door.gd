@@ -7,6 +7,7 @@ extends StaticBody3D
 @export var open_sound: AudioStream
 @export var close_sound: AudioStream
 
+
 var is_open: bool = false
 var player_in_range: bool = false
 var player_ref : Node3D = null

@@ -41,6 +41,7 @@ var original_camera_position: Vector3
 var original_camera_rotation: Vector3
 
 var direction: Vector3 = Vector3.ZERO
+var has_key: bool = false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_PAUSABLE  
@@ -151,3 +152,7 @@ func toggle_light():
 			spotlight.visible = true
 		else:
 			spotlight.visible = false
+			
+func _on_key_picked_up():
+	print("Player received the key!")
+	has_key = true
