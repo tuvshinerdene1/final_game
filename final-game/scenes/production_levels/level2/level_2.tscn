@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://x664cx1lidro"]
+[gd_scene load_steps=6 format=3 uid="uid://x664cx1lidro"]
 
 [ext_resource type="PackedScene" uid="uid://cbo4o1i2u3jba" path="res://assets/map_models/level2/Level_2.glb" id="1_6lvdd"]
 [ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="2_vpdn1"]
 [ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="3_6u1k8"]
+[ext_resource type="AudioStream" uid="uid://dtein8fesegf7" path="res://scenes/furnitures/radio/audio1.mp3" id="4_3vibf"]
+[ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="5_4fd54"]
 
 [node name="Level2" type="Node3D"]
 
@@ -19,3 +21,5 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -36.
 
 [node name="Retro Radio Receiver" parent="." instance=ExtResource("3_6u1k8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.616116, 0.29999965, -12.230562)
+audio_name = ExtResource("4_3vibf")
+default_name = ExtResource("5_4fd54")
