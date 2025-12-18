@@ -36,7 +36,6 @@ size = Vector3(11.841354, 0.99316406, 9.027954)
 [node name="Corridor" type="Node3D"]
 
 [node name="corridor" parent="." instance=ExtResource("1_wagdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9665072, 0, 0, 0)
 
 [node name="barrel" parent="." instance=ExtResource("3_2um5n")]
 transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, -3.240014, 0.32941008, -5.8536696)

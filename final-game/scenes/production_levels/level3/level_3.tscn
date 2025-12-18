@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://djn5ys604ln23"]
+
+[ext_resource type="PackedScene" uid="uid://bk11i2m1esinh" path="res://assets/map_models/level3/Level_3.glb" id="1_ig6k7"]
+[ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="2_k0f0u"]
+
+[node name="Level3" type="Node3D"]
+
+[node name="Level_3" parent="." instance=ExtResource("1_ig6k7")]
+
+[node name="window" parent="." instance=ExtResource("2_k0f0u")]
+transform = Transform3D(0.00638576, -0.21914808, 0.97567075, 0.19538043, 0.95715934, 0.21371143, -0.98070675, 0.18926223, 0.048929438, -47.52, -0.651, -38.457)
+
+[node name="window2" parent="." instance=ExtResource("2_k0f0u")]
+transform = Transform3D(0.0063857604, -0.21914808, 0.97567075, 0.002516374, 0.9756911, 0.21913621, -0.9999764, 0.0010557789, 0.0067819864, -47.513, -0.363, -42.379)
+
+[node name="window3" parent="." instance=ExtResource("2_k0f0u")]
+transform = Transform3D(-0.013858559, -0.26668802, 0.96368325, -0.20670605, 0.9437214, 0.2581912, -0.97830474, -0.19562097, -0.06820465, -47.539, -0.26, -46.313)

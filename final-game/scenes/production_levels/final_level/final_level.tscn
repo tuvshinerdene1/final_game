@@ -1,9 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxfw5xl47fh2q"]
+[gd_scene load_steps=14 format=3 uid="uid://cxfw5xl47fh2q"]
 
 [ext_resource type="PackedScene" uid="uid://d3vxe7oncfpd" path="res://scenes/production_levels/corridor/corridor.tscn" id="1_3u61e"]
 [ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="2_ix1qr"]
 [ext_resource type="PackedScene" uid="uid://8gaq3yih1l08" path="res://scenes/production_levels/level1/level1.tscn" id="3_ix1qr"]
 [ext_resource type="AudioStream" uid="uid://baj2nhdddwcll" path="res://assets/sound/ambient_sound/P.T. Silent Hills creepy ambient music (PS4) [Vg2IuNk28sI].mp3" id="4_rof60"]
+[ext_resource type="PackedScene" uid="uid://x664cx1lidro" path="res://scenes/production_levels/level2/level_2.tscn" id="5_g0og1"]
+[ext_resource type="PackedScene" uid="uid://djn5ys604ln23" path="res://scenes/production_levels/level3/level_3.tscn" id="6_veabu"]
+[ext_resource type="PackedScene" uid="uid://dee0dtctw54j8" path="res://scenes/production_levels/level4/level_4.tscn" id="7_oamqr"]
+[ext_resource type="PackedScene" uid="uid://lj6hskffmajc" path="res://scenes/production_levels/level5/level_5.tscn" id="8_k4hin"]
+[ext_resource type="PackedScene" uid="uid://phgv7ho8rgr0" path="res://scenes/production_levels/level6/level_6.tscn" id="9_7fxbf"]
+[ext_resource type="PackedScene" uid="uid://c3e4kcdwqb4ed" path="res://scenes/production_levels/level7/level_7.tscn" id="10_ewsar"]
+[ext_resource type="PackedScene" uid="uid://bs54rccgkcysm" path="res://scenes/production_levels/level8/level_8.tscn" id="11_th561"]
+[ext_resource type="PackedScene" uid="uid://b7a046v0qaba0" path="res://scenes/elevator/elevator.tscn" id="12_oamqr"]
 
 [sub_resource type="Environment" id="Environment_rof60"]
 background_mode = 1
@@ -16,14 +24,46 @@ reflected_light_source = 1
 environment = SubResource("Environment_rof60")
 
 [node name="Corridor" parent="." instance=ExtResource("1_3u61e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0001385808, 0, -0.00013828278)
+
+[node name="Corridor2" parent="." instance=ExtResource("1_3u61e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.3, 0, -6.607)
+
+[node name="Corridor3" parent="." instance=ExtResource("1_3u61e")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -47.898, 0, -24.938)
+
+[node name="Corridor4" parent="." instance=ExtResource("1_3u61e")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -23.578, 0.099, -47.822)
+
+[node name="Corridor5" parent="." instance=ExtResource("1_3u61e")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -20.574, 0.099, -52.702)
+
+[node name="Corridor6" parent="." instance=ExtResource("1_3u61e")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.892, 0.099, -36.622)
 
 [node name="Player" parent="." instance=ExtResource("2_ix1qr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.925001, 1.2768669, -3.316478)
-
-[node name="Level1" parent="." instance=ExtResource("3_ix1qr")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -20.227, 0.05, -16.85)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5271645, 1.2768669, -3.3160288)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_rof60")
 autoplay = true
 parameters/looping = true
+
+[node name="Level1" parent="." instance=ExtResource("3_ix1qr")]
+
+[node name="Level2" parent="." instance=ExtResource("5_g0og1")]
+
+[node name="Level3" parent="." instance=ExtResource("6_veabu")]
+
+[node name="Level4" parent="." instance=ExtResource("7_oamqr")]
+
+[node name="Level5" parent="." instance=ExtResource("8_k4hin")]
+
+[node name="Level_6" parent="." instance=ExtResource("9_7fxbf")]
+
+[node name="Level_7" parent="." instance=ExtResource("10_ewsar")]
+
+[node name="Level_8" parent="." instance=ExtResource("11_th561")]
+
+[node name="Elevator" parent="." instance=ExtResource("12_oamqr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.292, 0.099, 102.04)
