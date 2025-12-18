@@ -51,6 +51,10 @@ func _ready() -> void:
 
 
 func _input(event) -> void:
+	# Add this check:
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+		return
+
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		camera.rotate_x(-event.relative.y * mouse_sensitivity)

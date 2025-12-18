@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://7ugdd0s136l7"]
+[gd_scene load_steps=9 format=3 uid="uid://7ugdd0s136l7"]
 
 [ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="1_3cko2"]
 [ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="3_ojpkr"]
 [ext_resource type="PackedScene" uid="uid://x22xej5py6rq" path="res://scenes/furnitures/door_inside/inside_door.tscn" id="3_yq85g"]
 [ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="4_ojpkr"]
+[ext_resource type="PackedScene" uid="uid://4vmydmcb6a4u" path="res://scenes/furnitures/document/document.tscn" id="5_ojpkr"]
+[ext_resource type="PackedScene" uid="uid://8isxjp62xfmw" path="res://scenes/furnitures/document/DocumentUI.tscn" id="6_wrauw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_f7nsl"]
 
@@ -28,9 +30,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.3594456, 0)
 [node name="LightBulb" parent="." instance=ExtResource("3_ojpkr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72665286, 0)
 light_color = Color(1, 0.11764706, 1, 1)
+light_size = 0.5
 
 [node name="InsideDoor" parent="." instance=ExtResource("3_yq85g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6021872, 0.5, -2.1590247)
 
 [node name="InsideDoor2" parent="." instance=ExtResource("4_ojpkr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7048376, 0.5, -2.1763394)
+
+[node name="Document" parent="." instance=ExtResource("5_ojpkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.018341, 0.5302615, 0.10286522)
+
+[node name="DocumentUi" parent="." groups=["DocumentUI"] instance=ExtResource("6_wrauw")]

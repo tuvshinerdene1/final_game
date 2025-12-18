@@ -1,0 +1,116 @@
+[gd_scene load_steps=3 format=3 uid="uid://8isxjp62xfmw"]
+
+[ext_resource type="Script" uid="uid://24mn4ev1ucuu" path="res://scenes/furnitures/document/document_ui.gd" id="1_xafyq"]
+[ext_resource type="Texture2D" uid="uid://dc0e1715xxq8e" path="res://assets/materials/textures/Paper005_1K-JPG/Paper005_1K-JPG_Displacement.jpg" id="2_gdirs"]
+
+[node name="DocumentUi" type="CanvasLayer"]
+script = ExtResource("1_xafyq")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3854925, 0.38549247, 0.38549247, 1)
+
+[node name="PaperBackground" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.875
+offset_top = -287.5
+offset_right = 230.875
+offset_bottom = 287.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gdirs")
+expand_mode = 4
+
+[node name="TitleLabel" type="Label" parent="Control/PaperBackground"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -165.5
+offset_right = 165.5
+offset_bottom = 54.5
+grow_horizontal = 2
+
+[node name="BodyText" type="RichTextLabel" parent="Control/PaperBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.9375
+offset_top = -162.75
+offset_right = 137.9375
+offset_bottom = 162.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PageCountLabel" type="Label" parent="Control/PaperBackground"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -38.5
+offset_right = 66.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="NextButton" type="Button" parent="Control/PaperBackground"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+text = ">
+"
+
+[node name="PrevButton" type="Button" parent="Control/PaperBackground"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 8.0
+grow_vertical = 0
+text = "<
+"
+
+[node name="CloseButton" type="Button" parent="Control/PaperBackground"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+text = "Close(E)"
+
+[connection signal="pressed" from="Control/PaperBackground/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Control/PaperBackground/PrevButton" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="Control/PaperBackground/CloseButton" to="." method="_on_close_button_pressed"]
