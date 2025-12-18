@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://lj4ry77s71vo"]
+[gd_scene load_steps=23 format=3 uid="uid://lj4ry77s71vo"]
 
 [ext_resource type="Script" uid="uid://c5mespiumwye5" path="res://scenes/furnitures/eye_portrait/eye_portrait.gd" id="1_r4eaq"]
 [ext_resource type="Texture2D" uid="uid://dcdhs2xey21em" path="res://assets/materials/grey_eyes/female_1.png" id="1_ufj3j"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://cfo65bsuj0nhd" path="res://assets/materials/grey_eyes/male_2.png" id="8_r4eaq"]
 [ext_resource type="Texture2D" uid="uid://cu5d3e3y810xg" path="res://assets/materials/grey_eyes/male_3.png" id="9_c0kpj"]
 [ext_resource type="Texture2D" uid="uid://beyfxhe0mtxtf" path="res://assets/materials/grey_eyes/male_8.png" id="10_63wdi"]
+[ext_resource type="Texture2D" uid="uid://dywl2ekutmw0w" path="res://assets/materials/grey_eyes/male_11.png" id="12_c0kpj"]
+[ext_resource type="Texture2D" uid="uid://blpeqtt2xhcwp" path="res://assets/materials/grey_eyes/female_3.png" id="13_63wdi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o11qc"]
 albedo_texture = ExtResource("1_ufj3j")
@@ -52,6 +54,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_oef26"]
 resource_name = "male_default"
 length = 0.4034
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -65,14 +68,49 @@ tracks/0/keys = {
 "values": [ExtResource("7_sooov"), ExtResource("8_r4eaq"), ExtResource("9_c0kpj"), ExtResource("10_63wdi")]
 }
 
+[sub_resource type="Animation" id="Animation_r4eaq"]
+resource_name = "male_shut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("picture:mesh:material:albedo_texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("12_c0kpj")]
+}
+
+[sub_resource type="Animation" id="Animation_ycnx3"]
+resource_name = "female_shut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("picture:mesh:material:albedo_texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("13_63wdi")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nh668"]
 _data = {
 &"RESET": SubResource("Animation_5irl7"),
 &"female_default": SubResource("Animation_st6nx"),
-&"male_default": SubResource("Animation_oef26")
+&"female_shut": SubResource("Animation_ycnx3"),
+&"male_default": SubResource("Animation_oef26"),
+&"male_shut": SubResource("Animation_r4eaq")
 }
 
-[node name="EyePortrait" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_r4eaq"]
+size = Vector3(1.5, 1.5, 0.1)
+
+[node name="EyePortrait" type="Node3D" groups=["portraits"]]
 script = ExtResource("1_r4eaq")
 
 [node name="frame" type="MeshInstance3D" parent="."]
@@ -93,3 +131,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_nh668")
 }
 autoplay = "female_default"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_r4eaq")

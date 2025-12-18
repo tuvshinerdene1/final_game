@@ -32,6 +32,10 @@ distance_fade_shadow = 15.0
 spot_range = 5.5880494
 spot_angle = 37.612072
 
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D/SpotLight3D"]
+target_position = Vector3(0, 0, -6)
+collision_mask = 2
+
 [node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8407004, 0)
 stream = ExtResource("2_3c3w1")
