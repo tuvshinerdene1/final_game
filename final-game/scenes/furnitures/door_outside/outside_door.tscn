@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cq58mhonaoujl"]
+[gd_scene load_steps=14 format=3 uid="uid://cq58mhonaoujl"]
 
 [ext_resource type="Script" uid="uid://c1wqqc54qnt32" path="res://scenes/furnitures/door_outside/outside_door.gd" id="1_dp4pp"]
 [ext_resource type="AudioStream" uid="uid://clhulll16n8pi" path="res://assets/sound/door/door_open.mp3" id="2_twhgn"]
 [ext_resource type="AudioStream" uid="uid://lrc4opotw0w0" path="res://assets/sound/door/door_close.mp3" id="3_7r8fr"]
 [ext_resource type="PackedScene" uid="uid://btathpncqahjb" path="res://scenes/furnitures/door_outside/door_model/outside_door.glb" id="4_ey6fl"]
+[ext_resource type="AudioStream" uid="uid://8bsag2lpo7dy" path="res://assets/sound/door/Trying To Open Locked Door Knob Sound Effect [xa_w8f2xyRQ].mp3" id="4_l7n6b"]
+[ext_resource type="AudioStream" uid="uid://cr8xxj8t6dwnb" path="res://assets/sound/door/unlock.mp3" id="5_hw3wn"]
 
 [sub_resource type="Animation" id="Animation_spgpx"]
 length = 0.001
@@ -50,9 +52,26 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, -1.5707964, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_l7n6b"]
+resource_name = "locked"
+length = 0.5332
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.53),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.08726646, 0), Vector3(0, 0, 0), Vector3(0, -0.08726646, 0), Vector3(0, -0.08726646, 0), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_glkci"]
 _data = {
 &"RESET": SubResource("Animation_spgpx"),
+&"locked": SubResource("Animation_l7n6b"),
 &"open": SubResource("Animation_lo8st"),
 &"open_reverse": SubResource("Animation_ey6fl")
 }
@@ -63,12 +82,14 @@ size = Vector3(1.7456055, 2.1919556, 0.98984057)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vl3t6"]
 size = Vector3(0.8027954, 2.2011871, 0.050689697)
 
-[node name="InsideDoor" type="Node3D"]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="OutsideDoor" type="Node3D"]
 script = ExtResource("1_dp4pp")
 open_sound = ExtResource("2_twhgn")
 close_sound = ExtResource("3_7r8fr")
+locked_sound = ExtResource("4_l7n6b")
+unlock_sound = ExtResource("5_hw3wn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D"]
 libraries = {

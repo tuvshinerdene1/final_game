@@ -1,11 +1,14 @@
-extends StaticBody3D
+extends Node3D
 
-@onready var anim = $AnimationPlayer
-@onready var interact_zone = $Area3D
-@onready var audio_player = $AudioStreamPlayer3D
+@onready var anim = $StaticBody3D/AnimationPlayer
+@onready var interact_zone = $StaticBody3D/Area3D
+@onready var audio_player = $StaticBody3D/AudioStreamPlayer3D
 
 @export var open_sound: AudioStream
 @export var close_sound: AudioStream
+@export var locked_sound: AudioStream
+@export var unlock_sound : AudioStream
+@export var locked_with_key : bool = false
 
 var is_open: bool = false
 var player_in_range: bool = false
@@ -25,11 +28,29 @@ func _process(delta):
 			toggle_door()
 
 func toggle_door():
+	if locked_with_key:
+		handle_lock()
+		return
 	if is_open:
 		close_door()
 	else:
 		open_door()
-
+		
+func try_door():
+	anim.play("locked")
+	audio_player.stream = locked_sound
+	audio_player.play()
+	
+func handle_lock():
+	if player_ref.has_key:
+		audio_player.stream = unlock_sound
+		audio_player.play()
+		player_ref.has_key = false
+		open_door()
+	else:
+		try_door()
+		
+		
 func open_door():
 	#1 get the direction of door facing (global z axis)
 	var door_forward = global_transform.basis.z

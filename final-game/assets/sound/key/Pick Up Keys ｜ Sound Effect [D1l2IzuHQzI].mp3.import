@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c467hda02x1kh"
+path="res://.godot/imported/Pick Up Keys ｜ Sound Effect [D1l2IzuHQzI].mp3-7a9626c5c6190e25d2ea7d91235d1b42.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/key/Pick Up Keys ｜ Sound Effect [D1l2IzuHQzI].mp3"
+dest_files=["res://.godot/imported/Pick Up Keys ｜ Sound Effect [D1l2IzuHQzI].mp3-7a9626c5c6190e25d2ea7d91235d1b42.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
