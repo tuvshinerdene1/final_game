@@ -23,34 +23,36 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.7)
 
-[node name="Panel" type="PanelContainer" parent="Root"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.35
-anchor_top = 0.25
-anchor_right = 0.65
-anchor_bottom = 0.65
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Root/Panel"]
-layout_mode = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="Root"]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 273.0
+offset_right = 763.0
+offset_bottom = 447.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/separation = 12
+alignment = 1
 
-[node name="TitleLabel" type="Label" parent="Root/Panel/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="Root/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.44484326, 0.4448433, 0.4448433, 1)
+theme_override_font_sizes/font_size = 64
 text = "PAUSED"
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="ResumeButton" type="Button" parent="Root/Panel/VBoxContainer"]
+[node name="ResumeButton" type="Button" parent="Root/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.5449751, 0.5449739, 0.5449743, 1)
 text = "Resume"
 
-[node name="SettingsButton" type="Button" parent="Root/Panel/VBoxContainer"]
+[node name="SettingsButton" type="Button" parent="Root/VBoxContainer"]
 visible = false
 layout_mode = 2
 text = "Settings"
 
-[node name="MainMenuButton" type="Button" parent="Root/Panel/VBoxContainer"]
+[node name="MainMenuButton" type="Button" parent="Root/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.49747455, 0.4974733, 0.49747372, 1)
 text = "Main Menu"

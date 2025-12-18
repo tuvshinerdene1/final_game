@@ -1,7 +1,135 @@
-[gd_scene load_steps=2 format=3 uid="uid://bs54rccgkcysm"]
+[gd_scene load_steps=3 format=3 uid="uid://bs54rccgkcysm"]
 
 [ext_resource type="PackedScene" uid="uid://3iqu5wq28hj5" path="res://assets/map_models/level8/Level_8.glb" id="1_eetvj"]
+[ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="2_t2g60"]
 
 [node name="Level_8" type="Node3D"]
 
 [node name="Level_8" parent="." instance=ExtResource("1_eetvj")]
+
+[node name="bulb" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.491, -1, 282.05)
+
+[node name="LightBulb36" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -276.86487)
+light_size = 0.5
+
+[node name="LightBulb58" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -272.64136)
+light_size = 0.5
+
+[node name="LightBulb59" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -264.61627)
+light_size = 0.5
+
+[node name="LightBulb60" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -244.0349)
+light_size = 0.5
+
+[node name="LightBulb61" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -234.01883)
+light_size = 0.5
+
+[node name="LightBulb62" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -199.925)
+light_size = 0.5
+
+[node name="LightBulb63" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -241.65775)
+light_size = 0.5
+
+[node name="LightBulb64" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -250.98679)
+light_size = 0.5
+
+[node name="LightBulb65" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -256.65295)
+light_size = 0.5
+
+[node name="LightBulb66" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -262.01288)
+light_size = 0.5
+
+[node name="LightBulb37" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -268.63025)
+light_size = 0.5
+
+[node name="LightBulb38" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -259.52396)
+light_size = 0.5
+
+[node name="LightBulb39" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -253.81992)
+light_size = 0.5
+
+[node name="LightBulb40" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -247.93819)
+light_size = 0.5
+
+[node name="LightBulb41" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -238.37846)
+light_size = 0.5
+
+[node name="LightBulb42" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -229.1616)
+light_size = 0.5
+
+[node name="LightBulb43" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -225.75468)
+light_size = 0.5
+
+[node name="LightBulb44" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -221.54187)
+light_size = 0.5
+
+[node name="LightBulb45" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -218.67711)
+light_size = 0.5
+
+[node name="LightBulb46" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -214.47119)
+light_size = 0.5
+
+[node name="LightBulb47" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -213.03157)
+light_size = 0.5
+
+[node name="LightBulb48" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -209.26054)
+light_size = 0.5
+
+[node name="LightBulb49" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -207.56355)
+light_size = 0.5
+
+[node name="LightBulb50" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -205.2646)
+light_size = 0.5
+
+[node name="LightBulb51" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -203.72487)
+light_size = 0.5
+
+[node name="LightBulb52" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -197.17015)
+light_size = 0.5
+
+[node name="LightBulb53" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -192.37874)
+light_size = 0.5
+
+[node name="LightBulb54" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -189.65785)
+light_size = 0.5
+
+[node name="LightBulb55" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -187.89261)
+light_size = 0.5
+
+[node name="LightBulb56" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -183.567)
+light_size = 0.5
+
+[node name="LightBulb57" parent="bulb" instance=ExtResource("2_t2g60")]
+transform = Transform3D(1, 0, 0, 0, -0.99716544, 0.07523974, 0, -0.07523974, -0.99716544, -20.948135, 3.4341416, -183.567)
+light_size = 0.5

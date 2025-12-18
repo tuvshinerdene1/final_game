@@ -12,10 +12,10 @@ func _ready() -> void:
 	quit_button.pressed.connect(_on_quit_pressed)
 
 func _on_new_game_pressed() -> void:
-	get_tree().change_scene_to_file("res://test_level/test_level.tscn")
+	get_tree().change_scene_to_file("res://scenes/test_levels/test_level/test_level.tscn")
 	
 func _on_load_pressed() -> void:
-	get_tree().change_scene_to_file("res://test_level/test_level.tscn")
+	get_tree().change_scene_to_file("res://scenes/test_levels/test_level/test_level.tscn")
 
 func _on_settings_pressed() -> void:
 	pass

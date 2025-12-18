@@ -4,12 +4,12 @@ signal resume_requested
 signal back_to_main_menu_requested
 
 @onready var root: Control = $Root
-@onready var resume_button: Button = $Root/Panel/VBoxContainer/ResumeButton
-@onready var settings_button: Button = $Root/Panel/VBoxContainer/SettingsButton
-@onready var main_menu_button: Button = $Root/Panel/VBoxContainer/MainMenuButton
+@onready var resume_button: Button = $Root/VBoxContainer/ResumeButton
+@onready var settings_button: Button = $Root/VBoxContainer/SettingsButton
+@onready var main_menu_button: Button = $Root/VBoxContainer/MainMenuButton
 
 func _ready() -> void:
-	process_mode = Node.PROCESS_MODE_ALWAYS  # Process even when paused
+	process_mode = Node.PROCESS_MODE_ALWAYS  
 	visible = false
 	
 	resume_button.pressed.connect(_on_resume_pressed)
@@ -60,4 +60,4 @@ func _on_main_menu_pressed() -> void:
 	get_tree().paused = false
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	back_to_main_menu_requested.emit()
-	get_tree().change_scene_to_file("res://test_level/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/test_levels/test_level/MainMenu.tscn")
