@@ -1,13 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://b7a046v0qaba0"]
+[gd_scene load_steps=12 format=3 uid="uid://b7a046v0qaba0"]
 
 [ext_resource type="PackedScene" uid="uid://dtd00681cohl6" path="res://scenes/elevator/model/elevator.glb" id="1_7w7uo"]
 [ext_resource type="Script" uid="uid://c1e5s1g347yai" path="res://scenes/elevator/elevator.gd" id="1_8ved2"]
 [ext_resource type="AudioStream" uid="uid://dp0f3sd8jbg88" path="res://scenes/elevator/Elevator Door Closing Sound Effect [ac6-kDhIDKg].mp3" id="2_flwkg"]
 [ext_resource type="PackedScene" uid="uid://c7cngxqg62yx" path="res://scenes/elevator/model/elevator_door.glb" id="3_21fob"]
 [ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="4_hadwe"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_hadwe"]
-size = Vector3(8.404907, 1, 4.9785156)
 
 [sub_resource type="Animation" id="Animation_hadwe"]
 length = 0.001
@@ -90,12 +87,6 @@ transform = Transform3D(1.7836456, 0, 0, 0, 1.2061098, 0, 0, 0, 6.6727533, -1.35
 
 [node name="elevator_door2" parent="." instance=ExtResource("3_21fob")]
 transform = Transform3D(1.7836456, 0, 0, 0, 1.2061098, 0, 0, 0, 6.6727533, 0.23179257, 0.01973766, -0.0030457973)
-
-[node name="ground" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37554932, 0, -1.9892578)
-shape = SubResource("BoxShape3D_hadwe")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

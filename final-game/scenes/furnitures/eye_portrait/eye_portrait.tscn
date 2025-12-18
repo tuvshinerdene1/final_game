@@ -1,31 +1,22 @@
-[gd_scene load_steps=10 format=3 uid="uid://lj4ry77s71vo"]
+[gd_scene load_steps=18 format=3 uid="uid://lj4ry77s71vo"]
 
+[ext_resource type="Script" uid="uid://c5mespiumwye5" path="res://scenes/furnitures/eye_portrait/eye_portrait.gd" id="1_r4eaq"]
 [ext_resource type="Texture2D" uid="uid://dcdhs2xey21em" path="res://assets/materials/grey_eyes/female_1.png" id="1_ufj3j"]
 [ext_resource type="Texture2D" uid="uid://h3nmih7vda1d" path="res://assets/materials/grey_eyes/female_2.png" id="2_fbowr"]
 [ext_resource type="Texture2D" uid="uid://c0xuc3tbqcypg" path="res://assets/materials/grey_eyes/female_5.png" id="3_3wbdv"]
+[ext_resource type="Texture2D" uid="uid://dl851vnshvya0" path="res://assets/materials/grey_eyes/female_7.png" id="3_47g55"]
 [ext_resource type="Texture2D" uid="uid://b1uxfhgawsyke" path="res://assets/materials/grey_eyes/female_10.png" id="4_47g55"]
+[ext_resource type="Texture2D" uid="uid://cu4xjg5l442hr" path="res://assets/materials/grey_eyes/female_8.png" id="4_st6nx"]
+[ext_resource type="Texture2D" uid="uid://dgipdb8mi5uaa" path="res://assets/materials/grey_eyes/male_1.png" id="7_sooov"]
+[ext_resource type="Texture2D" uid="uid://cfo65bsuj0nhd" path="res://assets/materials/grey_eyes/male_2.png" id="8_r4eaq"]
+[ext_resource type="Texture2D" uid="uid://cu5d3e3y810xg" path="res://assets/materials/grey_eyes/male_3.png" id="9_c0kpj"]
+[ext_resource type="Texture2D" uid="uid://beyfxhe0mtxtf" path="res://assets/materials/grey_eyes/male_8.png" id="10_63wdi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o11qc"]
 albedo_texture = ExtResource("1_ufj3j")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_eknvk"]
 material = SubResource("StandardMaterial3D_o11qc")
-
-[sub_resource type="Animation" id="Animation_st6nx"]
-resource_name = "default"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("picture:mesh:material:albedo_texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.29, 0.57, 0.81),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("1_ufj3j"), ExtResource("2_fbowr"), ExtResource("3_3wbdv"), ExtResource("4_47g55")]
-}
 
 [sub_resource type="Animation" id="Animation_5irl7"]
 length = 0.001
@@ -42,13 +33,47 @@ tracks/0/keys = {
 "values": [ExtResource("1_ufj3j")]
 }
 
+[sub_resource type="Animation" id="Animation_st6nx"]
+resource_name = "default"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("picture:mesh:material:albedo_texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.46666667, 0.6, 0.81),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_ufj3j"), ExtResource("2_fbowr"), ExtResource("3_47g55"), ExtResource("4_st6nx"), ExtResource("2_fbowr"), ExtResource("3_3wbdv"), ExtResource("4_47g55")]
+}
+
+[sub_resource type="Animation" id="Animation_oef26"]
+resource_name = "male_default"
+length = 0.4034
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("picture:mesh:material:albedo_texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.26666668, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_sooov"), ExtResource("8_r4eaq"), ExtResource("9_c0kpj"), ExtResource("10_63wdi")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nh668"]
 _data = {
 &"RESET": SubResource("Animation_5irl7"),
-&"default": SubResource("Animation_st6nx")
+&"female_default": SubResource("Animation_st6nx"),
+&"male_default": SubResource("Animation_oef26")
 }
 
 [node name="EyePortrait" type="Node3D"]
+script = ExtResource("1_r4eaq")
 
 [node name="frame" type="MeshInstance3D" parent="."]
 
@@ -67,4 +92,4 @@ mesh = SubResource("PlaneMesh_eknvk")
 libraries = {
 &"": SubResource("AnimationLibrary_nh668")
 }
-autoplay = "default"
+autoplay = "female_default"
