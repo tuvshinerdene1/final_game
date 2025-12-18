@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://11bv17opodnt"]
+[gd_scene load_steps=21 format=3 uid="uid://11bv17opodnt"]
 
 [ext_resource type="Script" uid="uid://coiofb77452bc" path="res://scenes/test_levels/test_level/test_level.gd" id="1_sdm26"]
 [ext_resource type="PackedScene" uid="uid://d3vxe7oncfpd" path="res://scenes/production_levels/corridor/corridor.tscn" id="2_ptjus"]
@@ -15,6 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://b7a046v0qaba0" path="res://scenes/elevator/elevator.tscn" id="13_6eptk"]
 [ext_resource type="PackedScene" uid="uid://b88crces8q8xk" path="res://scenes/test_levels/test_level/PauseMenu.tscn" id="14_psvao"]
 [ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="15_th5yt"]
+[ext_resource type="PackedScene" uid="uid://8isxjp62xfmw" path="res://scenes/furnitures/document/DocumentUI.tscn" id="16_ptjus"]
+[ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="17_ctxgd"]
+[ext_resource type="AudioStream" uid="uid://b42n8ovvmim1k" path="res://scenes/furnitures/radio/Болгарын гудамж.mp3" id="18_qya1y"]
+[ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="19_j7pls"]
 
 [sub_resource type="Environment" id="Environment_rof60"]
 background_mode = 1
@@ -46,7 +50,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -20.
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.892, 0.099, -36.622)
 
 [node name="Player" parent="." instance=ExtResource("3_ctxgd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.843718, 1.5449524, -3.1439805)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.130387, 1.3846576, -4.0016923)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_3k8gw")
@@ -135,3 +139,10 @@ perma_locked = true
 [node name="OutsideDoor9" parent="permalocked_door" instance=ExtResource("15_th5yt")]
 transform = Transform3D(-0.9953962, -0.09584575, -8.742278e-08, -0.09584575, 0.9953962, 0, 8.70203e-08, 8.379102e-09, -1, 23.516193, 0.16916257, 40.268986)
 perma_locked = true
+[node name="DocumentUi" parent="." groups=["DocumentUI"] instance=ExtResource("16_ptjus")]
+
+[node name="Retro Radio Receiver" parent="." node_paths=PackedStringArray("player") instance=ExtResource("17_ctxgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.661262, 0.6958083, -5.2495465)
+audio_name = ExtResource("18_qya1y")
+default_name = ExtResource("19_j7pls")
+player = NodePath("../Player")

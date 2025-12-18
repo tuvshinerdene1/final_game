@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://8gaq3yih1l08"]
+[gd_scene load_steps=14 format=3 uid="uid://8gaq3yih1l08"]
 
 [ext_resource type="PackedScene" uid="uid://7gq5w1poek33" path="res://scenes/production_levels/level1/level_1_model.tscn" id="2_aqg50"]
 [ext_resource type="PackedScene" uid="uid://lj4ry77s71vo" path="res://scenes/furnitures/eye_portrait/eye_portrait.tscn" id="2_hwl57"]
+[ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="3_irc6w"]
 [ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="4_p5lcn"]
 [ext_resource type="PackedScene" uid="uid://cwip4y4xu4wf" path="res://assets/map_models/furniture/radiator.tscn" id="5_4ym0s"]
 [ext_resource type="PackedScene" uid="uid://t1dvv4s4nsc1" path="res://assets/map_models/furniture/sofa.tscn" id="6_islxn"]
@@ -43,6 +44,20 @@ transform = Transform3D(-0.018327218, 0, 1.0098294, 0, 0.5665083, 0, -0.7060052,
 
 [node name="EyePortrait7" parent="Level_1" instance=ExtResource("2_hwl57")]
 transform = Transform3D(-0.018327218, 0, 1.0098294, 0, 0.5665083, 0, -0.7060052, 0, -0.026214007, -16.30492, 1.6180968, -4.6670675)
+
+[node name="EyePortrait11" parent="Level_1" instance=ExtResource("2_hwl57")]
+transform = Transform3D(-0.018327218, 0, 1.0098294, 0, 0.5665083, 0, -0.7060052, 0, -0.026214007, -18.19386, 1.6180968, -6.933501)
+
+[node name="EyePortrait12" parent="Level_1" instance=ExtResource("2_hwl57")]
+transform = Transform3D(-0.70454663, 0, -0.069973424, 0, 0.5665083, 0, 0.04892088, 0, -1.0077434, -16.178326, 1.6180968, -6.406099)
+
+[node name="EyePortrait13" parent="Level_1" instance=ExtResource("2_hwl57")]
+transform = Transform3D(0.70566523, 0, -0.040857002, 0, 0.5665083, 0, 0.028564394, 0, 1.0093431, -15.915836, 1.6180968, -8.342804)
+
+[node name="LightBulb" parent="Level_1/EyePortrait13" instance=ExtResource("3_irc6w")]
+transform = Transform3D(1, 0, 7.450581e-09, 0, 1, 0, -3.7252903e-09, 0, 1, 0.050933838, 1.7291963, 0.87972546)
+light_color = Color(0.8643393, 0.12278668, 0, 1)
+light_size = 0.5
 
 [node name="EyePortrait8" parent="Level_1" instance=ExtResource("2_hwl57")]
 transform = Transform3D(-0.018327218, 0, 1.0098294, 0, 0.5665083, 0, -0.7060052, 0, -0.026214007, -16.30492, 1.1225688, -3.3832707)
