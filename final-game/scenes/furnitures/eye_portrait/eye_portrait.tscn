@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://lj4ry77s71vo"]
+[gd_scene load_steps=25 format=3 uid="uid://lj4ry77s71vo"]
 
 [ext_resource type="Script" uid="uid://c5mespiumwye5" path="res://scenes/furnitures/eye_portrait/eye_portrait.gd" id="1_r4eaq"]
 [ext_resource type="Texture2D" uid="uid://dcdhs2xey21em" path="res://assets/materials/grey_eyes/female_1.png" id="1_ufj3j"]
@@ -51,6 +51,21 @@ tracks/0/keys = {
 "values": [ExtResource("1_ufj3j"), ExtResource("2_fbowr"), ExtResource("3_47g55"), ExtResource("4_st6nx"), ExtResource("2_fbowr"), ExtResource("3_3wbdv"), ExtResource("4_47g55")]
 }
 
+[sub_resource type="Animation" id="Animation_ycnx3"]
+resource_name = "female_shut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("picture:mesh:material:albedo_texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("13_63wdi")]
+}
+
 [sub_resource type="Animation" id="Animation_oef26"]
 resource_name = "male_default"
 length = 0.4034
@@ -83,8 +98,9 @@ tracks/0/keys = {
 "values": [ExtResource("12_c0kpj")]
 }
 
-[sub_resource type="Animation" id="Animation_ycnx3"]
-resource_name = "female_shut"
+[sub_resource type="Animation" id="Animation_63wdi"]
+resource_name = "female_open"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -95,15 +111,33 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("13_63wdi")]
+"values": [ExtResource("1_ufj3j")]
+}
+
+[sub_resource type="Animation" id="Animation_rsblv"]
+resource_name = "male_open"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("picture:mesh:material:albedo_texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_sooov")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nh668"]
 _data = {
 &"RESET": SubResource("Animation_5irl7"),
 &"female_default": SubResource("Animation_st6nx"),
+&"female_open": SubResource("Animation_63wdi"),
 &"female_shut": SubResource("Animation_ycnx3"),
 &"male_default": SubResource("Animation_oef26"),
+&"male_open": SubResource("Animation_rsblv"),
 &"male_shut": SubResource("Animation_r4eaq")
 }
 

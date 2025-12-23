@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3e4kcdwqb4ed"]
+[gd_scene load_steps=7 format=3 uid="uid://c3e4kcdwqb4ed"]
 
 [ext_resource type="PackedScene" uid="uid://cgoawtblahyl0" path="res://assets/map_models/level7/Level_7.glb" id="1_q4i3r"]
 [ext_resource type="PackedScene" uid="uid://hmvtouab0w4p" path="res://assets/map_models/furniture/fetus.tscn" id="2_7kwj0"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="4_iu36f"]
 [ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="5_hi1hg"]
 [ext_resource type="PackedScene" uid="uid://cctb0wiqe6oo7" path="res://scenes/baby cry/MazeSound.tscn" id="6_ygcov"]
-[ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="7_tdirv"]
 
 [node name="Level_7" type="Node3D"]
 
@@ -29,6 +28,3 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26.4
 
 [node name="AudioSource" parent="." instance=ExtResource("6_ygcov")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.064413, 0.60845894, 1.1549547)
-
-[node name="Player" parent="." instance=ExtResource("7_tdirv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7030573, 1.5595263, -20.11896)

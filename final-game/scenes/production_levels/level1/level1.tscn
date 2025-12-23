@@ -1,8 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://8gaq3yih1l08"]
 
 [ext_resource type="PackedScene" uid="uid://7gq5w1poek33" path="res://scenes/production_levels/level1/level_1_model.tscn" id="2_aqg50"]
-[ext_resource type="PackedScene" uid="uid://lj4ry77s71vo" path="res://scenes/furnitures/eye_portrait/eye_portrait.tscn" id="2_hwl57"]
-[ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="3_irc6w"]
+[ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="2_pobet"]
 [ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="4_p5lcn"]
 [ext_resource type="PackedScene" uid="uid://cwip4y4xu4wf" path="res://assets/map_models/furniture/radiator.tscn" id="5_4ym0s"]
 [ext_resource type="PackedScene" uid="uid://t1dvv4s4nsc1" path="res://assets/map_models/furniture/sofa.tscn" id="6_islxn"]
@@ -10,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ce53xx6didmoa" path="res://assets/map_models/furniture/bed.tscn" id="8_tytmh"]
 [ext_resource type="PackedScene" uid="uid://ccecxm007jfh5" path="res://assets/map_models/furniture/toilet.tscn" id="9_tytmh"]
 [ext_resource type="PackedScene" uid="uid://cvwtfempmh7fp" path="res://assets/map_models/furniture/toy.tscn" id="11_2amag"]
+[ext_resource type="PackedScene" uid="uid://dilfwimncmvgk" path="res://assets/map_models/furniture/low_poly_drawer_5.glb" id="11_irc6w"]
 [ext_resource type="PackedScene" uid="uid://cfa7e7grxc4wc" path="res://assets/map_models/furniture/bath.tscn" id="11_pobet"]
 [ext_resource type="PackedScene" uid="uid://4vmydmcb6a4u" path="res://scenes/furnitures/document/document.tscn" id="11_tytmh"]
 [ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="12_pobet"]
@@ -18,49 +18,10 @@
 
 [node name="Level_1" parent="." instance=ExtResource("2_aqg50")]
 
-[node name="EyePortrait" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(0.01991291, 0, -0.9998017, 0, 1, 0, 0.9998017, 0, 0.01991291, -12.520046, 1.3577406, -3.9829407)
-
-[node name="EyePortrait2" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(0.010739617, 0, -0.9895689, 0, 0.5165585, 0, 0.5392224, 0, 0.019709105, -12.520046, 1.9743409, -2.1268063)
-
-[node name="EyePortrait9" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(0.010739617, 0, -0.9895689, 0, 0.5165585, 0, 0.5392224, 0, 0.019709105, -12.520046, 1.0527194, -1.8091793)
-
-[node name="EyePortrait10" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(0.010739617, 0, -0.9895689, 0, 0.5165585, 0, 0.5392224, 0, 0.019709105, -12.520046, 2.5345984, -3.921763)
-
-[node name="EyePortrait3" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(-0.5326111, 0, -0.15573755, 0, 0.5165585, 0, 0.084862486, 0, -0.977436, -13.345615, 1.9743409, -0.5092869)
-
-[node name="EyePortrait4" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(-0.5388255, 0, -0.04277595, 0, 0.5165585, 0, 0.023308989, 0, -0.98884064, -13.345615, 1.007327, -0.5092869)
-
-[node name="EyePortrait5" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(-0.034595624, 0, 1.0223088, 0, 1.090658, 0, -1.3327005, 0, -0.026537959, -16.30492, 1.8524555, -1.6327407)
-
-[node name="EyePortrait6" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(-0.018327218, 0, 1.0098294, 0, 0.5665083, 0, -0.7060052, 0, -0.026214007, -16.30492, 2.360025, -3.4896736)
-
-[node name="EyePortrait7" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(-0.018327218, 0, 1.0098294, 0, 0.5665083, 0, -0.7060052, 0, -0.026214007, -16.30492, 1.6180968, -4.6670675)
-
-[node name="EyePortrait11" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(-0.018327218, 0, 1.0098294, 0, 0.5665083, 0, -0.7060052, 0, -0.026214007, -18.19386, 1.6180968, -6.933501)
-
-[node name="EyePortrait12" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(-0.70454663, 0, -0.069973424, 0, 0.5665083, 0, 0.04892088, 0, -1.0077434, -16.178326, 1.6180968, -6.406099)
-
-[node name="EyePortrait13" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(0.70566523, 0, -0.040857002, 0, 0.5665083, 0, 0.028564394, 0, 1.0093431, -15.915836, 1.6180968, -8.342804)
-
-[node name="LightBulb" parent="Level_1/EyePortrait13" instance=ExtResource("3_irc6w")]
-transform = Transform3D(1, 0, 7.450581e-09, 0, 1, 0, -3.7252903e-09, 0, 1, 0.050933838, 1.7291963, 0.87972546)
-light_color = Color(0.8643393, 0.12278668, 0, 1)
-light_size = 0.5
-
-[node name="EyePortrait8" parent="Level_1" instance=ExtResource("2_hwl57")]
-transform = Transform3D(-0.018327218, 0, 1.0098294, 0, 0.5665083, 0, -0.7060052, 0, -0.026214007, -16.30492, 1.1225688, -3.3832707)
+[node name="LightBulb" parent="Level_1" instance=ExtResource("2_pobet")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -12.850978, 2.5064745, -6.374987)
+light_energy = 0.05
+light_size = 0.2
 
 [node name="windows" type="Node3D" parent="."]
 
@@ -94,10 +55,10 @@ transform = Transform3D(-1.8, 0, -1.509958e-07, 0, 0.8, 0, 2.7179243e-07, 0, -1,
 transform = Transform3D(1.192488e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, 1.192488e-10, -13.485975, 0.5443845, -3.0468428)
 
 [node name="Kitchen_table" parent="." instance=ExtResource("7_36w8h")]
-transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.2453668e-08, -10.758771, 0.3534844, -2.8763983)
+transform = Transform3D(-0.5198813, 0, 1.0815375, 0, 1.1999999, 0, -1.0815375, 0, -0.5198813, -10.469448, 0.44365, -2.4295604)
 
 [node name="bed" parent="." instance=ExtResource("8_tytmh")]
-transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711387e-10, -18.461792, 0.41033113, -2.1655097)
+transform = Transform3D(-0.0060614026, -0.007953149, -8.262855e-05, -0.007952409, 0.0060619665, -0.00010840659, 0.0001363065, 3.8433362e-12, -0.009999069, -17.42731, 0.8423759, -2.1854954)
 
 [node name="toilet" parent="." instance=ExtResource("9_tytmh")]
 transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, -19.349483, 0.30284578, -9.461304)
@@ -108,11 +69,14 @@ transform = Transform3D(0.0012360148, 0, -0.009923319, 0, 0.01, 0, 0.009923319, 
 [node name="bath" parent="." instance=ExtResource("11_pobet")]
 transform = Transform3D(1.192488e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, 1.192488e-10, -19.379154, 0.37396502, -7.499386)
 
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("11_irc6w")]
+transform = Transform3D(-0.009969732, 0, 0.0007774573, 0, 0.01, 0, -0.0007774573, 0, -0.009969732, -15.769097, 0.5726154, -6.715657)
+
 [node name="Document" parent="." instance=ExtResource("11_tytmh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.974254, 0.6981797, -4.621352)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.974254, 0.29904473, -4.621352)
 
 [node name="OutsideDoor2" parent="." instance=ExtResource("12_pobet")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -19.984, 0.3, -14.389)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.0529575, 0, -1, 0, -4.371139e-08, -19.984, 0.3, -14.389)
 
 [node name="OutsideDoor1" parent="." instance=ExtResource("12_pobet")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.684, 0.3, -7.782)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.0530471, 0, -1, 0, -4.371139e-08, -10.684, 0.3, -7.782)

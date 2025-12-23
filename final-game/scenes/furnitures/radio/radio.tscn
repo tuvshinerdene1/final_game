@@ -7,7 +7,6 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yew7d"]
 resource_name = "Radio"
 cull_mode = 2
-shading_mode = 0
 albedo_texture = ExtResource("1_ww4nh")
 texture_filter = 2
 
@@ -48,6 +47,7 @@ script = ExtResource("1_yrq6i")
 
 [node name="PSX style" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.76128286, 0, 0.1381897, 0)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_j0p32")
 skeleton = NodePath("")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://7ugdd0s136l7"]
+[gd_scene load_steps=12 format=3 uid="uid://7ugdd0s136l7"]
 
 [ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="1_3cko2"]
 [ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="3_ojpkr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://8isxjp62xfmw" path="res://scenes/furnitures/document/DocumentUI.tscn" id="6_wrauw"]
 [ext_resource type="PackedScene" uid="uid://d1mqdjkkee177" path="res://scenes/key/key.tscn" id="7_yjb48"]
 [ext_resource type="PackedScene" uid="uid://lj4ry77s71vo" path="res://scenes/furnitures/eye_portrait/eye_portrait.tscn" id="8_2atyb"]
+[ext_resource type="PackedScene" uid="uid://b7a046v0qaba0" path="res://scenes/elevator/elevator.tscn" id="9_ngm33"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_f7nsl"]
 
@@ -54,3 +55,10 @@ locked_with_key = true
 
 [node name="EyePortrait" parent="." instance=ExtResource("8_2atyb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1331043, 1.6272366, 0)
+
+[node name="EyePortrait2" parent="." instance=ExtResource("8_2atyb")]
+transform = Transform3D(0.98874074, 0.14963889, 0, -0.14963889, 0.98874074, 0, 0, 0, 1, 5.1069155, 1.7128389, 3.0703826)
+
+[node name="Elevator" parent="." instance=ExtResource("9_ngm33")]
+transform = Transform3D(-0.97659355, 0, -0.2150932, 0, 1, 0, 0.2150932, 0, -0.97659355, -2.0828724, 0, -4.05937)
+perma_closed = true

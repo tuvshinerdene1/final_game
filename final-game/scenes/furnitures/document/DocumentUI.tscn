@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.3854925, 0.38549247, 0.38549247, 1)
+color = Color(0.00566115, 0.005661152, 0.005661148, 1)
 
 [node name="PaperBackground" type="TextureRect" parent="Control"]
 layout_mode = 1

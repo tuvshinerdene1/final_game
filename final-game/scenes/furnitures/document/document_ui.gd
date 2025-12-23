@@ -22,17 +22,13 @@ signal on_close_document
 func open_document(doc: DocumentData):
 	current_doc = doc
 	current_page_index = 0
-	
-	# Set the texture if the document has a specific one, else keep default
 	if doc.background:
 		background_rect.texture = doc.background
-		
 	title_label.text = doc.title
 	update_page()
-	
-	# Show UI and unlock mouse
 	visible = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
 func update_page():
 	if current_doc.pages.size() > 0:
 		body_text.text = current_doc.pages[current_page_index]
@@ -47,27 +43,22 @@ func update_page():
 	next_btn.visible = current_page_index < current_doc.pages.size() - 1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
-func close_document():
-	visible = false
-	# Relock mouse
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	emit_signal("on_close_document")
 
 
 # Optional: Handle keyboard inputs for better feel
 func _input(event: InputEvent) -> void:
 	if not visible: return
 	
-	if event.is_action_pressed("interact") or event.is_action_pressed("ui_cancel"):
-		close_document()
-		get_viewport().set_input_as_handled() # Stop player from jumping/interacting
-		
 	if event.is_action_pressed("ui_right"):
 		_on_next_button_pressed()
-	
-	if event.is_action_pressed("ui_left"):
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("ui_left"):
 		_on_prev_button_pressed()
 
+func close_document():
+	visible = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	emit_signal("on_close_document")
 
 func _on_next_button_pressed() -> void:
 	if current_page_index < current_doc.pages.size() - 1:
@@ -83,6 +74,5 @@ func _on_prev_button_pressed() -> void:
 
 func _on_close_button_pressed() -> void:
 	visible = false
-	# Relock mouse
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	emit_signal("on_close_document")

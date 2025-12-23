@@ -5,26 +5,28 @@ extends Node3D
 
 var is_being_shined_on: bool = false
 
-func _ready() -> void:
-	play_default()
+func _ready():
+	#play_open()
+	play_shut()
 
-func play_default():
-	if gender == "Male":
-		anim.play("male_default")
+		
+func toggle_eye():
+	is_being_shined_on = not is_being_shined_on
+	#if is_being_shined_on:
+		#return
+	if is_being_shined_on:
+		play_shut()
 	else:
-		anim.play("female_default")
-
+		play_open()
+		
 func play_shut():
 	if gender == "Male":
 		anim.play("male_shut")
 	else:
 		anim.play("female_shut")
 
-# This is called every frame by the player's RayCast
-func shine_light():
-	if not is_being_shined_on:
-		is_being_shined_on = true
-		play_shut()
-	
-	# Reset the timer/flag every frame the light hits
-	# We will use the Player script to detect when this stops
+func play_open():
+	if gender == "Male":
+		anim.play("male_open")
+	else:
+		anim.play("female_open")

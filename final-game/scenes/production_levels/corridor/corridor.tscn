@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3vxe7oncfpd"]
+[gd_scene load_steps=10 format=3 uid="uid://d3vxe7oncfpd"]
 
+[ext_resource type="Script" uid="uid://cdp8biws602hg" path="res://scenes/production_levels/corridor/corridor.gd" id="1_8gbyb"]
 [ext_resource type="PackedScene" uid="uid://bi2eaewagws47" path="res://scenes/production_levels/corridor/model/corridor.glb" id="1_wagdf"]
 [ext_resource type="PackedScene" uid="uid://ddvd8c6yqbp4s" path="res://assets/map_models/trash/rusty_barrel.glb" id="3_2um5n"]
 [ext_resource type="PackedScene" uid="uid://b03p8qeuteck8" path="res://assets/map_models/trash/plank_01.tscn" id="4_7qaoq"]
@@ -14,6 +15,7 @@ size = Vector3(1.8911133, 2.6750793, 1.2978516)
 size = Vector3(11.841354, 0.99316406, 9.027954)
 
 [node name="Corridor" type="Node3D"]
+script = ExtResource("1_8gbyb")
 
 [node name="corridor" parent="." instance=ExtResource("1_wagdf")]
 

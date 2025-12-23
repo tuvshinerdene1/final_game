@@ -32,25 +32,30 @@ script = ExtResource("1_sdm26")
 environment = SubResource("Environment_rof60")
 
 [node name="Corridor" parent="." instance=ExtResource("2_ptjus")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0001385808, 0, -0.00013828278)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041248143, -9.536743e-07, 0.034537315)
+is_elevator_disabled = true
 
 [node name="Corridor2" parent="." instance=ExtResource("2_ptjus")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.3, 0, -6.607)
+is_elevator_disabled = true
 
 [node name="Corridor3" parent="." instance=ExtResource("2_ptjus")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -47.898, 0, -24.938)
+is_elevator_disabled = true
 
 [node name="Corridor4" parent="." instance=ExtResource("2_ptjus")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -23.578, 0.099, -47.822)
+is_elevator_disabled = true
 
 [node name="Corridor5" parent="." instance=ExtResource("2_ptjus")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -20.574, 0.099, -52.702)
+is_elevator_disabled = true
 
 [node name="Corridor6" parent="." instance=ExtResource("2_ptjus")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.892, 0.099, -36.622)
 
 [node name="Player" parent="." instance=ExtResource("3_ctxgd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.130387, 1.3846576, -4.0016923)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.130387, 1.3846576, -7.33141)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_3k8gw")
@@ -139,10 +144,11 @@ perma_locked = true
 [node name="OutsideDoor9" parent="permalocked_door" instance=ExtResource("15_th5yt")]
 transform = Transform3D(-0.9953962, -0.09584575, -8.742278e-08, -0.09584575, 0.9953962, 0, 8.70203e-08, 8.379102e-09, -1, 23.516193, 0.16916257, 40.268986)
 perma_locked = true
+
 [node name="DocumentUi" parent="." groups=["DocumentUI"] instance=ExtResource("16_ptjus")]
 
 [node name="Retro Radio Receiver" parent="." node_paths=PackedStringArray("player") instance=ExtResource("17_ctxgd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.661262, 0.6958083, -5.2495465)
+transform = Transform3D(0.06286016, 0, 0.9980223, 0, 1, 0, -0.9980223, 0, 0.06286016, -15.539924, 1.00719, -6.604037)
 audio_name = ExtResource("18_qya1y")
 default_name = ExtResource("19_j7pls")
 player = NodePath("../Player")

@@ -74,19 +74,24 @@ func _physics_process(delta: float) -> void:
 	check_flashlight_hit() # Add this line
 
 func check_flashlight_hit():
+	var hit_portrait = null
 	if is_light_on and flashlight_ray.is_colliding():
 		var collider = flashlight_ray.get_collider()
-		var portrait = collider.get_parent()
+		if collider:
+			var portrait = collider.get_parent()
+			if portrait.has_method("toggle_eye"):
+				hit_portrait = portrait
+	
+	# Only act if the lit portrait changed
+	if hit_portrait != last_portrait:
+		if is_light_on:
 		
-		if portrait.has_method("shine_light"):
-			portrait.shine_light()
-			last_portrait = portrait # Keep track of what we are looking at
-	else:
-		# If we stop hitting a portrait, tell the last one to reset
-		if last_portrait != null:
-			last_portrait.is_being_shined_on = false
-			last_portrait.play_default()
-			last_portrait = null
+		# Turn on the new one
+			if hit_portrait:
+				hit_portrait.toggle_eye()
+		
+		# Update tracker
+		last_portrait = hit_portrait
 
 func apply_gravity(delta: float) -> void:
 	if not is_on_floor():
@@ -171,7 +176,7 @@ func toggle_light():
 			spotlight.visible = true
 		else:
 			spotlight.visible = false
-			
+
 func _on_key_picked_up():
 	print("Player received the key!")
 	has_key = true
