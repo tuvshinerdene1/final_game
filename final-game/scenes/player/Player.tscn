@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnyiadfx0wcvv"]
+
+[ext_resource type="Script" uid="uid://7fytjb4dooon" path="res://scenes/player/player.gd" id="1_ulp21"]
+[ext_resource type="AudioStream" uid="uid://cvd4gqwsj3yjj" path="res://scenes/player/WalkingSound.mp3" id="2_3c3w1"]
+[ext_resource type="AudioStream" uid="uid://vvwt6t62tf3i" path="res://scenes/player/Breathing Sound Effect.mp3" id="3_wnvi2"]
+[ext_resource type="AudioStream" uid="uid://ba76j17lfik1o" path="res://assets/sound/player/light_switch_on.mp3" id="4_524rm"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ehsmr"]
+radius = 0.32373047
+height = 1.6441803
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_ulp21")
+HEADBOB_FREQUENCY = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17790985, 0)
+shape = SubResource("CapsuleShape3D_ehsmr")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0.006381139)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16278648, -0.006381139)
+light_energy = 0.1
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 10.0
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 15.0
+distance_fade_shadow = 15.0
+spot_range = 5.5880494
+spot_angle = 37.612072
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D/SpotLight3D"]
+target_position = Vector3(0, 0, -6)
+collision_mask = 2
+
+[node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8407004, 0)
+stream = ExtResource("2_3c3w1")
+volume_db = -40.0
+parameters/looping = true
+
+[node name="BreathingPlayer" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6649535, 0)
+stream = ExtResource("3_wnvi2")
+volume_db = 50.0
+autoplay = true
+parameters/looping = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7881819, 0)
+light_color = Color(0.6955031, 0.6955032, 0.6955029, 1)
+light_energy = 0.015
+light_indirect_energy = 0.0
+
+[node name="toggle_light_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_524rm")
+volume_db = -30.0

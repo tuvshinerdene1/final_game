@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://4vmydmcb6a4u"]
+
+[ext_resource type="Script" uid="uid://cv1by0w2r3iud" path="res://scenes/furnitures/document/document.gd" id="1_8y1n3"]
+[ext_resource type="PackedScene" uid="uid://uraaswesn8dw" path="res://assets/map_models/sheet_of_paper/pile_of_papers.glb" id="1_joh3u"]
+[ext_resource type="Resource" uid="uid://bjdh2x8k1bpmx" path="res://scenes/furnitures/document/Journal1.tres" id="2_ptf3s"]
+[ext_resource type="AudioStream" uid="uid://mb5e6cv3rhqh" path="res://assets/sound/document/Page Turn Sound Effect! Flip Sound Effect! [-9lky-djA7w].mp3" id="3_t8re1"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8y1n3"]
+radius = 1.2801653
+
+[node name="Document" type="Node3D"]
+script = ExtResource("1_8y1n3")
+document_info = ExtResource("2_ptf3s")
+sound_pickup = ExtResource("3_t8re1")
+sound_putdown = ExtResource("3_t8re1")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_joh3u")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_8y1n3")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]

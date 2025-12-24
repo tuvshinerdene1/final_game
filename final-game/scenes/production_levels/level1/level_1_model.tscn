@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://7gq5w1poek33"]
+
+[ext_resource type="PackedScene" uid="uid://bo8dgdow3ctl0" path="res://assets/map_models/level1/Level_1.glb" id="1_gw2t7"]
+
+[node name="Level_1" instance=ExtResource("1_gw2t7")]
+
+[node name="Layer_2 kicken_wall" parent="Node" index="0"]
+gi_mode = 2

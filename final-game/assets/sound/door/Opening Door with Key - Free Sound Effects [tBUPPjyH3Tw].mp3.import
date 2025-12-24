@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2u3nvp42sjdp"
+path="res://.godot/imported/Opening Door with Key - Free Sound Effects [tBUPPjyH3Tw].mp3-ea2cd93db910b4978895943c074bd2b9.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/door/Opening Door with Key - Free Sound Effects [tBUPPjyH3Tw].mp3"
+dest_files=["res://.godot/imported/Opening Door with Key - Free Sound Effects [tBUPPjyH3Tw].mp3-ea2cd93db910b4978895943c074bd2b9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,145 @@
+[gd_scene load_steps=18 format=3 uid="uid://11bv17opodnt"]
+
+[ext_resource type="Script" uid="uid://coiofb77452bc" path="res://scenes/test_levels/test_level/test_level.gd" id="1_sdm26"]
+[ext_resource type="PackedScene" uid="uid://d3vxe7oncfpd" path="res://scenes/production_levels/corridor/corridor.tscn" id="2_ptjus"]
+[ext_resource type="PackedScene" uid="uid://bnyiadfx0wcvv" path="res://scenes/player/Player.tscn" id="3_ctxgd"]
+[ext_resource type="AudioStream" uid="uid://baj2nhdddwcll" path="res://assets/sound/ambient_sound/P.T. Silent Hills creepy ambient music (PS4) [Vg2IuNk28sI].mp3" id="4_3k8gw"]
+[ext_resource type="PackedScene" uid="uid://8gaq3yih1l08" path="res://scenes/production_levels/level1/level1.tscn" id="5_qya1y"]
+[ext_resource type="PackedScene" uid="uid://x664cx1lidro" path="res://scenes/production_levels/level2/level_2.tscn" id="6_j7pls"]
+[ext_resource type="PackedScene" uid="uid://djn5ys604ln23" path="res://scenes/production_levels/level3/level_3.tscn" id="7_8t5eg"]
+[ext_resource type="PackedScene" uid="uid://dee0dtctw54j8" path="res://scenes/production_levels/level4/level_4.tscn" id="8_062g7"]
+[ext_resource type="PackedScene" uid="uid://lj6hskffmajc" path="res://scenes/production_levels/level5/level_5.tscn" id="9_et1ol"]
+[ext_resource type="PackedScene" uid="uid://phgv7ho8rgr0" path="res://scenes/production_levels/level6/level_6.tscn" id="10_65sxd"]
+[ext_resource type="PackedScene" uid="uid://c3e4kcdwqb4ed" path="res://scenes/production_levels/level7/level_7.tscn" id="11_omqv0"]
+[ext_resource type="PackedScene" uid="uid://bs54rccgkcysm" path="res://scenes/production_levels/level8/level_8.tscn" id="12_ry47q"]
+[ext_resource type="PackedScene" uid="uid://b7a046v0qaba0" path="res://scenes/elevator/elevator.tscn" id="13_6eptk"]
+[ext_resource type="PackedScene" uid="uid://b88crces8q8xk" path="res://scenes/test_levels/test_level/PauseMenu.tscn" id="14_psvao"]
+[ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="15_th5yt"]
+[ext_resource type="PackedScene" uid="uid://8isxjp62xfmw" path="res://scenes/furnitures/document/DocumentUI.tscn" id="16_ptjus"]
+
+[sub_resource type="Environment" id="Environment_rof60"]
+background_mode = 1
+ambient_light_source = 1
+reflected_light_source = 1
+
+[node name="FinalLevel" type="Node3D"]
+script = ExtResource("1_sdm26")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rof60")
+
+[node name="Corridor" parent="." instance=ExtResource("2_ptjus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041248143, -9.536743e-07, 0.034537315)
+is_elevator_disabled = true
+
+[node name="Corridor2" parent="." instance=ExtResource("2_ptjus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.3, 0, -6.607)
+is_elevator_disabled = true
+
+[node name="Corridor3" parent="." instance=ExtResource("2_ptjus")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -47.898, 0, -24.938)
+is_elevator_disabled = true
+
+[node name="Corridor4" parent="." instance=ExtResource("2_ptjus")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -23.578, 0.099, -47.822)
+is_elevator_disabled = true
+
+[node name="Corridor5" parent="." instance=ExtResource("2_ptjus")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -20.574, 0.099, -52.702)
+is_elevator_disabled = true
+
+[node name="Corridor6" parent="." instance=ExtResource("2_ptjus")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.892, 0.099, -36.622)
+
+[node name="Player" parent="." instance=ExtResource("3_ctxgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.130387, 1.3846576, -7.33141)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3k8gw")
+autoplay = true
+parameters/looping = true
+
+[node name="Level1" parent="." instance=ExtResource("5_qya1y")]
+
+[node name="Level2" parent="." instance=ExtResource("6_j7pls")]
+
+[node name="Level3" parent="." instance=ExtResource("7_8t5eg")]
+
+[node name="Level4" parent="." instance=ExtResource("8_062g7")]
+
+[node name="Level5" parent="." instance=ExtResource("9_et1ol")]
+
+[node name="Level_6" parent="." instance=ExtResource("10_65sxd")]
+
+[node name="Level_7" parent="." instance=ExtResource("11_omqv0")]
+
+[node name="Level_8" parent="." instance=ExtResource("12_ry47q")]
+
+[node name="Elevator" parent="." instance=ExtResource("13_6eptk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.292, 0.099, 102.04)
+
+[node name="PauseMenu" parent="." instance=ExtResource("14_psvao")]
+
+[node name="permalocked_door" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.884, 0.3, -8.482)
+
+[node name="OutsideDoor" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+perma_locked = true
+
+[node name="OutsideDoor2" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.4, 0, 0.1)
+perma_locked = true
+
+[node name="OutsideDoor3" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -10.9, 0, -0.7)
+perma_locked = true
+
+[node name="OutsideDoor4" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3, 0, 6.607)
+perma_locked = true
+
+[node name="OutsideDoor5" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9, 0, 6.707)
+perma_locked = true
+
+[node name="OutsideDoor6" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 29.532, 0, 26.339)
+perma_locked = true
+
+[node name="OutsideDoor7" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 29.432, 0, 16.939)
+perma_locked = true
+
+[node name="OutsideDoor8" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20.676, 0.099, 40.356)
+perma_locked = true
+
+[node name="OutsideDoor10" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 22.176, 0.099, 30.256)
+perma_locked = true
+
+[node name="OutsideDoor11" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.706, 0.099, 37.238)
+perma_locked = true
+
+[node name="OutsideDoor12" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.606, 0.099, 35.738)
+perma_locked = true
+
+[node name="OutsideDoor13" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -7.194, 0.099, 28.456)
+perma_locked = true
+
+[node name="OutsideDoor14" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -7.294, 0.099, 19.056)
+perma_locked = true
+
+[node name="OutsideDoor15" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -9.394, 0.499, 43.645)
+perma_locked = true
+
+[node name="OutsideDoor9" parent="permalocked_door" instance=ExtResource("15_th5yt")]
+transform = Transform3D(-0.9953962, -0.09584575, -8.742278e-08, -0.09584575, 0.9953962, 0, 8.70203e-08, 8.379102e-09, -1, 23.516193, 0.16916257, 40.268986)
+perma_locked = true
+
+[node name="DocumentUi" parent="." groups=["DocumentUI"] instance=ExtResource("16_ptjus")]

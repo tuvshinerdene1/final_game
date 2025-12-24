@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DocumentData" load_steps=2 format=3 uid="uid://dwtdmequ6bgdi"]
+
+[ext_resource type="Script" uid="uid://cbfqdprht2bx1" path="res://scenes/furnitures/document/document_data.gd" id="1_abwnx"]
+
+[resource]
+script = ExtResource("1_abwnx")
+pages = Array[String](["Zenom proved revolution of mankind", "Zeno needed eyes we needed eyes , in order to make contact, the blood is too pure
+
+
+so i took them
+i took them from the sheep
+
+", "Sometimes shepherd must take. must take 
+must take
+must take"])
+metadata/_custom_type_script = "uid://cbfqdprht2bx1"

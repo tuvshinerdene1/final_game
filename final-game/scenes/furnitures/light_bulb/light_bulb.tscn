@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2qc58jyyjare"]
+
+[ext_resource type="Script" uid="uid://ctsm40mc02ko5" path="res://scenes/furnitures/light_bulb/light_bulb.gd" id="1_vlvyy"]
+[ext_resource type="PackedScene" uid="uid://ddbbqlcjhhrrq" path="res://scenes/furnitures/light_bulb/Light Bulb.glb" id="2_wieth"]
+
+[node name="LightBulb" type="Node3D"]
+script = ExtResource("1_vlvyy")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_indirect_energy = 0.0
+light_size = 0.5
+light_specular = 0.0
+shadow_enabled = true
+shadow_bias = 8.141
+shadow_opacity = 0.9
+shadow_blur = 2.443
+distance_fade_enabled = true
+distance_fade_begin = 4.0
+distance_fade_shadow = 4.0
+distance_fade_length = 4.0
+omni_range = 4.6273894
+
+[node name="Light Bulb" parent="." instance=ExtResource("2_wieth")]

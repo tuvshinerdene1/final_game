@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DocumentData" load_steps=2 format=3 uid="uid://bjdh2x8k1bpmx"]
+
+[ext_resource type="Script" uid="uid://cbfqdprht2bx1" path="res://scenes/furnitures/document/document_data.gd" id="1_3ue7f"]
+
+[resource]
+script = ExtResource("1_3ue7f")
+title = "1996-12-10"
+pages = Array[String](["Өчигдөр 03:59 цагийн орчимд Пагма нэртэй, 60 гаруй насны эмэгтэй өөрийн орцондоо нас барсан байдалтай олдсон хэрэг гарчээ.", "Талийгаачийн хоёр чихийг тастсан байсан бөгөөд уг чихнүүдийг хэргийн газраас хайсан боловч олдоогүй талаар Цагдаагийн ерөнхий газрын ажилтан Энгүүнбаяр мэдээллээ."])
+metadata/_custom_type_script = "uid://cbfqdprht2bx1"

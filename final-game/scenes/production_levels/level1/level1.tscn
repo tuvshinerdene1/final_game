@@ -1,0 +1,95 @@
+[gd_scene load_steps=18 format=3 uid="uid://8gaq3yih1l08"]
+
+[ext_resource type="PackedScene" uid="uid://7gq5w1poek33" path="res://scenes/production_levels/level1/level_1_model.tscn" id="2_aqg50"]
+[ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="2_pobet"]
+[ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="4_p5lcn"]
+[ext_resource type="PackedScene" uid="uid://cwip4y4xu4wf" path="res://assets/map_models/furniture/radiator.tscn" id="5_4ym0s"]
+[ext_resource type="PackedScene" uid="uid://t1dvv4s4nsc1" path="res://assets/map_models/furniture/sofa.tscn" id="6_islxn"]
+[ext_resource type="PackedScene" uid="uid://dkk7l1ol38847" path="res://assets/map_models/furniture/kitchen_table.tscn" id="7_36w8h"]
+[ext_resource type="PackedScene" uid="uid://ce53xx6didmoa" path="res://assets/map_models/furniture/bed.tscn" id="8_tytmh"]
+[ext_resource type="PackedScene" uid="uid://ccecxm007jfh5" path="res://assets/map_models/furniture/toilet.tscn" id="9_tytmh"]
+[ext_resource type="PackedScene" uid="uid://cvwtfempmh7fp" path="res://assets/map_models/furniture/toy.tscn" id="11_2amag"]
+[ext_resource type="PackedScene" uid="uid://dilfwimncmvgk" path="res://assets/map_models/furniture/low_poly_drawer_5.glb" id="11_irc6w"]
+[ext_resource type="PackedScene" uid="uid://cfa7e7grxc4wc" path="res://assets/map_models/furniture/bath.tscn" id="11_pobet"]
+[ext_resource type="PackedScene" uid="uid://4vmydmcb6a4u" path="res://scenes/furnitures/document/document.tscn" id="11_tytmh"]
+[ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="12_pobet"]
+[ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="14_5nyq3"]
+[ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="15_14ee3"]
+[ext_resource type="AudioStream" uid="uid://b42n8ovvmim1k" path="res://scenes/furnitures/radio/Болгарын гудамж.mp3" id="15_xbdrc"]
+[ext_resource type="PackedScene" uid="uid://vk8v5mpxqfcy" path="res://scenes/furnitures/television/television.tscn" id="17_xbdrc"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="Level_1" parent="." instance=ExtResource("2_aqg50")]
+
+[node name="LightBulb" parent="Level_1" instance=ExtResource("2_pobet")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -12.850978, 2.5064745, -6.374987)
+light_energy = 0.05
+light_size = 0.2
+
+[node name="windows" type="Node3D" parent="."]
+
+[node name="window" parent="windows" instance=ExtResource("4_p5lcn")]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 0.99999994, 0, -8.742278e-08, 0, -0.99999994, -9.634, 1.3, -0.2)
+
+[node name="window2" parent="windows" instance=ExtResource("4_p5lcn")]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 0.99999994, 0, -8.742278e-08, 0, -0.99999994, -13.695, 1.3, -0.2)
+
+[node name="window3" parent="windows" instance=ExtResource("4_p5lcn")]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 0.99999994, 0, -8.742278e-08, 0, -0.99999994, -17.695, 1.3, -0.2)
+
+[node name="window4" parent="windows" instance=ExtResource("4_p5lcn")]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -18.794, 1.3, -14.964)
+
+[node name="radiator" type="Node3D" parent="."]
+
+[node name="Radiator_A_1" parent="radiator" instance=ExtResource("5_4ym0s")]
+transform = Transform3D(-1.8, 0, -1.509958e-07, 0, 0.8, 0, 2.7179243e-07, 0, -1, -11.481278, 0.3935706, -0.40952516)
+
+[node name="Radiator_A_4" parent="radiator" instance=ExtResource("5_4ym0s")]
+transform = Transform3D(1.8, 0, 0, 0, 0.8, 0, 0, 0, 1, -17.309204, 0.3935706, -14.76111)
+
+[node name="Radiator_A_2" parent="radiator" instance=ExtResource("5_4ym0s")]
+transform = Transform3D(-1.8, 0, -1.509958e-07, 0, 0.8, 0, 2.7179243e-07, 0, -1, -15.531399, 0.3935706, -0.40952516)
+
+[node name="Radiator_A_3" parent="radiator" instance=ExtResource("5_4ym0s")]
+transform = Transform3D(-1.8, 0, -1.509958e-07, 0, 0.8, 0, 2.7179243e-07, 0, -1, -19.58626, 0.3935706, -0.40952516)
+
+[node name="Sofa" parent="." instance=ExtResource("6_islxn")]
+transform = Transform3D(1.192488e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, 1.192488e-10, -13.485975, 0.5443845, -3.0468428)
+
+[node name="Kitchen_table" parent="." instance=ExtResource("7_36w8h")]
+transform = Transform3D(-0.5198813, 0, 1.0815375, 0, 1.1999999, 0, -1.0815375, 0, -0.5198813, -10.469448, 0.44365, -2.4295604)
+
+[node name="bed" parent="." instance=ExtResource("8_tytmh")]
+transform = Transform3D(-0.0060614026, -0.007953149, -8.262855e-05, -0.007952409, 0.0060619665, -0.00010840659, 0.0001363065, 3.8433362e-12, -0.009999069, -17.42731, 0.8423759, -2.1854954)
+
+[node name="toilet" parent="." instance=ExtResource("9_tytmh")]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, -19.349483, 0.30284578, -9.461304)
+
+[node name="toy" parent="." instance=ExtResource("11_2amag")]
+transform = Transform3D(0.0012360148, 0, -0.009923319, 0, 0.01, 0, 0.009923319, 0, 0.0012360148, -18.816216, 0.4337746, -11.571917)
+
+[node name="bath" parent="." instance=ExtResource("11_pobet")]
+transform = Transform3D(1.192488e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, 1.192488e-10, -19.379154, 0.37396502, -7.499386)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("11_irc6w")]
+transform = Transform3D(-0.009969732, 0, 0.0007774573, 0, 0.01, 0, -0.0007774573, 0, -0.009969732, -15.769097, 0.5726154, -6.715657)
+
+[node name="Document" parent="." instance=ExtResource("11_tytmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.974254, 0.29904473, -4.621352)
+
+[node name="OutsideDoor2" parent="." instance=ExtResource("12_pobet")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.0529575, 0, -1, 0, -4.371139e-08, -19.984, 0.3, -14.389)
+
+[node name="OutsideDoor1" parent="." instance=ExtResource("12_pobet")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.0530471, 0, -1, 0, -4.371139e-08, -10.684, 0.3, -7.782)
+
+[node name="Retro Radio Receiver" parent="." instance=ExtResource("14_5nyq3")]
+transform = Transform3D(0.40263483, 0, 0.9153607, 0, 1, 0, -0.9153607, 0, 0.40263483, -15.763478, 1.0045917, -6.6772423)
+audio_name = ExtResource("15_xbdrc")
+default_name = ExtResource("15_14ee3")
+
+[node name="Television" parent="Retro Radio Receiver" instance=ExtResource("17_xbdrc")]
+transform = Transform3D(0.7714081, 0, 5.9604645e-08, 0, 0.43772477, 0, 0, 0, 0.48031303, -0.63012934, -0.29652244, 1.583292)
+video_path_parent = "res://assets/videos/output.ogv"

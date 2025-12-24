@@ -1,0 +1,45 @@
+[gd_scene load_steps=10 format=3 uid="uid://x664cx1lidro"]
+
+[ext_resource type="PackedScene" uid="uid://cbo4o1i2u3jba" path="res://assets/map_models/level2/Level_2.glb" id="1_6lvdd"]
+[ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="2_vpdn1"]
+[ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="6_4fd54"]
+[ext_resource type="PackedScene" uid="uid://4vmydmcb6a4u" path="res://scenes/furnitures/document/document.tscn" id="6_gfote"]
+[ext_resource type="Resource" uid="uid://dxong0ie7q03t" path="res://scenes/furnitures/document/journal2.tres" id="7_gfote"]
+[ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="8_pjydf"]
+[ext_resource type="AudioStream" uid="uid://dtein8fesegf7" path="res://scenes/furnitures/radio/audio1.mp3" id="9_gpeb1"]
+[ext_resource type="PackedScene" uid="uid://c1r0pycy4xe3h" path="res://assets/corpse/corpse.tscn" id="9_i28iu"]
+[ext_resource type="PackedScene" uid="uid://d1mqdjkkee177" path="res://scenes/key/key.tscn" id="10_v2se6"]
+
+[node name="Level2" type="Node3D"]
+
+[node name="Level_2" parent="." instance=ExtResource("1_6lvdd")]
+
+[node name="window" parent="." instance=ExtResource("2_vpdn1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.534, 1.3, -28.622)
+
+[node name="window2" parent="." instance=ExtResource("2_vpdn1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31.684, 1.3, -21.539)
+
+[node name="window3" parent="." instance=ExtResource("2_vpdn1")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -36.988, 1.3, -12.457)
+
+[node name="corpse" parent="." instance=ExtResource("9_i28iu")]
+transform = Transform3D(0.89179754, 0, -0.45243472, 0, 1, 0, 0.45243472, 0, 0.89179754, -34.444134, 0.3, -20.400925)
+
+[node name="Key" parent="." instance=ExtResource("10_v2se6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.696182, 0.75140023, -20.750465)
+
+[node name="OutsideDoor" parent="." instance=ExtResource("6_4fd54")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -31.984, 0.3, -14.389)
+
+[node name="OutsideDoor2" parent="." instance=ExtResource("6_4fd54")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -40.916, 0.3, -23.722)
+locked_with_key = true
+
+[node name="Retro Radio Receiver" parent="." instance=ExtResource("8_pjydf")]
+transform = Transform3D(0.4665873, 0, 0.8844751, 0, 1, 0, -0.8844751, 0, 0.4665873, -34.954582, 0.3234974, -19.432768)
+audio_name = ExtResource("9_gpeb1")
+
+[node name="Document" parent="." instance=ExtResource("6_gfote")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.954582, 0.3234974, -26.461273)
+document_info = ExtResource("7_gfote")

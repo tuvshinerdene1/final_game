@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vvwt6t62tf3i"
+path="res://.godot/imported/Breathing Sound Effect.mp3-29b4cef62b2b39e1dbd59663a69618af.mp3str"
+
+[deps]
+
+source_file="res://scenes/player/Breathing Sound Effect.mp3"
+dest_files=["res://.godot/imported/Breathing Sound Effect.mp3-29b4cef62b2b39e1dbd59663a69618af.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

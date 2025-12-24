@@ -1,0 +1,182 @@
+extends CharacterBody3D
+
+@export var mouse_sensitivity: float = 0.002
+@export var SPEED: float = 1.5
+@export var JUMP_VELOCITY: float = 4.5
+
+# Headbob settings
+@export var HEADBOB_ENABLED := true
+@export var HEADBOB_FREQUENCY := 1.8  # Slower, more deliberate
+@export var HEADBOB_AMPLITUDE := 0.03  # Vertical movement
+@export var HEADBOB_SWAY_AMOUNT := 0.02  # Horizontal sway
+
+# Head sway settings (for standing still and subtle movement)
+@export var IDLE_SWAY_ENABLED := true
+@export var IDLE_SWAY_FREQUENCY := 1.0
+@export var IDLE_SWAY_AMPLITUDE := 0.015
+
+# Camera tilt when moving sideways
+@export var MOVEMENT_TILT_AMOUNT := 0.05
+
+# ---------- FOOTSTEP SETTINGS ----------
+@export var MIN_WALK_SPEED: float = 0.2          # how fast you must move before walking sound starts
+@export var walking_loops: Array[AudioStream] = []  # assign your 4 walking sounds in the editor
+# ---------------------------------------
+
+var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+
+@onready var camera: Camera3D = $Camera3D
+@onready var spotlight : SpotLight3D = $Camera3D/SpotLight3D
+@onready var click_sound :AudioStreamPlayer3D= $toggle_light_sound
+var is_light_on := true
+
+# ---------- FOOTSTEP NODE ----------
+@onready var footstep_player: AudioStreamPlayer3D = $FootstepPlayer
+# -----------------------------------
+@onready var flashlight_ray : RayCast3D = $Camera3D/SpotLight3D/RayCast3D
+# Head bob vars
+var headbob_time: float = 0.0
+var idle_sway_time: float = 0.0
+var original_camera_position: Vector3
+var original_camera_rotation: Vector3
+
+var direction: Vector3 = Vector3.ZERO
+var has_key: bool = false
+var last_portrait = null
+
+
+
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_PAUSABLE  
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	original_camera_position = camera.position
+	original_camera_rotation = camera.rotation
+	camera.current = true
+
+
+func _input(event) -> void:
+	# Add this check:
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+		return
+
+	if event is InputEventMouseMotion:
+		rotate_y(-event.relative.x * mouse_sensitivity)
+		camera.rotate_x(-event.relative.y * mouse_sensitivity)
+		camera.rotation.x = clamp(camera.rotation.x, -1.2, 1.2)
+
+func _physics_process(delta: float) -> void:
+	apply_gravity(delta)
+	move()
+	apply_headbob_and_sway(delta)
+	_update_walking_sound()  
+	move_and_slide()
+	toggle_light()
+	check_flashlight_hit() # Add this line
+
+func check_flashlight_hit():
+	var hit_portrait = null
+	if is_light_on and flashlight_ray.is_colliding():
+		var collider = flashlight_ray.get_collider()
+		if collider:
+			var portrait = collider.get_parent()
+			if portrait.has_method("toggle_eye"):
+				hit_portrait = portrait
+	
+	# Only act if the lit portrait changed
+	if hit_portrait != last_portrait:
+		if is_light_on:
+		
+		# Turn on the new one
+			if hit_portrait:
+				hit_portrait.toggle_eye()
+		
+		# Update tracker
+		last_portrait = hit_portrait
+
+func apply_gravity(delta: float) -> void:
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+
+func move() -> void:
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
+	if direction != Vector3.ZERO:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+func apply_headbob_and_sway(delta: float) -> void:
+	var horizontal_velocity := Vector2(velocity.x, velocity.z)
+	var is_moving := horizontal_velocity.length() > 0.1 and is_on_floor()
+
+	var target_position: Vector3 = original_camera_position
+	var target_rotation: Vector3 = Vector3.ZERO  # local rotation offset
+
+	if is_moving and HEADBOB_ENABLED and SPEED > 0.0:
+		# Walking headbob
+		headbob_time += delta * horizontal_velocity.length() / SPEED
+		idle_sway_time = 0.0  # Reset idle sway when moving
+
+		# Vertical bob (up and down)
+		target_position.y += sin(headbob_time * HEADBOB_FREQUENCY * TAU) * HEADBOB_AMPLITUDE
+
+		# Horizontal sway (side to side)
+		target_position.x += cos(headbob_time * HEADBOB_FREQUENCY * TAU * 0.5) * HEADBOB_SWAY_AMOUNT
+
+		# Slight camera tilt based on horizontal movement
+		var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+		target_rotation.z = -input_dir.x * MOVEMENT_TILT_AMOUNT
+	else:
+		# Idle breathing/sway effect
+		if IDLE_SWAY_ENABLED:
+			idle_sway_time += delta
+
+			# Very subtle breathing motion
+			target_position.y += sin(idle_sway_time * IDLE_SWAY_FREQUENCY * TAU) * IDLE_SWAY_AMPLITUDE * 0.5
+			target_position.x += cos(idle_sway_time * IDLE_SWAY_FREQUENCY * TAU * 0.7) * IDLE_SWAY_AMPLITUDE * 0.3
+
+		# Reset headbob time when not moving
+		headbob_time = 0.0
+
+	# Smoothly interpolate to target position and rotation
+	var lerp_speed := 10.0 if is_moving else 5.0
+	camera.position = camera.position.lerp(target_position, delta * lerp_speed)
+
+	# Apply rotation tilt (separate from mouse look rotation)
+	var current_local_rotation := Vector3(0.0, 0.0, camera.rotation.z)
+	var new_local_rotation := current_local_rotation.lerp(target_rotation, delta * lerp_speed)
+	camera.rotation.z = new_local_rotation.z
+func _is_walking() -> bool:
+	var horizontal_speed := Vector2(velocity.x, velocity.z).length()
+	return horizontal_speed > MIN_WALK_SPEED and is_on_floor()
+func _update_walking_sound() -> void:
+	var walking := _is_walking()
+
+	if walking:
+
+		# If not already playing, start a random loop
+		if not footstep_player.playing:
+			footstep_player.play()
+	else:
+		# Stop the sound when you stop walking or leave the floor
+		if footstep_player.playing:
+			footstep_player.stop()
+			
+func toggle_light():
+	if Input.is_action_just_pressed("flash_light"):
+		is_light_on = not is_light_on
+		click_sound.play()
+		if is_light_on:
+			spotlight.visible = true
+		else:
+			spotlight.visible = false
+
+func _on_key_picked_up():
+	print("Player received the key!")
+	has_key = true

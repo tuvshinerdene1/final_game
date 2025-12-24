@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://djn5ys604ln23"]
+
+[ext_resource type="PackedScene" uid="uid://bk11i2m1esinh" path="res://assets/map_models/level3/Level_3.glb" id="1_ig6k7"]
+[ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="2_k0f0u"]
+[ext_resource type="PackedScene" uid="uid://4vmydmcb6a4u" path="res://scenes/furnitures/document/document.tscn" id="4_ts3je"]
+[ext_resource type="Resource" uid="uid://dwtdmequ6bgdi" path="res://scenes/furnitures/document/journal3.tres" id="4_x25j6"]
+[ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="5_ts3je"]
+[ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="5_x25j6"]
+[ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="6_cr2tx"]
+[ext_resource type="AudioStream" uid="uid://dbdouyrkadph6" path="res://scenes/furnitures/radio/audio2.mp3" id="6_is0te"]
+[ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="7_cr2tx"]
+
+[node name="Level3" type="Node3D"]
+
+[node name="Level_3" parent="." instance=ExtResource("1_ig6k7")]
+
+[node name="window" parent="." instance=ExtResource("2_k0f0u")]
+transform = Transform3D(0.00638576, -0.21914808, 0.97567075, 0.19538043, 0.95715934, 0.21371143, -0.98070675, 0.18926223, 0.048929438, -47.52, -0.651, -38.457)
+
+[node name="window2" parent="." instance=ExtResource("2_k0f0u")]
+transform = Transform3D(0.0063857604, -0.21914808, 0.97567075, 0.002516374, 0.9756911, 0.21913621, -0.9999764, 0.0010557789, 0.0067819864, -47.513, -0.363, -42.379)
+
+[node name="window3" parent="." instance=ExtResource("2_k0f0u")]
+transform = Transform3D(-0.013858559, -0.26668802, 0.96368325, -0.20670605, 0.9437214, 0.2581912, -0.97830474, -0.19562097, -0.06820465, -47.539, -0.26, -46.313)
+
+[node name="Retro Radio Receiver" parent="." instance=ExtResource("5_x25j6")]
+transform = Transform3D(0.99925685, -0.036894016, -0.011159339, 0.03854477, 0.9564618, 0.28930116, 0, -0.2895163, 0.9571731, -42.443436, -0.08083156, -46.01358)
+audio_name = ExtResource("6_is0te")
+default_name = ExtResource("7_cr2tx")
+
+[node name="LightBulb" parent="Retro Radio Receiver" instance=ExtResource("6_cr2tx")]
+transform = Transform3D(1, 2.6963298e-10, -3.6854046e-09, 7.463331e-09, 1, 0, 2.7518139e-09, 1.1920929e-07, 1, 0.08779526, 2.2489834, 0.42573166)
+light_color = Color(0.9360285, 0.17348671, 5.7756904e-07, 1)
+light_energy = 0.5
+
+[node name="LightBulb5" parent="Retro Radio Receiver" instance=ExtResource("6_cr2tx")]
+transform = Transform3D(1, -7.180948e-09, -6.4793726e-09, 7.0140773e-09, 1, 0, 4.2370965e-09, 2.682209e-07, 1, 1.4514122, 1.2608204, 4.648525)
+light_color = Color(0.9360285, 0.17348671, 5.7756904e-07, 1)
+light_energy = 0.5
+
+[node name="LightBulb6" parent="Retro Radio Receiver" instance=ExtResource("6_cr2tx")]
+transform = Transform3D(1, -1.0906238e-08, -7.410695e-09, 6.864326e-09, 1, 0, 4.7321906e-09, 2.9802322e-07, 1, 1.4514122, 0.1804285, 8.220421)
+light_color = Color(0.9360285, 0.17348671, 5.7756904e-07, 1)
+light_energy = 0.5
+
+[node name="LightBulb2" parent="Retro Radio Receiver" instance=ExtResource("6_cr2tx")]
+transform = Transform3D(1, -1.4631528e-08, -8.342018e-09, 6.7145747e-09, 1, 0, 5.227285e-09, 3.2782555e-07, 1, 3.0637703, 3.0047855, 0.29940414)
+light_color = Color(0.9360285, 0.17348671, 5.7756904e-07, 1)
+light_energy = 0.5
+
+[node name="LightBulb3" parent="Retro Radio Receiver" instance=ExtResource("6_cr2tx")]
+transform = Transform3D(1, -1.4631528e-08, -1.11359855e-08, 6.2653207e-09, 1, 0, 6.712568e-09, 3.5762787e-07, 1, 7.2274857, 2.8510551, 0.25290298)
+light_color = Color(0.9360285, 0.17348671, 5.7756904e-07, 1)
+light_energy = 0.5
+
+[node name="LightBulb4" parent="Retro Radio Receiver" instance=ExtResource("6_cr2tx")]
+transform = Transform3D(1, -1.4631528e-08, -1.2067308e-08, 9.84086e-09, 1, 0, 9.070307e-09, 3.5762787e-07, 1, 5.97377, 2.8973446, 0.26690292)
+light_color = Color(0.9360285, 0.17348671, 5.7756904e-07, 1)
+light_energy = 0.5
+
+[node name="Document" parent="." instance=ExtResource("4_ts3je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.132694, 0.4259077, -46.01358)
+document_info = ExtResource("4_x25j6")
+
+[node name="OutsideDoor" parent="." instance=ExtResource("5_ts3je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.116, 0.3, -35.722)
+
+[node name="OutsideDoor2" parent="." instance=ExtResource("5_ts3je")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -32.505, 0.399, -48.138)
