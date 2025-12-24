@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://djn5ys604ln23"]
+[gd_scene load_steps=9 format=3 uid="uid://djn5ys604ln23"]
 
 [ext_resource type="PackedScene" uid="uid://bk11i2m1esinh" path="res://assets/map_models/level3/Level_3.glb" id="1_ig6k7"]
 [ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="2_k0f0u"]
 [ext_resource type="PackedScene" uid="uid://4vmydmcb6a4u" path="res://scenes/furnitures/document/document.tscn" id="4_ts3je"]
+[ext_resource type="Resource" uid="uid://dwtdmequ6bgdi" path="res://scenes/furnitures/document/journal3.tres" id="4_x25j6"]
 [ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="5_ts3je"]
+[ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="5_x25j6"]
+[ext_resource type="AudioStream" uid="uid://dbdouyrkadph6" path="res://scenes/furnitures/radio/audio2.mp3" id="6_is0te"]
+[ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="7_cr2tx"]
 
 [node name="Level3" type="Node3D"]
 
@@ -18,8 +22,14 @@ transform = Transform3D(0.0063857604, -0.21914808, 0.97567075, 0.002516374, 0.97
 [node name="window3" parent="." instance=ExtResource("2_k0f0u")]
 transform = Transform3D(-0.013858559, -0.26668802, 0.96368325, -0.20670605, 0.9437214, 0.2581912, -0.97830474, -0.19562097, -0.06820465, -47.539, -0.26, -46.313)
 
+[node name="Retro Radio Receiver" parent="." instance=ExtResource("5_x25j6")]
+transform = Transform3D(0.99925685, -0.036894016, -0.011159339, 0.03854477, 0.9564618, 0.28930116, 0, -0.2895163, 0.9571731, -42.443436, -0.08083156, -46.01358)
+audio_name = ExtResource("6_is0te")
+default_name = ExtResource("7_cr2tx")
+
 [node name="Document" parent="." instance=ExtResource("4_ts3je")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.132694, 0.4259077, -46.01358)
+document_info = ExtResource("4_x25j6")
 
 [node name="OutsideDoor" parent="." instance=ExtResource("5_ts3je")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.116, 0.3, -35.722)

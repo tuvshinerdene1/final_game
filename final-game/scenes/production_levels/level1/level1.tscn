@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://8gaq3yih1l08"]
+[gd_scene load_steps=17 format=3 uid="uid://8gaq3yih1l08"]
 
 [ext_resource type="PackedScene" uid="uid://7gq5w1poek33" path="res://scenes/production_levels/level1/level_1_model.tscn" id="2_aqg50"]
 [ext_resource type="PackedScene" uid="uid://b2qc58jyyjare" path="res://scenes/furnitures/light_bulb/light_bulb.tscn" id="2_pobet"]
@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://cfa7e7grxc4wc" path="res://assets/map_models/furniture/bath.tscn" id="11_pobet"]
 [ext_resource type="PackedScene" uid="uid://4vmydmcb6a4u" path="res://scenes/furnitures/document/document.tscn" id="11_tytmh"]
 [ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="12_pobet"]
+[ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="14_5nyq3"]
+[ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="15_14ee3"]
+[ext_resource type="AudioStream" uid="uid://b42n8ovvmim1k" path="res://scenes/furnitures/radio/Болгарын гудамж.mp3" id="15_xbdrc"]
 
 [node name="Level1" type="Node3D"]
 
@@ -80,3 +83,8 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.0529575, 0, -1, 0, -4.371139e-
 
 [node name="OutsideDoor1" parent="." instance=ExtResource("12_pobet")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.0530471, 0, -1, 0, -4.371139e-08, -10.684, 0.3, -7.782)
+
+[node name="Retro Radio Receiver" parent="." instance=ExtResource("14_5nyq3")]
+transform = Transform3D(0.40263483, 0, 0.9153607, 0, 1, 0, -0.9153607, 0, 0.40263483, -15.763478, 1.0045917, -6.6772423)
+audio_name = ExtResource("15_xbdrc")
+default_name = ExtResource("15_14ee3")

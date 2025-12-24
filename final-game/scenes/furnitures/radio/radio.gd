@@ -6,13 +6,14 @@ extends Node3D
 @export var default_name: AudioStream = null
 
 # Reference to the player to calculate distance
-@export var player: Node3D = null
-
+#@onready var player: Node3D = get_parent().get_parent().get_node("Player")
+@onready var player: CharacterBody3D = $"../../Player"
 @onready var audio_player: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 # State variables
 var has_triggered = false
 var is_looping_stage = false
+
 
 func _ready() -> void:
 	# Don't play anything at the start. We wait for the player.
@@ -21,7 +22,9 @@ func _ready() -> void:
 	# Connect the signal for when audio finishes
 	if not audio_player.finished.is_connected(_on_audio_finished):
 		audio_player.finished.connect(_on_audio_finished)
-
+	if player != null:
+		print("player is not null")
+		
 func _process(_delta: float) -> void:
 	# If we have already triggered the radio, stop checking distance to save performance
 	if has_triggered:

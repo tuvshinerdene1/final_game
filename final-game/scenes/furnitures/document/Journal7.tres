@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="DocumentData" load_steps=2 format=3 uid="uid://d3up40uwhiik0"]
+
+[ext_resource type="Script" uid="uid://cbfqdprht2bx1" path="res://scenes/furnitures/document/document_data.gd" id="1_tungl"]
+
+[resource]
+script = ExtResource("1_tungl")
+metadata/_custom_type_script = "uid://cbfqdprht2bx1"

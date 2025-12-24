@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3e4kcdwqb4ed"]
+[gd_scene load_steps=10 format=3 uid="uid://c3e4kcdwqb4ed"]
 
 [ext_resource type="PackedScene" uid="uid://cgoawtblahyl0" path="res://assets/map_models/level7/Level_7.glb" id="1_q4i3r"]
 [ext_resource type="PackedScene" uid="uid://hmvtouab0w4p" path="res://assets/map_models/furniture/fetus.tscn" id="2_7kwj0"]
 [ext_resource type="PackedScene" uid="uid://4vmydmcb6a4u" path="res://scenes/furnitures/document/document.tscn" id="3_nkrha"]
 [ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="4_iu36f"]
+[ext_resource type="Resource" uid="uid://d3up40uwhiik0" path="res://scenes/furnitures/document/Journal7.tres" id="4_tdirv"]
 [ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="5_hi1hg"]
+[ext_resource type="AudioStream" uid="uid://bixu6mlyei6a8" path="res://scenes/furnitures/radio/audio6.mp3" id="6_m4d7t"]
 [ext_resource type="PackedScene" uid="uid://cctb0wiqe6oo7" path="res://scenes/baby cry/MazeSound.tscn" id="6_ygcov"]
+[ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="7_5il1j"]
 
 [node name="Level_7" type="Node3D"]
 
@@ -16,9 +19,12 @@ transform = Transform3D(5.9624403e-09, 0.5, 0, 0.5, -5.9624403e-09, 4.371139e-08
 
 [node name="Document" parent="." instance=ExtResource("3_nkrha")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.019034, 0.4258253, -19.365366)
+document_info = ExtResource("4_tdirv")
 
 [node name="Retro Radio Receiver" parent="." instance=ExtResource("4_iu36f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.164006, 0.39948446, -20.67142)
+audio_name = ExtResource("6_m4d7t")
+default_name = ExtResource("7_5il1j")
 
 [node name="OutsideDoor" parent="." instance=ExtResource("5_hi1hg")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 6.442, 0.399, -19.934)
