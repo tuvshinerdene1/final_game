@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dee0dtctw54j8"]
+[gd_scene load_steps=13 format=3 uid="uid://dee0dtctw54j8"]
 
 [ext_resource type="PackedScene" uid="uid://c80d7k4yr2emn" path="res://assets/map_models/level4/Level_4.glb" id="1_t68d1"]
 [ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="2_e1dgs"]
@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cq58mhonaoujl" path="res://scenes/furnitures/door_outside/outside_door.tscn" id="5_js5b0"]
 [ext_resource type="AudioStream" uid="uid://14darx6i4uxv" path="res://scenes/furnitures/radio/audio3.mp3" id="6_l21m1"]
 [ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="7_i3oal"]
+[ext_resource type="PackedScene" uid="uid://ce53xx6didmoa" path="res://assets/map_models/furniture/bed.tscn" id="9_6fk3d"]
+[ext_resource type="PackedScene" uid="uid://t1dvv4s4nsc1" path="res://assets/map_models/furniture/sofa.tscn" id="10_5wl4u"]
+[ext_resource type="PackedScene" uid="uid://dkk7l1ol38847" path="res://assets/map_models/furniture/kitchen_table.tscn" id="11_ea7db"]
+[ext_resource type="PackedScene" uid="uid://cwip4y4xu4wf" path="res://assets/map_models/furniture/radiator.tscn" id="12_wlwdn"]
 
 [node name="Level4" type="Node3D"]
 
@@ -39,3 +43,18 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -31.
 
 [node name="OutsideDoor2" parent="." instance=ExtResource("5_js5b0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.09, 0.399, -43.72)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("9_6fk3d")]
+transform = Transform3D(-0.01, 0, -8.7422775e-10, 0, 0.01, 0, 8.7422775e-10, 0, -0.01, -20.564222, 0.5423101, -31.039877)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("10_5wl4u")]
+transform = Transform3D(1.192488e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, 1.192488e-10, -22.978712, 0.4124526, -31.843851)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("11_ea7db")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -29.115276, 0.39977956, -32.18202)
+
+[node name="Radiator_A_1" parent="." instance=ExtResource("12_wlwdn")]
+transform = Transform3D(-0.8, 0, -1.2079664e-07, 0, 0.8, 0, 1.2079664e-07, 0, -0.8, -28.840006, 0.39948446, -29.171726)
+
+[node name="Radiator_A_2" parent="." instance=ExtResource("12_wlwdn")]
+transform = Transform3D(-0.8, 0, -1.2079664e-07, 0, 0.8, 0, 1.2079664e-07, 0, -0.8, -25.16318, 0.39948446, -29.171726)

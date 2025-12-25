@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://lj6hskffmajc"]
+[gd_scene load_steps=15 format=3 uid="uid://lj6hskffmajc"]
 
 [ext_resource type="PackedScene" uid="uid://xgq7fu4qcfo3" path="res://assets/map_models/level5/Level_5.glb" id="1_1tdt7"]
 [ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="2_jmvh0"]
@@ -8,6 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="5_l43r4"]
 [ext_resource type="AudioStream" uid="uid://clppsul5qmpp2" path="res://scenes/furnitures/radio/audio4.mp3" id="6_lhuqu"]
 [ext_resource type="AudioStream" uid="uid://cfh70ad0dkf3t" path="res://scenes/furnitures/radio/Silent Hill 2 - Radio Static [Danger] [_T3RjLpA7t8].mp3" id="7_7s0ju"]
+[ext_resource type="PackedScene" uid="uid://dkk7l1ol38847" path="res://assets/map_models/furniture/kitchen_table.tscn" id="9_c4ig1"]
+[ext_resource type="PackedScene" uid="uid://t1dvv4s4nsc1" path="res://assets/map_models/furniture/sofa.tscn" id="10_popca"]
+[ext_resource type="PackedScene" uid="uid://cvwtfempmh7fp" path="res://assets/map_models/furniture/toy.tscn" id="11_v2nch"]
+[ext_resource type="PackedScene" uid="uid://ccecxm007jfh5" path="res://assets/map_models/furniture/toilet.tscn" id="12_g2dhq"]
+[ext_resource type="PackedScene" uid="uid://cfa7e7grxc4wc" path="res://assets/map_models/furniture/bath.tscn" id="13_xicfh"]
+[ext_resource type="PackedScene" uid="uid://ce53xx6didmoa" path="res://assets/map_models/furniture/bed.tscn" id="14_gmeut"]
 
 [node name="Level5" type="Node3D"]
 
@@ -36,3 +42,21 @@ transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -9.7
 
 [node name="OutsideDoor2" parent="." instance=ExtResource("5_0222n")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.89, 0.399, -37.938)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("9_c4ig1")]
+transform = Transform3D(4.371139e-08, 3.821371e-15, 1, 8.742278e-08, -1, 0, 1, 8.742278e-08, -4.371139e-08, -10.885629, 3.0239618, -40.582905)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("10_popca")]
+transform = Transform3D(-1.192488e-10, 1.0425061e-17, -0.01, -8.7422775e-10, -0.01, 0, -0.01, 8.7422775e-10, 1.192488e-10, -4.7236557, 3.0320873, -41.30788)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("11_v2nch")]
+transform = Transform3D(-0.01, 8.7422775e-10, 0, -8.7422775e-10, -0.01, 0, 0, 0, 0.01, -2.5973244, 2.9990067, -51.729816)
+
+[node name="Sketchfab_Scene4" parent="." instance=ExtResource("12_g2dhq")]
+transform = Transform3D(0.1, 8.742278e-09, -8.742278e-09, 8.742278e-09, -0.1, 0, -8.742278e-09, -7.642742e-16, -0.1, -1.7630407, 3.0043445, -47.194458)
+
+[node name="Sketchfab_Scene5" parent="." instance=ExtResource("13_xicfh")]
+transform = Transform3D(4.3711387e-10, -3.821371e-17, 0.01, -8.7422775e-10, -0.01, 0, 0.01, -8.7422775e-10, -4.3711387e-10, -1.5437262, 2.994745, -45.182175)
+
+[node name="Sketchfab_Scene6" parent="." instance=ExtResource("14_gmeut")]
+transform = Transform3D(-0.01, 8.7422775e-10, 0, -8.7422775e-10, -0.01, 0, 0, 0, 0.01, -2.3214195, 3.0493665, -40.17153)

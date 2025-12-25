@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://x664cx1lidro"]
+[gd_scene load_steps=15 format=3 uid="uid://x664cx1lidro"]
 
 [ext_resource type="PackedScene" uid="uid://cbo4o1i2u3jba" path="res://assets/map_models/level2/Level_2.glb" id="1_6lvdd"]
 [ext_resource type="PackedScene" uid="uid://but11xthd4d45" path="res://assets/map_models/window/window.glb" id="2_vpdn1"]
@@ -8,7 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://b7yrfghfgmhcn" path="res://scenes/furnitures/radio/radio.tscn" id="8_pjydf"]
 [ext_resource type="AudioStream" uid="uid://dtein8fesegf7" path="res://scenes/furnitures/radio/audio1.mp3" id="9_gpeb1"]
 [ext_resource type="PackedScene" uid="uid://c1r0pycy4xe3h" path="res://assets/corpse/corpse.tscn" id="9_i28iu"]
+[ext_resource type="PackedScene" uid="uid://cfa7e7grxc4wc" path="res://assets/map_models/furniture/bath.tscn" id="10_s7pv0"]
 [ext_resource type="PackedScene" uid="uid://d1mqdjkkee177" path="res://scenes/key/key.tscn" id="10_v2se6"]
+[ext_resource type="PackedScene" uid="uid://ccecxm007jfh5" path="res://assets/map_models/furniture/toilet.tscn" id="11_xm6uq"]
+[ext_resource type="PackedScene" uid="uid://ce53xx6didmoa" path="res://assets/map_models/furniture/bed.tscn" id="12_gvmom"]
+[ext_resource type="PackedScene" uid="uid://cvwtfempmh7fp" path="res://assets/map_models/furniture/toy.tscn" id="13_44n7f"]
+[ext_resource type="PackedScene" uid="uid://t1dvv4s4nsc1" path="res://assets/map_models/furniture/sofa.tscn" id="14_2pa12"]
 
 [node name="Level2" type="Node3D"]
 
@@ -43,3 +48,18 @@ audio_name = ExtResource("9_gpeb1")
 [node name="Document" parent="." instance=ExtResource("6_gfote")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.954582, 0.3234974, -26.461273)
 document_info = ExtResource("7_gfote")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("10_s7pv0")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -32.999832, 0.3382545, -12.338219)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("11_xm6uq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -30.826542, 0.31119978, -27.69169)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("12_gvmom")]
+transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711387e-10, -37.821526, 0.41033077, -13.93142)
+
+[node name="Sketchfab_Scene4" parent="." instance=ExtResource("13_44n7f")]
+transform = Transform3D(-0.0007323823, 0, 0.009973144, 0, 0.01, 0, -0.009973144, 0, -0.0007323823, -39.029865, 0.311, -22.520248)
+
+[node name="Sketchfab_Scene5" parent="." instance=ExtResource("14_2pa12")]
+transform = Transform3D(-4.3711387e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711387e-10, -32.398148, 0.3129678, -24.73174)
