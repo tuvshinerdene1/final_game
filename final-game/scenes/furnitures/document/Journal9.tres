@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DocumentData" load_steps=2 format=3 uid="uid://brx0iqk2pvf5c"]
+
+[ext_resource type="Script" uid="uid://cbfqdprht2bx1" path="res://scenes/furnitures/document/document_data.gd" id="1_5daag"]
+
+[resource]
+script = ExtResource("1_5daag")
+pages = Array[String](["You experienced the night and saw everything there is", "You can exit now", "There is nothing there else"])
+metadata/_custom_type_script = "uid://cbfqdprht2bx1"

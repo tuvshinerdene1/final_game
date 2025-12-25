@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://vk8v5mpxqfcy"]
+
+[ext_resource type="Script" uid="uid://y5oduspyv3bj" path="res://scenes/furnitures/television/screen.gd" id="1_rt6ne"]
+[ext_resource type="Script" uid="uid://cjml8yrabn3vu" path="res://scenes/furnitures/television/television.gd" id="1_yuwcl"]
+[ext_resource type="PackedScene" uid="uid://ckbksbcu5ba8i" path="res://assets/map_models/furniture/tv-model.tscn" id="2_rt6ne"]
+[ext_resource type="AudioStream" uid="uid://yiwyae7kb3vp" path="res://assets/videos/audio.wav" id="4_yuwcl"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_oqh2q"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rt6ne"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_oqh2q")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_oqh2q"]
+material = SubResource("StandardMaterial3D_rt6ne")
+orientation = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rt6ne"]
+size = Vector3(2.0771284, 2.1555176, 2.0385132)
+
+[node name="Television" type="Node3D"]
+script = ExtResource("1_yuwcl")
+
+[node name="screen" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.008204897, 0.004617086, 1.0032226, 5.212683e-05, -0.726741, 0.0063736113, 0.8105138, 0, -0.010156112, 0.64455473, 0.10392386, -0.017410874)
+mesh = SubResource("PlaneMesh_oqh2q")
+script = ExtResource("1_rt6ne")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_rt6ne")]
+
+[node name="Area3D" type="StaticBody3D" parent="."]
+collision_layer = 15
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 4.656613e-10, 1, 0, 0, 0, 1, -0.011089861, -0.068481445, -0.003753662)
+shape = SubResource("BoxShape3D_rt6ne")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.044787634, 0, -0.99899656, 0, 1, 0, 0.99899656, 0, 0.044787634, -0.8754219, 0, 0)
+light_energy = 0.001
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_yuwcl")
+pitch_scale = 5.0
+autoplay = true
+max_distance = 1.0
